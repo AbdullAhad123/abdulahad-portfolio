@@ -41,6 +41,34 @@
         box-shadow: 0px 1px 8px 0px #0000004d
     }
 
+    .project_card_item {
+        height: auto;
+        width: auto;
+    }
+    
+    .project_image_container {
+        height: 350px;
+        width: auto;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0px 4px 8px 0px #0000004a;
+        position: relative;
+    }
+    .project_image_container img{
+        transition: 6s;
+    }
+
+    .project_card_link {
+        text-decoration: none;
+        color: #000000a6;
+        transition: 0.2s;
+    }
+    .project_card_link:hover {
+        color: #f78f1a;
+        text-decoration: underline;
+    }
+
+
 </style>
 
 <body>
@@ -48,6 +76,8 @@
     <!-- <div id="preloader" class="">
         <span class="loader"></span>
     </div> -->
+
+    <a id="backToTop" href="#content"><i class="bx bx-chevron-up"></i></a>
 
     <main id="content" class="site-content" role="main">
         <header>
@@ -190,9 +220,9 @@
 
         <section id="service" class="full-screen py-5 d-flex align-items-center">
             <div class="container-lg">
-                <h2 class="fw-medium h4 my-1 text-start" style="color: #ffc27d">SERVICES</h2>
+                <h2 class="fw-medium h4 my-1 text-start" style="color: #ffc27d">PROJECTS</h2>
                 <h3 class="display-2 fw-semibold my-1 text-start text-white">Explore the <span
-                    class="text_secondary">Masterpieces,</span> I've designed</h3>
+                    class="text_secondary">top masterpiece,</span> I've develop</h3>
                 <p class="text-white fw-light my-3" style="font-size: 1.32rem; line-height: 1.7;">Discover my innovative and interactive projects designs that showcase my best work in web development and design. Go Ahead!</p>
                 <div class="swiper myProjects p-md-4 p-2">
                     <div class="swiper-wrapper">
@@ -244,6 +274,71 @@
                                     <button class="secondary_btn p-2 px-3 m-1 rounded-pill" data-bs-toggle="modal" data-bs-target="#availableSoonPopup">Case Study</button>
                                     <a href="http://word-hunt.000webhostapp.com/" target="_blank" class="primary_btn text-decoration-none p-2 px-3 m-1 rounded-pill d-inline-flex align-items-center">Preview <i class="bx bx-arrow-back bx-rotate-180"></i></a>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="informations" class="full-screen py-5 d-flex align-items-center">
+            <div class="container-md">
+                <h2 class="fw-medium h4 my-1 text-start text-uppercase" style="color: #ffc27d">Latest Work</h2>
+                <h3 class="display-2 fw-semibold my-1 text-start">Explore and discover my latest projects</h3>
+                <p class="text-dark my-3" style="font-size: 1.32rem; line-height: 1.7;">Explore and discover my latest projects, where creativity meets innovation. Dive in to see what I've developed.</p>
+                <div class="row m-0 align-items-center">
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 my-2">
+                        <div class="project_card_item">
+                            <div class="project_image_container">
+                                <img src="assets/img/netflix_uidesign.png" width="100%" height="auto" alt="">
+                            </div>
+                            <div class="mt-2 mb-3">
+                                <a href="#" class="project_card_link fs-5 fw-medium">Netflix Landing Page</a>
+                                <p class="my-1 text-dark-emphasis">Re-design netflix landing page</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 my-2">
+                        <div class="project_card_item">
+                            <div class="project_image_container">
+                                <img src="assets/img/oneli_builders_uidesign.png" width="100%" height="auto" alt="">
+                            </div>
+                            <div class="mt-2 mb-3">
+                                <a href="#" class="project_card_link fs-5 fw-medium">Oneli Builders Website</a>
+                                <p class="my-1 text-dark-emphasis">Design & develop builders website</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 my-2">
+                        <div class="project_card_item">
+                            <div class="project_image_container">
+                                <img src="assets/img/luckyone_careers_website.png" width="100%" height="auto" alt="">
+                            </div>
+                            <div class="mt-2 mb-3">
+                                <a href="#" class="project_card_link fs-5 fw-medium">Luckyone Careers Website</a>
+                                <p class="my-1 text-dark-emphasis">Design & develop recruitment website</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 my-2">
+                        <div class="project_card_item">
+                            <div class="project_image_container">
+                                <img src="assets/img/rest_religion_uidesign.png" width="100%" height="auto" alt="">
+                            </div>
+                            <div class="mt-2 mb-3">
+                                <a href="#" class="project_card_link fs-5 fw-medium">Rest Religion Blog Pages</a>
+                                <p class="my-1 text-dark-emphasis">Convert figma designs into HTML</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-6 col-12 my-2">
+                        <div class="project_card_item">
+                            <div class="project_image_container">
+                                <img src="assets/img/birthday_uidesign.png" width="100%" height="auto" alt="">
+                            </div>
+                            <div class="mt-2 mb-3">
+                                <a href="#" class="project_card_link fs-5 fw-medium">HTML Invitation Templates</a>
+                                <p class="my-1 text-dark-emphasis">Create invitation templates with HTML</p>
                             </div>
                         </div>
                     </div>
@@ -507,6 +602,17 @@
                 },
             },
         });
+
+        $(".project_image_container").on('mouseover mouseenter', function () {
+            const image = $(this).find('img');
+            const imageTransformToBe = image.innerHeight() - 350;
+            image.css('transform', 'translateY(-'+imageTransformToBe+'px)')
+        })
+        $(".project_image_container").on('mouseleave mouseout', function () {
+            const image = $(this).find('img');
+            image.css('transform', 'translateY(0px)')
+        })
+
     </script>
 </body>
 
