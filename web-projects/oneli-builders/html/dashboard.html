@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard - Client Portal | Oneli Builders</title>
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/portal_all.css">
+    <link rel="stylesheet" href="../assets/css/portal_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css" integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <!-- follow cursor  -->
+    <div class="cursor"></div>
+
+    <!-- <div class="window_preloader">
+        <span class="loader"></span>
+    </div> -->
+
+    <div id="main_wrapper">
+        <article class="content_wrapper">
+            <!-- sidebar  -->
+            <section class="sideBar text-center py-5">
+                <ul class="m-0 list-unstyled py-4 sideBar_item_list mx-auto">
+                    <li class="sidebar_listItem my-2">
+                        <a href="dashboard.html" class="sidebar_listItem_link mx-auto d-flex justify-content-center align-items-center" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Dashboard">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24"><path d="m0,3v6h11V0H3C1.346,0,0,1.346,0,3Zm13,21h8c1.654,0,3-1.346,3-3v-6h-11v9ZM21,0h-8v13h11V3c0-1.654-1.346-3-3-3ZM0,21c0,1.654,1.346,3,3,3h8v-13H0v10Z"/></svg>
+                            <span class="mt-1 sb_lil_title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sidebar_listItem my-2">
+                        <a href="contracts.html" class="sidebar_listItem_link mx-auto d-flex justify-content-center align-items-center" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Contracts">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24"><path d="M17.41,5h-4.41V.59l4.41,4.41Zm-6.41,2V0H3C1.34,0,0,1.34,0,3V22H10v-2.42l2.75-2.75-1.25-.34-1.45,.39c-.38,.08-.75,.12-1.05,.12-1.05,0-2.09-.41-3-1.05-.91,.64-1.95,1.05-3,1.05v-2c.51,0,1.02-.17,1.5-.45-.92-1.1-1.5-2.42-1.5-3.55,0-1.65,1.35-3,3-3s3,1.35,3,3c0,1.14-.58,2.45-1.5,3.55,.48,.28,.99,.45,1.5,.45,.12,0,.64-.03,1.17-.27-.1-.36-.17-.77-.17-1.23,0-.83,.68-1.5,1.5-1.5s1.5,.67,1.5,1.5c0,.46-.07,.87-.17,1.23,.53,.25,1.05,.27,1.17,.27h.57s3.43-3.42,3.43-3.42V7h-7Zm12.26,5.74c-.99-.99-2.6-.99-3.59,0l-7.67,7.67v3.59h3.59l7.67-7.67c.48-.48,.74-1.12,.74-1.8s-.26-1.32-.74-1.79Zm-18.26-1.74c0,.63,.39,1.48,1,2.24,.61-.76,1-1.61,1-2.24,0-.55-.45-1-1-1s-1,.45-1,1Z"/></svg>
+                            <span class="mt-1 sb_lil_title">Contracts</span>
+                        </a>
+                    </li>
+                    <li class="sidebar_listItem my-2">
+                        <a href="projects.html" class="sidebar_listItem_link mx-auto d-flex justify-content-center align-items-center" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Project">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24"><path d="M24,9.367v2.332l-12,7.2L0,11.7v-2.332l12,7.2,12-7.2Zm-.056-2.137L12,.064,.056,7.23l11.944,7.166,11.944-7.166ZM0,13.699v2.332l12,7.2,2-1.2v-2.332l-2,1.2L0,13.699Zm21,2.301h-2v3h-3v2h3v3h2v-3h3v-2h-3v-3Z"/></svg>
+                            <span class="mt-1 sb_lil_title">Project</span>
+                        </a>
+                    </li>
+                    <li class="sidebar_listItem my-2">
+                        <a href="chats.html" class="sidebar_listItem_link mx-auto d-flex justify-content-center align-items-center" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Message">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24"><path d="m12,0C5.383,0,0,5.383,0,12s5.383,12,12,12h12v-12C24,5.383,18.617,0,12,0Zm-5,13.5c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5,1.5.672,1.5,1.5-.672,1.5-1.5,1.5Zm5,0c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5,1.5.672,1.5,1.5-.672,1.5-1.5,1.5Zm5,0c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5,1.5.672,1.5,1.5-.672,1.5-1.5,1.5Z"/></svg>
+                            <span class="mt-1 sb_lil_title">Message</span>
+                        </a>
+                    </li>
+                    <li class="sidebar_listItem my-2">
+                        <a href="meetings.html" class="sidebar_listItem_link mx-auto d-flex justify-content-center align-items-center" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Meetings">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24"><path xmlns="http://www.w3.org/2000/svg" d="M21,12.418V11A9,9,0,0,0,3,11v1.418A5,5,0,0,0,5,22H7V12H5V11a7,7,0,0,1,14,0v1H17v8H13v2h6a5,5,0,0,0,2-9.582Z"/></svg>
+                            <span class="mt-1 sb_lil_title">Meetings</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- body  -->
+            <section class="contentBody">
+                <!-- topnav  -->
+                <div class="topBar">
+                    <div class="d-flex container py-1 align-items-center justify-content-between">
+                        <a href="dashboard.html">
+                            <img src="../assets/img/mini_logo.png" width="60" height="auto" alt="">
+                        </a>
+                        <div class="d-flex align-items-center">
+                            <!-- notification  -->
+                            <div>
+                                <button class="btn btn-transparent position-relative d-inline-flex shadow-none border-0" data-bs-toggle="offcanvas" data-bs-target="#notification" aria-controls="notification">
+                                    <div class="newItem_dot"></div>
+                                    <i class='bx bx-bell fs-4'></i>
+                                </button>
+                                <div class="offcanvas offcanvas-end" tabindex="-1" id="notification" aria-labelledby="notificationLabel">
+                                    <div class="all_notification_list animate__animated">
+                                        <div class="d-flex align-items-center justify-content-between p-3">
+                                            <p class="fs-5 fw-medium my-0">Notifications (3)</p>
+                                            <button type="button" class="btn btn-transparent d-inline-flex border-0 shadow-none text-white p-0" data-bs-dismiss="offcanvas"><i class="bx bx-x fs-4"></i></button>
+                                        </div>
+                                        <div class="notification_section_body">
+                                            <ul class="notification_list">
+                                                <li class="notification_list_item new position-relative">
+                                                    <div class="new_item">
+                                                        <i class="bx bxs-circle small"></i>
+                                                    </div>
+                                                    <p class="my-0 fw-bold notification_list_title">Kitchen Renovation: Demolition & Prep Work In Progress!</p>
+                                                    <p class="my-0 fw-medium fs_6 notification_list_time ms-2">2h ago</p>
+                                                </li>
+                                                <li class="notification_list_item new position-relative">
+                                                    <div class="new_item">
+                                                        <i class="bx bxs-circle small"></i>
+                                                    </div>
+                                                    <p class="my-0 fw-bold notification_list_title">Kitchen renovation: Payment Received for Cabinet Selection!</p>
+                                                    <p class="my-0 fw-medium fs_6 notification_list_time ms-2">3h ago</p>
+                                                </li>
+                                                <li class="notification_list_item new position-relative">
+                                                    <div class="new_item">
+                                                        <i class="bx bxs-circle small"></i>
+                                                    </div>
+                                                    <p class="my-0 fw-bold notification_list_title">New Message from Project Manager: John Smith</p>
+                                                    <p class="my-0 fw-medium fs_6 notification_list_time ms-2">3h ago</p>
+                                                </li>
+                                                <li class="notification_list_item">
+                                                    <p class="my-0 fw-medium notification_list_title">Milestone Update: Countertop Selection Finalized</p>
+                                                    <p class="my-0 fs_6 notification_list_time ms-2">12h ago</p>
+                                                </li>
+                                                <li class="notification_list_item">
+                                                    <p class="my-0 fw-medium notification_list_title">Reminder: Upcoming Inspection Scheduled for July 15th</p>
+                                                    <p class="my-0 fs_6 notification_list_time ms-2">1d ago</p>
+                                                </li>
+                                                <li class="notification_list_item">
+                                                    <p class="my-0 fw-medium notification_list_title">Hey Alex! Your Kitchen Plans are Now Available!</p>
+                                                    <p class="my-0 fs_6 notification_list_time ms-2">2d ago</p>
+                                                </li>
+                                                <li class="notification_list_item">
+                                                    <p class="my-0 fw-medium notification_list_title">Action Required: Review Change Order for Additional Lighting</p>
+                                                    <p class="my-0 fs_6 notification_list_time ms-2">1w ago</p>
+                                                </li>
+                                                <li class="notification_list_item">
+                                                    <p class="my-0 fw-medium notification_list_title">Congratulations! Your Kitchen Renovation Project is 50% Complete!</p>
+                                                    <p class="my-0 fs_6 notification_list_time ms-2">4w ago</p>
+                                                </li>
+                                                <div class="text-center">
+                                                    <button class="btn_peach p-2 px-3 rounded-pill fs_6 my-2">Load More</button>
+                                                </div>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="notification_detail_section animate__animated animate__fadeInRight">
+                                        <div class="py-2">
+                                            <button type="button" id="backToNotificationList" class="btn btn-transparent d-inline-flex align-items-center border-0 shadow-none text-white p-0"><i class="bx bx-chevron-left fs_5"></i>Back</button>
+                                        </div>
+                                        <p class="fs_5 my-2 fw-medium">Kitchen Renovation: Demolition & Prep Work In Progress!</p>
+                                        <p class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi animi a inventore alias tenetur voluptas, eveniet accusamus sunt, consequuntur culpa exercitationem quae repellat ullam distinctio impedit deleniti veniam saepe? Vitae molestias nobis voluptates sunt tempore, consectetur deserunt eum dolor ratione quam vero accusamus dolorum nesciunt facere eveniet dolore unde quia a debitis harum sint cumque eius. Dolore nam nostrum sapiente.</p>
+                                    </div> 
+                                </div>
+                            </div>
+                            <!-- user profile  -->
+                            <div>
+                                <button class="btn btn-transparent p-0 ms-1 shadow-none border-0" data-bs-toggle="offcanvas" data-bs-target="#userProfile" aria-controls="userProfile">
+                                    <div class="user_profile rounded-circle" style="background-image: url(../assets/img/man_dummmy_image.jpg); background-size: cover;"></div>
+                                </button>
+                                <div class="offcanvas offcanvas-end" tabindex="-1" id="userProfile" aria-labelledby="userProfileLabel">
+                                    <div class="d-flex align-items-center justify-content-between p-3">
+                                        <p class="fs-5 fw-medium my-0">Account Settings</p>
+                                        <button type="button" class="btn btn-transparent d-inline-flex border-0 shadow-none text-white p-0" data-bs-dismiss="offcanvas"><i class="bx bx-x fs-4"></i></button>
+                                    </div>
+                                    <div class="account_setting_container fst_sans p-2 py-3">
+                                        <a href="profile.html" class="userBigAvatar position-relative" style="background: url(../assets/img/man_dummmy_image.jpg) center; background-size: cover;">
+                                            <div class="onlineDot"></div>
+                                            <div class="position-absolute top-0 end-0 bottom-0 start-0 h-100 w-100 editProfile_btn"><i class="bx bx-pencil fs-4"></i></div>
+                                        </a>
+                                        <p class="fs-5 text-white fw-medium my-1 text-center">Alex Hales Havandaas</p>
+                                        <p class="my-1 text-center">@alexhales55</p>
+                                        <p class="my-1 mb-2 d-flex justify-content-center align-items-center"><i class='bx bxs-map me-1'></i> London, Greater London</p>
+                                        <div class="profile_completion_progress_section rounded">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <p class="fst_sans d-block my-1 fw-medium small">Profile Completeness</p>
+                                                <p class="my-1 small">30%</p>
+                                            </div>
+                                            <div class="progress profile_completion_progress" role="progressbar" aria-label="profile completeness">
+                                                <div class="progress-bar percent_50" style="width: 30%"></div>
+                                            </div>
+                                            <div class="text-end">
+                                                <a href="profile.html" class="fst_sans profile_completion_link d-block my-1 small">Complete Now<i class='bx bx-right-arrow-alt'></i></a>
+                                            </div>
+                                        </div>
+                                        <ul class="user_quick_links m-0 my-2">
+                                            <li class="my-2">
+                                                <a href="profile.html">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="user_links_svg" viewBox="0 0 24 24" width="17" height="17"><path d="M12,12A6,6,0,1,0,6,6,6.006,6.006,0,0,0,12,12ZM12,2A4,4,0,1,1,8,6,4,4,0,0,1,12,2Z"/><path d="M12,14a9.01,9.01,0,0,0-9,9,1,1,0,0,0,2,0,7,7,0,0,1,14,0,1,1,0,0,0,2,0A9.01,9.01,0,0,0,12,14Z"/></svg>
+                                                    <span class="ms-1">&nbsp;Profile</span>
+                                                </a>
+                                            </li>
+                                            <li class="my-2">
+                                                <a href="contracts.html">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="user_links_svg" viewBox="0 0 24 24" width="17" height="17"><path d="M23.12,11.88c-1.13-1.13-3.11-1.13-4.24,0l-7,7c-.57,.57-.88,1.32-.88,2.12v2c0,.55,.45,1,1,1h2c.8,0,1.55-.31,2.12-.88l7-7c.57-.57,.88-1.32,.88-2.12s-.31-1.55-.88-2.12Zm-1.41,2.83l-7,7c-.19,.19-.44,.29-.71,.29h-1v-1c0-.26,.11-.52,.29-.71l7-7c.38-.38,1.04-.38,1.41,0,.19,.19,.29,.44,.29,.71s-.1,.52-.29,.71Zm-7.71-1.21c0-.83-.67-1.5-1.5-1.5s-1.5,.67-1.5,1.5c0,.32,.1,.67,.29,.99-.32,.28-.74,.51-1.29,.51-.44,0-.88-.13-1.3-.34,.81-1.16,1.3-2.55,1.3-3.66,0-1.65-1.35-3-3-3s-3,1.35-3,3c0,1.22,.68,2.65,1.71,3.8-.24,.13-.48,.2-.71,.2-.55,0-1,.45-1,1s.45,1,1,1c.83,0,1.61-.33,2.3-.85,.84,.53,1.76,.85,2.7,.85,2.6,0,4-2.48,4-3.5Zm-6.87-.1c-.68-.79-1.13-1.72-1.13-2.4,0-.55,.45-1,1-1s1,.45,1,1c0,.72-.35,1.63-.87,2.4Zm1.87,7.6c0,.55-.45,1-1,1h-3c-2.76,0-5-2.24-5-5V5C0,2.24,2.24,0,5,0h5.76c1.07,0,2.07,.42,2.83,1.17l3.24,3.24c.76,.76,1.17,1.76,1.17,2.83v1.76c0,.55-.45,1-1,1s-1-.45-1-1v-1.76c0-.08,0-.16-.02-.24h-2.98c-1.1,0-2-.9-2-2V2.02c-.08,0-.16-.02-.24-.02H5c-1.65,0-3,1.35-3,3v12c0,1.65,1.35,3,3,3h3c.55,0,1,.45,1,1Z" /></svg>
+                                                    <span class="ms-1">&nbsp;Contracts</span>
+                                                </a>
+                                            </li>
+                                            <li class="my-2">
+                                                <a href="projects.html">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="user_links_svg" viewBox="0 0 24 24" width="17" height="17"><path d="M.485,8.088l9.862,5.917c.51,.306,1.081,.459,1.653,.459,.571,0,1.143-.153,1.653-.459l9.861-5.917c.301-.181,.485-.506,.485-.857s-.184-.677-.485-.857L13.654,.456c-1.021-.613-2.287-.613-3.307,0L.485,6.373c-.301,.181-.485,.506-.485,.857s.184,.677,.485,.857ZM11.376,2.171h0c.384-.23,.863-.23,1.248,0l8.432,5.06-8.432,5.06c-.385,.23-.864,.23-1.249,0L2.944,7.23,11.376,2.171Zm12.624,17.829c0,.553-.448,1-1,1h-2v2c0,.553-.448,1-1,1s-1-.447-1-1v-2h-2c-.552,0-1-.447-1-1s.448-1,1-1h2v-2c0-.553,.448-1,1-1s1,.447,1,1v2h2c.552,0,1,.447,1,1Zm-11.143,3.286c-.188,.312-.519,.485-.858,.485-.175,0-.353-.046-.514-.143L.485,17.029c-.474-.284-.627-.898-.343-1.372,.283-.474,.897-.628,1.372-.343l11,6.6c.474,.284,.627,.898,.343,1.372Zm11-12.196c.284,.474,.131,1.088-.343,1.372l-11,6.6c-.159,.095-.336,.143-.515,.143s-.356-.048-.515-.143L.485,12.462c-.474-.284-.627-.898-.343-1.372,.283-.475,.897-.628,1.372-.343l10.485,6.291,10.485-6.291c.474-.284,1.088-.131,1.372,.343Z"/></svg>
+                                                    <span class="ms-1">&nbsp;Projects</span>
+                                                </a>
+                                            </li>
+                                            <li class="my-2">
+                                                <a href="contact.html">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="user_links_svg" viewBox="0 0 24 24" width="17" height="17"><path d="M21,12.424V11A9,9,0,0,0,3,11v1.424A5,5,0,0,0,5,22a2,2,0,0,0,2-2V14a2,2,0,0,0-2-2V11a7,7,0,0,1,14,0v1a2,2,0,0,0-2,2v6H14a1,1,0,0,0,0,2h5a5,5,0,0,0,2-9.576ZM5,20H5a3,3,0,0,1,0-6Zm14,0V14a3,3,0,0,1,0,6Z"/></svg>
+                                                    <span class="ms-1">&nbsp;Meetings</span>
+                                                </a>
+                                            </li>
+                                            <li class="my-2">
+                                                <a target="_blank" href="https://www.ratedpeople.com/profile/oneli#reviews-and-ratings">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="user_links_svg" viewBox="0 0 24 24" width="17" height="17"><path d="m6.516 14.323-1.49 6.452a.998.998 0 0 0 1.529 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082a1 1 0 0 0-.59-1.74l-5.701-.454-2.467-5.461a.998.998 0 0 0-1.822 0L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.214 4.107zm2.853-4.326a.998.998 0 0 0 .832-.586L12 5.43l1.799 3.981a.998.998 0 0 0 .832.586l3.972.315-3.271 2.944c-.284.256-.397.65-.293 1.018l1.253 4.385-3.736-2.491a.995.995 0 0 0-1.109 0l-3.904 2.603 1.05-4.546a1 1 0 0 0-.276-.94l-3.038-2.962 4.09-.326z"></path></svg>
+                                                    <span class="ms-1">&nbsp;Rate Us</span>
+                                                </a>
+                                            </li>
+                                            <li class="my-2">
+                                                <a href="send_feedback.html">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="user_links_svg" viewBox="0 0 24 24" width="17" height="17"><path d="m21,3H3c-1.654,0-3,1.346-3,3v13h6.923l3.749,3.157c.382.339.861.507,1.337.507.468,0,.931-.163,1.292-.484l3.848-3.18h6.852V6c0-1.654-1.346-3-3-3Zm1,14h-5.571l-4.448,3.645-4.327-3.645H2v-6.487l1.844,1.026-.724,2.265.4.302,1.82-1.407,1.811,1.401.421-.291-.737-2.239,1.832-1.061v.004l1.844,1.026-.724,2.265.4.302,1.82-1.407,1.811,1.401.421-.291-.737-2.239,1.832-1.061v.004l1.844,1.026-.724,2.265.4.302,1.82-1.407,1.811,1.401.421-.291-.737-2.239,1.832-1.061v6.491Zm0-7h-2.403l-.653-2.501h-.54l-.654,2.501h-4.82l-.653-2.501h-.54l-.654,2.501h-4.82l-.653-2.501h-.54l-.654,2.501h-2.416v-4c0-.551.448-1,1-1h18c.552,0,1,.449,1,1v4Z"/></svg>
+                                                    <span class="ms-1">&nbsp;Send Feedback</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <a href="index.html" class="btn_edit_profile text-decoration-none d-flex w-100 fw-medium justify-content-center align-items-center rounded my-2 p-2 px-3"><i class='bx bx-log-out me-1' ></i> Logout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- main content of body starts  -->
+                <div class="contentBody_content container-lg">
+                    <section class="intro_section p-3 d-flex align-items-center">
+                        <div class="row m-0 align-items-center">
+                            <div class="col-md-6 col-12 p-2 my-2">
+                                <p class="fs-5 fst_sans fw-normal m-0 text_darker_brown">Welcome Abdul,</p>
+                                <h1 class="display-5 fst_serif fw-medium mt-0 my-2 text_darker_brown">You are in control now!</h1>
+                                <p class="my-2 fst_sans fw-normal fs_5 text_darker_brown">Take full control of your projects. Track, manage, update details, and file new contracts seamlessly with our expert team.</p>
+                            </div>
+                            <div class="col-md-6 col-12 p-2 my-2 text-center">
+                                <img src="../assets/img/a_man_illustration.png" width="500" height="auto" class="img-fluid" alt="flat illustration of young man">
+                            </div>
+                        </div>
+                    </section>
+                    <!-- contract  -->
+                    <section class="contract_section my-5">
+                        <div class="mb-3">
+                            <div class="d-inline-flex px-1 position-relative">
+                                <div class="spinner-grow spinner-grow-sm heading_spinner" role="status"></div>
+                                <h2 class="fst_serif h1 fw-medium my-1 text_darker_brown">Active Contracts</h2>
+                            </div>
+                            <div class="heading_line"></div>
+                        </div>
+                        <div class="row m-0 align-items-center my-4">
+                            <div class="col-md-6 col-sm-10 col-12 my-3">
+                                <div class="contract_card p-md-4 p-3 position-relative">
+                                    <div class="spinner-grow spinner-grow-sm" role="status"data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Active"></div>
+                                    <svg fill="#cea065" class="my-2" xmlns="http://www.w3.org/2000/svg" height="60" width="60" viewBox="0 0 24 24"><path d="m17.979,13.024c-1.119-1.116-2.813-1.318-4.14-.607l-4.832-4.832v-3.086c0-1.013-.545-1.956-1.422-2.462L4.604.318C3.673-.22,2.492-.063,1.73.697L.705,1.724C-.056,2.483-.211,3.665.326,4.596l1.719,2.981h0c.506.878,1.45,1.423,2.462,1.423h3.086l4.826,4.826c-.278.508-.426,1.079-.426,1.674,0,.936.365,1.814,1.028,2.476l5.014,5c.658.656,1.554,1.024,2.48,1.024.985,0,2.088-.521,2.718-1.289,1.126-1.372.976-3.475-.341-4.787l-4.913-4.899ZM3.777,6.579l-1.719-2.982c-.086-.148-.061-.337.061-.459l1.025-1.026c.122-.121.311-.147.46-.061l2.98,1.72c.26.15.422.43.422.729v2.5h-2.5c-.3,0-.579-.161-.729-.421Zm17.91,14.863c-.276.337-.666.534-1.097.556-.421.02-.841-.139-1.142-.438l-5.014-5c-.284-.283-.44-.659-.44-1.06s.157-.776.44-1.06c.294-.293.681-.44,1.067-.44s.772.147,1.066.44l4.914,4.899c.596.595.687,1.518.207,2.103Zm-11.25-4.343c.39.392.389,1.024-.002,1.414l-4.477,4.462c-.658.656-1.553,1.024-2.48,1.024-.881,0-2.088-.521-2.718-1.29-1.125-1.371-.976-3.474.342-4.786l5.668-5.655c.39-.39,1.024-.39,1.414.002.39.391.389,1.024-.002,1.414l-5.669,5.655c-.596.595-.688,1.518-.208,2.102.277.338.667.535,1.098.557.426.019.841-.139,1.142-.438l4.478-4.462c.391-.39,1.023-.39,1.415.002Zm-.544-12.465C10.813,2.291,12.917.56,15.384.117c.863-.154,1.73-.157,2.579-.006.666.118,1.203.588,1.402,1.224.229.729,0,1.531-.612,2.145l-2.335,2.242c-.485.485-.564,1.261-.165,1.749.23.281.553.445.911.464.349.017.694-.112.947-.365l2.614-2.521c.486-.486,1.213-.667,1.893-.45.664.209,1.151.762,1.272,1.441.15.848.148,1.717-.006,2.581-.281,1.572-1.1,3.036-2.306,4.123-.191.172-.431.257-.669.257-.273,0-.546-.111-.743-.33-.37-.41-.337-1.043.073-1.413.877-.79,1.472-1.852,1.676-2.988.098-.548.112-1.095.043-1.632l-2.445,2.359c-.635.637-1.53.984-2.448.936-.916-.046-1.776-.481-2.36-1.195-1.042-1.274-.904-3.226.314-4.443l2.334-2.242.009-.009c-.535-.068-1.081-.054-1.625.044-1.788.32-3.313,1.577-3.982,3.279-.201.514-.782.767-1.296.565s-.768-.782-.565-1.296Z"/></svg>
+                                    <p class="fs-3 fst_serif my-1 fw-medium text_darker_brown">Kitchen Renovation</p>
+                                    <p class="fs_5 my-1 fst_sans text_darker_brown">Upgrade your kitchen with new cabinets, countertops, and appliances. </p>
+                                    <div class="my-3">
+                                        <p class="d-flex align-items-center my-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="var(--wood_red)" viewBox="0 0 24 24" width="18" height="18"><path d="M17,10.039c-3.859,0-7,3.14-7,7,0,3.838,3.141,6.961,7,6.961s7-3.14,7-7c0-3.838-3.141-6.961-7-6.961Zm0,11.961c-2.757,0-5-2.226-5-4.961,0-2.757,2.243-5,5-5s5,2.226,5,4.961c0,2.757-2.243,5-5,5Zm1.707-4.707c.391,.391,.391,1.023,0,1.414-.195,.195-.451,.293-.707,.293s-.512-.098-.707-.293l-1-1c-.188-.188-.293-.442-.293-.707v-2c0-.552,.447-1,1-1s1,.448,1,1v1.586l.707,.707Zm5.293-10.293v2c0,.552-.447,1-1,1s-1-.448-1-1v-2c0-1.654-1.346-3-3-3H5c-1.654,0-3,1.346-3,3v1H11c.552,0,1,.448,1,1s-.448,1-1,1H2v9c0,1.654,1.346,3,3,3h4c.552,0,1,.448,1,1s-.448,1-1,1H5c-2.757,0-5-2.243-5-5V7C0,4.243,2.243,2,5,2h1V1c0-.552,.448-1,1-1s1,.448,1,1v1h8V1c0-.552,.447-1,1-1s1,.448,1,1v1h1c2.757,0,5,2.243,5,5Z"/></svg>
+                                            <span class="ms-1 fst_sans text_darker_brown fw-medium">15 May, 2024 - 15 September, 2024</span>
+                                        </p>
+                                        <p class="d-flex align-items-center my-2">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="var(--wood_red)" viewBox="0 0 24 24" width="18" height="18"><path d="M18.201,9.429l.454-.874c.373-.72,.441-1.539,.191-2.31s-.787-1.394-1.474-1.736L11.213,1.092C7.267-.959,4.302,.343,2.887,1.301c-.597,.403-.927,1.072-.883,1.789,.043,.708,.446,1.324,1.076,1.65l4.024,2.168L.314,19.665c-.723,1.455-.139,3.247,1.303,3.997,.434,.226,.905,.339,1.379,.339,.313,0,.628-.049,.935-.149,.771-.252,1.395-.791,1.742-1.492l6.707-12.609,1.797,.968c.433,.221,.896,.326,1.354,.326,1.086,0,2.138-.591,2.671-1.615ZM3.894,21.445c-.12,.242-.327,.421-.584,.505-.258,.084-.531,.062-.771-.063-.48-.249-.675-.847-.447-1.307L8.865,7.857l1.754,.945L3.894,21.445ZM16.88,7.633l-.453,.874c-.253,.485-.857,.678-1.321,.439L4.02,2.975c-.006-.003-.005-.015-.012-.018,.744-.504,1.776-.958,3.069-.958,.931,0,1.997,.235,3.19,.854l6.173,3.424c.241,.121,.42,.328,.504,.585,.083,.257,.061,.53-.064,.771Zm7.12-1.633c0,.553-.447,1-1,1h-1c-.553,0-1-.447-1-1s.447-1,1-1h1c.553,0,1,.447,1,1Zm-3.947,7.384c.341,.435,.265,1.062-.171,1.403-.183,.144-.399,.213-.615,.213-.297,0-.591-.132-.788-.384l-.783-1c-.341-.435-.265-1.062,.171-1.403,.434-.342,1.062-.265,1.403,.171l.783,1Zm2.938-2.393c-.184,.325-.522,.509-.872,.509-.166,0-.335-.041-.49-.129l-.888-.5c-.48-.271-.651-.881-.38-1.362,.271-.479,.88-.653,1.362-.38l.888,.5c.48,.271,.651,.881,.38,1.362Z"/></svg>
+                                            <span class="ms-1 fst_sans text_darker_brown fw-medium">Renovation & remodeling</span>
+                                        </p>
+                                    </div>
+                                    <div class="my-2">
+                                        <a href="contract_details.html" class="btn_wood_red text-decoration-none w-100 text_peach rounded d-inline-flex align-items-center justify-content-center" style="padding: 0.9rem 1rem;">
+                                            View Contract
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="var(--peach)" viewBox="0 0 24 24" width="20" height="20"><path d="M18,12h0a2,2,0,0,0-.59-1.4l-4.29-4.3a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42L15,11H5a1,1,0,0,0,0,2H15l-3.29,3.29a1,1,0,0,0,1.41,1.42l4.29-4.3A2,2,0,0,0,18,12Z"/></svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- add project  -->
+                    <section class="add_project_section my-5">
+                        <div class="row m-0 align-items-center">
+                            <div class="col-lg-7 col-md-6 col-12 p-2 my-2">
+                                <div class="mb-4">
+                                    <h2 class="fst_serif h1 fw-medium my-1 text_darker_brown">Explore your projects</h2>
+                                    <div class="heading_line"></div>
+                                </div>
+                                <p class="my-2 fst_sans fw-normal fs_5 text_darker_brown">Manage and update your completed and active projects with our expert consultants. We specialize in turning your ideas into reality, providing professional insight and personalized support. Let's collaborate to bring your vision to life and ensure your project's success.</p>
+                                <div class="my-3">
+                                    <button class="btn_wood_red rounded-pill d-inline-flex align-items-center" style="padding: 0.8rem 1.2rem;">Explore all&nbsp;<i class="bx bx-arrow-back bx-rotate-180"></i></button>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-md-6 col-12 p-2 my-2 text-center">
+                                <img src="../assets/img/discuss_project.png" width="500" height="auto" class="img-fluid" alt="flat illustration of young man">
+                            </div>
+                        </div>
+                    </section>
+                    <!-- project  -->
+                    <section class="projects_section my-5">
+                        <div class="mb-3">
+                            <div class="d-inline-flex px-1 position-relative">
+                                <div class="spinner-grow spinner-grow-sm heading_spinner" role="status"></div>
+                                <h2 class="fst_serif h1 fw-medium my-1 text_darker_brown">Active Projects</h2>
+                            </div>
+                            <div class="heading_line"></div>
+                        </div>
+                        <div class="row align-items-center">
+                            <div class="col-lg-4 col-md-6 col-sm-6 col-12 my-3">
+                                <div class="project_card">
+                                    <div class="project_img" style="background: url('../assets/img/kitchen_renovation.jpg') center; background-size: cover;">
+                                    </div>
+                                    <div class="project_details">
+                                        <p class="fs-4 my-1 fw-medium text_wood_red">Kitchen Renovation</p>
+                                        <p class="text_darker_brown my-1">Upgrade your kitchen with new cabinets, countertops, and appliances.</p>
+                                        <div class="project_status active text-uppercase my-2 me-1 d-inline-flex">Status: In Progress</div>
+                                        <a href="project_details.html" class="btn_wood_red my-2 d-block text-center rounded w-100 text-decoration-none" style="padding: 0.6rem;">Explore Project</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- contact  -->
+                    <section class="contact_section p-4 my-5">
+                        <div class="row align-items-center">
+                            <div class="col-lg-7 col-md-6 col-sm-10 col-12 my-2">
+                                <div class="mb-4">
+                                    <h2 class="display-5 fst_serif fw-medium my-2 text_darker_brown">Need to discuss something?</h2>
+                                    <div class="heading_line" style="background: var(--wood_red) !important;"></div>
+                                </div>
+                                <p class="my-2 fst_sans fw-normal fs_5 text_darker_brown">Schedule a video call with our team via Zoom. Share your customization ideas effortlessly and receive personalized assistance, all from the comfort of your own space.</p>
+                                <div class="my-3">
+                                    <button class="btn_wood_red rounded-pill d-inline-flex align-items-center" style="padding: 0.8rem 1.2rem;"><i class="bx bx-phone"></i>&nbsp;Request a Call</button>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-md-6 col-sm-10 col-12 my-2">
+                                <img src="../assets/img/a_man_on_zoom_call.png" width="500" height="auto" class="img-fluid" alt="">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </article>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../assets/js/app.js"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        function setTooltipPlacement() {
+            var screenWidth = window.innerWidth;
+            var showToolTip = screenWidth >= 1024;
+            if (showToolTip) {
+                var tooltipPlacement = 'right'; 
+                $('.sidebar_listItem_link').attr('data-bs-placement', tooltipPlacement);
+                $('.sidebar_listItem_link').tooltip();
+            } else {
+                $('.sidebar_listItem_link').tooltip('dispose');
+            }
+        }
+
+        $(window).on('resize load', function() {
+            setTooltipPlacement();
+        });
+
+        // notifications
+        $('.notification_list_item').click(function() {
+            $('.all_notification_list').addClass('animate__fadeOutLeft')
+            setTimeout(()=> {
+                $(".all_notification_list").hide();
+                $(".notification_detail_section").show();
+                $('.notification_detail_section').removeClass('animate__fadeOutLeft').addClass('animate__fadeInRight animate__faster')
+            }, 400)
+        });
+
+        $("#backToNotificationList").click(function () {
+            $('.notification_detail_section').addClass('animate__fadeOutLeft')
+            setTimeout(()=> {
+                $(".notification_detail_section").hide();
+                $(".all_notification_list").show();
+                $('.all_notification_list').removeClass('animate__fadeOutLeft').addClass('animate__fadeInRight animate__faster')
+            }, 400)
+        });
+    </script>
+</body>
+
+</html>

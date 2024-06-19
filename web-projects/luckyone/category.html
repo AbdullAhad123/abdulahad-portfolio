@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Job Categories | Luckyone Careers</title>
+    <link rel="shortcut icon" href="assets/img/lucky-one-icon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css" integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+    <style>
+        .glance_cards {
+            height: auto;
+            width: auto;
+            background: #ffffff;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .glance_cards:hover {
+            box-shadow: 1px 2px 7px 0px #00000038;
+        }
+    </style>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+            <div class="fixed_container container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/img/logo.png" width="180" height="auto" alt="luckyone logo">
+                </a>
+                <div class="d-flex align-items-center">
+                    <a href="jobs.html" class="btn_primary d-lg-none d-inline-flex text-decoration-none align-items-center me-2 find_job_nav_btn">Find Job <i class='bx bx-search-alt ms-1 fs-5' ></i></a>
+                    <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+                        <i class="bx bx-menu fs-2"></i>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item mx-lg-2">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item mx-lg-2">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item mx-lg-2">
+                            <a class="nav-link" href="category.html">Categories</a>
+                        </li>
+                        <li class="nav-item mx-lg-2">
+                            <a class="nav-link" href="how_to_apply.html">How to apply?</a>
+                        </li>
+                    </ul>
+                    <a href="jobs.html" class="btn_primary d-lg-inline-flex text-decoration-none align-items-center d-none">Find Job <i class='bx bx-search-alt ms-1 fs-5' ></i></a>
+                </div>
+            </div>
+        </nav>
+        <div class="offcanvas offcanvas-start w-100" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+            <div class="d-flex p-2 align-items-center justify-content-between">
+                <img src="assets/img/logo.png" width="auto" height="auto" alt="logo">
+                <button class="btn btn-transparent shadow-none border-0" data-bs-dismiss="offcanvas">
+                    <i class="bx bx-x text-white fs-3"></i>
+                </button>
+            </div>
+            <div class="p-3 my-3">
+                <ul class="list-unstyled m-0">
+                    <li class="my-3"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                    <li class="my-3"><a href="about.html" class="text-white text-decoration-none">About</a></li>
+                    <li class="my-3"><a href="jobs.html" class="text-white text-decoration-none">Find Jobs</a></li>
+                    <li class="my-3"><a href="category.html" class="text-white text-decoration-none">Categories</a></li>
+                    <li class="my-3"><a href="how_to_apply.html" class="text-white text-decoration-none">How to apply?</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section id="category_intro" class="d-flex align-items-center position-relative">
+        <div class="fixed_container container">
+            <h1 class="display-5 text-center text_light fw-medium my-2">Categories</h1>
+            <p class="fs-5 text-center text_light my-2">Explore categories and discover finest jobs by categories</p>
+        </div>
+    </section>
+
+    <section id="category" class="py_5 pb-0">
+        <div class="fixed_container container">
+            <p class="text-center text_secondary my-2 fs-5 text-uppercase">Categories List</p>
+            <h2 class="text-center fw-semibold my-2 fs-1">Browse All Categories</h2>
+            <div class="heading_line mx-auto"></div>
+            <div class="row m-0 my-4 align-items-center">
+                <div class="col-lg-4 col-md-5 col-sm-6 col-12 my-3">
+                    <div class="category_card position-relative p-3">
+                        <a href="#" class="category_card_navigation_link text-decoration-none fs-5"><i class="bx bx-arrow-back bx-rotate-180"></i></a>
+                        <p class="fs-5 fw-medium my-1">Administration</p>
+                        <p class="small my-2">Efficiently manage and support office operations.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5 col-sm-6 col-12 my-3">
+                    <div class="category_card position-relative p-3">
+                        <a href="#" class="category_card_navigation_link text-decoration-none fs-5"><i class="bx bx-arrow-back bx-rotate-180"></i></a>
+                        <p class="fs-5 fw-medium my-1">Civil and Fabrication</p>
+                        <p class="small my-2">Oversee construction and maintenance projects.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5 col-sm-6 col-12 my-3">
+                    <div class="category_card position-relative p-3">
+                        <a href="#" class="category_card_navigation_link text-decoration-none fs-5"><i class="bx bx-arrow-back bx-rotate-180"></i></a>
+                        <p class="fs-5 fw-medium my-1">Corporate Management</p>
+                        <p class="small my-2">Lead strategic initiatives and corporate planning.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5 col-sm-6 col-12 my-3">
+                    <div class="category_card position-relative p-3">
+                        <a href="#" class="category_card_navigation_link text-decoration-none fs-5"><i class="bx bx-arrow-back bx-rotate-180"></i></a>
+                        <p class="fs-5 fw-medium my-1">Customer Services</p>
+                        <p class="small my-2">Provide exceptional service and support to customers.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5 col-sm-6 col-12 my-3">
+                    <div class="category_card position-relative p-3">
+                        <a href="#" class="category_card_navigation_link text-decoration-none fs-5"><i class="bx bx-arrow-back bx-rotate-180"></i></a>
+                        <p class="fs-5 fw-medium my-1">Finance</p>
+                        <p class="small my-2">Manage financial planning, reporting, and analysis.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5 col-sm-6 col-12 my-3">
+                    <div class="category_card position-relative p-3">
+                        <a href="#" class="category_card_navigation_link text-decoration-none fs-5"><i class="bx bx-arrow-back bx-rotate-180"></i></a>
+                        <p class="fs-5 fw-medium my-1">Food and Beverage</p>
+                        <p class="small my-2">Deliver outstanding dining experiences to customers.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5 col-sm-6 col-12 my-3">
+                    <div class="category_card position-relative p-3">
+                        <a href="#" class="category_card_navigation_link text-decoration-none fs-5"><i class="bx bx-arrow-back bx-rotate-180"></i></a>
+                        <p class="fs-5 fw-medium my-1">Health Safety and Environment</p>
+                        <p class="small my-2">Ensure workplace safety and environmental compliance.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5 col-sm-6 col-12 my-3">
+                    <div class="category_card position-relative p-3">
+                        <a href="#" class="category_card_navigation_link text-decoration-none fs-5"><i class="bx bx-arrow-back bx-rotate-180"></i></a>
+                        <p class="fs-5 fw-medium my-1">Marketing</p>
+                        <p class="small my-2">Create and implement marketing strategies and campaigns.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-5 col-sm-6 col-12 my-3">
+                    <div class="category_card position-relative p-3">
+                        <a href="#" class="category_card_navigation_link text-decoration-none fs-5"><i class="bx bx-arrow-back bx-rotate-180"></i></a>
+                        <p class="fs-5 fw-medium my-1">Information Technology</p>
+                        <p class="small my-2">Support and develop IT infrastructure and systems.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer pb-4">
+        <div class="fixed_container container">
+            <div class="row mb-5 align-items-start justify-content-lg-between justify-content-center">
+                <div class="col-md-3">
+                    <img src="assets/img/logo.png" width="auto" height="auto" alt="luckyone logo" class="mb-3">
+                    <h3>Lucky Landmark (Pvt) Ltd.</h3>
+                    <p class="small">LuckyOne Mall,<br>Opp. UBL Sports Complex,<br>Main Rashid Minhas Road<br>Karachi, Pakistan.</p>
+                </div>
+                <div class="col-md-2 ml-auto">
+                    <h3 class="mt-md-4 mt-3">Links</h3>
+                    <ul class="list-unstyled links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Find Jobs</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">How to apply</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 ml-auto">
+                    <h3 class="mt-md-4 mt-3">Looking for job?</h3>
+                    <p>Submit you resume at lucky landmark (Pvt) Ltd via email. Just Mail us your resume at </p>
+                    <a class="text-white-50" target="_blank" href="mailto:careers@luckyone.com.pk">careers@luckyone.com.pk</a>
+                </div>
+                <div class="col-md-3 ml-auto">
+                    <h3 class="mt-md-4 mt-3">Contact</h3>
+                    <ul class="list-unstyled links">
+                        <li><a class="text-white-50" href="tel:+922136321311">Ph: (+92) 21 36321311</a></li>
+                        <li><a class="text-white-50" target="_blank" href="mailto:info@luckyone.com.pk">info@luckyone.com.pk</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="line"></div>
+                </div>
+            </div>
+            <p class="small text-center my-1">All rights reserved. Lucky Landmark (Pvt) Ltd.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

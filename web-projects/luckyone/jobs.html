@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Find the finest jobs here | Luckyone Careers</title>
+    <link rel="shortcut icon" href="assets/img/lucky-one-icon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css" integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+    <style>
+        .glance_cards {
+            height: auto;
+            width: auto;
+            background: #ffffff;
+            border-radius: 10px;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .glance_cards:hover {
+            box-shadow: 1px 2px 7px 0px #00000038;
+        }
+    </style>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+            <div class="fixed_container container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/img/logo.png" width="180" height="auto" alt="luckyone logo">
+                </a>
+                <div class="d-flex align-items-center">
+                    <a href="jobs.html" class="btn_primary d-lg-none d-inline-flex text-decoration-none align-items-center me-2 find_job_nav_btn">Find Job <i class='bx bx-search-alt ms-1 fs-5' ></i></a>
+                    <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+                        <i class="bx bx-menu fs-2"></i>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item mx-lg-2">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item mx-lg-2">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item mx-lg-2">
+                            <a class="nav-link" href="category.html">Categories</a>
+                        </li>
+                        <li class="nav-item mx-lg-2">
+                            <a class="nav-link" href="how_to_apply.html">How to apply?</a>
+                        </li>
+                    </ul>
+                    <a href="jobs.html" class="btn_primary d-lg-inline-flex text-decoration-none align-items-center d-none">Find Job <i class='bx bx-search-alt ms-1 fs-5' ></i></a>
+                </div>
+            </div>
+        </nav>
+        <div class="offcanvas offcanvas-start w-100" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+            <div class="d-flex p-2 align-items-center justify-content-between">
+                <img src="assets/img/logo.png" width="auto" height="auto" alt="logo">
+                <button class="btn btn-transparent shadow-none border-0" data-bs-dismiss="offcanvas">
+                    <i class="bx bx-x text-white fs-3"></i>
+                </button>
+            </div>
+            <div class="p-3 my-3">
+                <ul class="list-unstyled m-0">
+                    <li class="my-3"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                    <li class="my-3"><a href="about.html" class="text-white text-decoration-none">About</a></li>
+                    <li class="my-3"><a href="jobs.html" class="text-white text-decoration-none">Find Jobs</a></li>
+                    <li class="my-3"><a href="category.html" class="text-white text-decoration-none">Categories</a></li>
+                    <li class="my-3"><a href="how_to_apply.html" class="text-white text-decoration-none">How to apply?</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section id="job_intro" class="d-flex align-items-center position-relative">
+        <div class="fixed_container container">
+            <h1 class="display-5 text-center text_light fw-medium my-2">Find the finest jobs</h1>
+            <p class="fs-5 text-center text_light my-2">Explore the jobs that fits your expertise and area of interest. Start hunting job!</p>
+            <div class="search_container my-4 mb-3 mx-auto">
+                <input type="text" class="search_input" placeholder="Enter Keywords or Job title" />
+                <button class="filters_btn rounded-5 d-inline-flex align-items-center mx-1" data-bs-toggle="modal" data-bs-target="#filterPopup"><i class='bx bx-filter fs-5 me-1'></i> <span>Filters</span></button>
+                <button class="search_btn rounded-5 d-inline-flex align-items-center mx-1"><span>Search</span><i class='bx bx-search fs-5 ms-1'></i></button>
+            </div>
+            <div class="trend_search d-flex flex-wrap align-items-center mx-auto">
+                <span class="text-white fw-medium my-1 me-2">Top Searches:</span>
+                <span class="m-1 trend_search_tag"><a href="#">Web Developer</a></span>
+                <span class="m-1 trend_search_tag"><a href="#">HR manager</a></span>
+                <span class="m-1 trend_search_tag"><a href="#">Sales Executive</a></span>
+                <span class="m-1 trend_search_tag"><a href="#">Finance Manager</a></span>
+            </div>
+            <div class="modal fade" id="filterPopup" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                aria-labelledby="filterPopupLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" style="max-width: 700px;">
+                    <div class="modal-content rounded-0 shadow-lg">
+                        <div class="modal-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <p class="modal-title fw-semibold fs-4 my-0" id="filterPopupLabel">Filters</p>
+                                <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="p-2">
+                                <div class="my-3">
+                                    <p class="fs-6 my-2 fw-medium">Date Posted</p>
+                                    <select class="form-select p-2 px-3 shadow-sm" aria-label="Default select example">
+                                        <option selected>Select Date Posted</option>
+                                        <option value="1">Last 24 hours</option>
+                                        <option value="2">Last 3 days</option>
+                                        <option value="3">Last 7 days</option>
+                                        <option value="4">Last 14 days</option>
+                                    </select>
+                                </div>
+                                <div class="my-3">
+                                    <p class="fs-6 my-2 fw-medium">Job Type</p>
+                                    <select class="form-select p-2 px-3 shadow-sm" aria-label="Default select example">
+                                        <option selected>Select Job Type</option>
+                                        <option value="1">Part-time</option>
+                                        <option value="2">Full-time</option>
+                                        <option value="3">Contract</option>
+                                        <option value="4">Internship</option>
+                                    </select>
+                                </div>
+                                <div class="my-3">
+                                    <p class="fs-6 my-2 fw-medium">Category</p>
+                                    <select class="form-select p-2 px-3 shadow-sm" aria-label="Default select example">
+                                        <option selected>Select the Category</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+                                <div class="my-3 text-end">
+                                    <button class="btn_primary rounded-pill">Apply Filters</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="jobs" class="py_5 pb-0">
+        <div class="fixed_container container">
+            <p class="text-center text_secondary my-2 fs-5 text-uppercase">Job List</p>
+            <h2 class="text-center fw-semibold my-2 fs-1">Browse All Jobs</h2>
+            <div class="heading_line mx-auto"></div>
+            <div class="row m-0 my-4 align-items-center justify-content-center">
+                <div class="col-lg-5 col-md-6 col-sm-10 col-12 my-3">
+                    <div class="job_card p-3">
+                        <div class="d-flex align-items-center my-1 mb-3">
+                            <span class="bg-white mx-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="16" height="16"><path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM4.736,11.5l3.509,1.755L10,16.764l1.755-3.509L15.264,11.5,11.755,9.745,10,6.236,8.245,9.745ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"/></svg>
+                                Featured    
+                            </span>
+                            <span class="bg-white mx-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="16" height="16"><path d="M12.566,24H8.719l2-8H6.586a2.561,2.561,0,0,1-2.451-3.3L7.976,0h9.467l-3,8h4.023a2.533,2.533,0,0,1,2.11,3.932Zm-1.285-2h.212l7.416-11.174A.532.532,0,0,0,18.466,10H11.557l3-8H9.46L6.049,13.276A.561.561,0,0,0,6.586,14h6.7Z"/></svg>
+                                Urgent
+                            </span>
+                        </div>
+                        <p class="fs-4 fw-medium m-0">Frontend Developer</p>
+                        <p class="m-0">Information Technology</p>
+                        <div class="d-flex align-items-center my-4 flex-wrap">
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15" style="fill: #008bff;"><path d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22Z"></path><path d="M12,6a1,1,0,0,0-1,1v4.325L7.629,13.437a1,1,0,0,0,1.062,1.7l3.84-2.4A1,1,0,0,0,13,11.879V7A1,1,0,0,0,12,6Z"></path></svg>
+                                Full Time
+                            </span>
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15" style="fill: brown;"><path d="M19,4H17.9A5.009,5.009,0,0,0,13,0H11A5.009,5.009,0,0,0,6.1,4H5A5.006,5.006,0,0,0,0,9V19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V9A5.006,5.006,0,0,0,19,4ZM11,2h2a3,3,0,0,1,2.816,2H8.184A3,3,0,0,1,11,2ZM5,6H19a3,3,0,0,1,3,3v3H2V9A3,3,0,0,1,5,6ZM19,22H5a3,3,0,0,1-3-3V14h9v1a1,1,0,0,0,2,0V14h9v5A3,3,0,0,1,19,22Z"></path></svg>
+                                1-2 Years
+                            </span>
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15" style="fill: orange;"><path d="M17,0c-3.925,0-7,1.757-7,4v4.378c-.906-.24-1.919-.378-3-.378-3.925,0-7,1.757-7,4v8c0,2.243,3.075,4,7,4s7-1.757,7-4v-.385c.933,.248,1.955,.385,3,.385,3.925,0,7-1.757,7-4V4c0-2.243-3.075-4-7-4Zm0,1c3.252,0,6,1.374,6,3s-2.748,3-6,3-6-1.374-6-3,2.748-3,6-3ZM7,9c3.252,0,6,1.374,6,3s-2.748,3-6,3-6-1.374-6-3,2.748-3,6-3ZM1,14.08c1.213,1.158,3.419,1.92,6,1.92s4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3s-6-1.374-6-3v-1.92Zm6,8.92c-3.252,0-6-1.374-6-3v-1.92c1.213,1.158,3.419,1.92,6,1.92s4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Zm10-4c-1.057,0-2.086-.149-3-.422v-2.962c.932,.248,1.953,.383,3,.383,2.581,0,4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Zm0-4c-1.061,0-2.086-.151-3-.424v-2.576c0-.133-.012-.264-.034-.393,.938,.254,1.963,.393,3.034,.393,2.581,0,4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Zm0-4c-1.309,0-2.538-.22-3.586-.624-.518-.683-1.356-1.261-2.414-1.676v-2.619c1.213,1.158,3.419,1.92,6,1.92s4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Z"></path></svg>
+                                PKR 50k Per Month    
+                            </span>
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15" style="fill: #e80000;"><path d="m8,12h-2c-1.103,0-2,.897-2,2v2c0,1.103.897,2,2,2h2c1.103,0,2-.897,2-2v-2c0-1.103-.897-2-2-2Zm-2,4v-2h2v2s-2,0-2,0ZM19,2h-1v-1c0-.552-.447-1-1-1s-1,.448-1,1v1h-8v-1c0-.552-.447-1-1-1s-1,.448-1,1v1h-1C2.243,2,0,4.243,0,7v12c0,2.757,2.243,5,5,5h14c2.757,0,5-2.243,5-5V7c0-2.757-2.243-5-5-5Zm-14,2h14c1.654,0,3,1.346,3,3v1H2v-1c0-1.654,1.346-3,3-3Zm14,18H5c-1.654,0-3-1.346-3-3v-9h20v9c0,1.654-1.346,3-3,3Z"></path></svg>
+                                Posted on 1 May, 2024    
+                            </span>
+                        </div>
+                        <div class="my-2 text-end">
+                            <button class="btn btn-dark rounded-pill p-2 px-3" data-bs-toggle="modal" data-bs-target="#jobModal">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-10 col-12 my-3">
+                    <div class="job_card p-3">
+                        <div class="d-flex align-items-center my-1 mb-3">
+                            <span class="bg-white mx-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="16" height="16"><path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM4.736,11.5l3.509,1.755L10,16.764l1.755-3.509L15.264,11.5,11.755,9.745,10,6.236,8.245,9.745ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"/></svg>
+                                Featured    
+                            </span>
+                            <span class="bg-white mx-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="16" height="16"><path d="M12.566,24H8.719l2-8H6.586a2.561,2.561,0,0,1-2.451-3.3L7.976,0h9.467l-3,8h4.023a2.533,2.533,0,0,1,2.11,3.932Zm-1.285-2h.212l7.416-11.174A.532.532,0,0,0,18.466,10H11.557l3-8H9.46L6.049,13.276A.561.561,0,0,0,6.586,14h6.7Z"/></svg>
+                                Urgent
+                            </span>
+                        </div>
+                        <p class="fs-4 fw-medium m-0">Backend Developer</p>
+                        <p class="m-0">Information Technology</p>
+                        <div class="d-flex align-items-center my-4 flex-wrap">
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22Z"/><path d="M12,6a1,1,0,0,0-1,1v4.325L7.629,13.437a1,1,0,0,0,1.062,1.7l3.84-2.4A1,1,0,0,0,13,11.879V7A1,1,0,0,0,12,6Z"/></svg>
+                                Full Time
+                            </span>
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="M19,4H17.9A5.009,5.009,0,0,0,13,0H11A5.009,5.009,0,0,0,6.1,4H5A5.006,5.006,0,0,0,0,9V19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V9A5.006,5.006,0,0,0,19,4ZM11,2h2a3,3,0,0,1,2.816,2H8.184A3,3,0,0,1,11,2ZM5,6H19a3,3,0,0,1,3,3v3H2V9A3,3,0,0,1,5,6ZM19,22H5a3,3,0,0,1-3-3V14h9v1a1,1,0,0,0,2,0V14h9v5A3,3,0,0,1,19,22Z"/></svg>
+                                1-2 Years    
+                            </span>
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="M17,0c-3.925,0-7,1.757-7,4v4.378c-.906-.24-1.919-.378-3-.378-3.925,0-7,1.757-7,4v8c0,2.243,3.075,4,7,4s7-1.757,7-4v-.385c.933,.248,1.955,.385,3,.385,3.925,0,7-1.757,7-4V4c0-2.243-3.075-4-7-4Zm0,1c3.252,0,6,1.374,6,3s-2.748,3-6,3-6-1.374-6-3,2.748-3,6-3ZM7,9c3.252,0,6,1.374,6,3s-2.748,3-6,3-6-1.374-6-3,2.748-3,6-3ZM1,14.08c1.213,1.158,3.419,1.92,6,1.92s4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3s-6-1.374-6-3v-1.92Zm6,8.92c-3.252,0-6-1.374-6-3v-1.92c1.213,1.158,3.419,1.92,6,1.92s4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Zm10-4c-1.057,0-2.086-.149-3-.422v-2.962c.932,.248,1.953,.383,3,.383,2.581,0,4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Zm0-4c-1.061,0-2.086-.151-3-.424v-2.576c0-.133-.012-.264-.034-.393,.938,.254,1.963,.393,3.034,.393,2.581,0,4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Zm0-4c-1.309,0-2.538-.22-3.586-.624-.518-.683-1.356-1.261-2.414-1.676v-2.619c1.213,1.158,3.419,1.92,6,1.92s4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Z"/></svg>
+                                PKR 50k Per Month    
+                            </span>
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="m8,12h-2c-1.103,0-2,.897-2,2v2c0,1.103.897,2,2,2h2c1.103,0,2-.897,2-2v-2c0-1.103-.897-2-2-2Zm-2,4v-2h2v2s-2,0-2,0ZM19,2h-1v-1c0-.552-.447-1-1-1s-1,.448-1,1v1h-8v-1c0-.552-.447-1-1-1s-1,.448-1,1v1h-1C2.243,2,0,4.243,0,7v12c0,2.757,2.243,5,5,5h14c2.757,0,5-2.243,5-5V7c0-2.757-2.243-5-5-5Zm-14,2h14c1.654,0,3,1.346,3,3v1H2v-1c0-1.654,1.346-3,3-3Zm14,18H5c-1.654,0-3-1.346-3-3v-9h20v9c0,1.654-1.346,3-3,3Z"/></svg>
+                                Posted on 1 May, 2024    
+                            </span>
+                        </div>
+                        <div class="my-2 text-end">
+                            <button class="btn btn-dark rounded-pill p-2 px-3">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-10 col-12 my-3">
+                    <div class="job_card p-3">
+                        <div class="d-flex align-items-center my-1 mb-3">
+                            <span class="bg-white mx-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="16" height="16"><path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM4.736,11.5l3.509,1.755L10,16.764l1.755-3.509L15.264,11.5,11.755,9.745,10,6.236,8.245,9.745ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"/></svg>
+                                Featured    
+                            </span>
+                            <span class="bg-white mx-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="16" height="16"><path d="M12.566,24H8.719l2-8H6.586a2.561,2.561,0,0,1-2.451-3.3L7.976,0h9.467l-3,8h4.023a2.533,2.533,0,0,1,2.11,3.932Zm-1.285-2h.212l7.416-11.174A.532.532,0,0,0,18.466,10H11.557l3-8H9.46L6.049,13.276A.561.561,0,0,0,6.586,14h6.7Z"/></svg>
+                                Urgent
+                            </span>
+                        </div>
+                        <p class="fs-4 fw-medium m-0">Call Representative</p>
+                        <p class="m-0">Sales & Marketing</p>
+                        <div class="d-flex align-items-center my-4 flex-wrap">
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22Z"/><path d="M12,6a1,1,0,0,0-1,1v4.325L7.629,13.437a1,1,0,0,0,1.062,1.7l3.84-2.4A1,1,0,0,0,13,11.879V7A1,1,0,0,0,12,6Z"/></svg>
+                                Full Time
+                            </span>
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="M19,4H17.9A5.009,5.009,0,0,0,13,0H11A5.009,5.009,0,0,0,6.1,4H5A5.006,5.006,0,0,0,0,9V19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V9A5.006,5.006,0,0,0,19,4ZM11,2h2a3,3,0,0,1,2.816,2H8.184A3,3,0,0,1,11,2ZM5,6H19a3,3,0,0,1,3,3v3H2V9A3,3,0,0,1,5,6ZM19,22H5a3,3,0,0,1-3-3V14h9v1a1,1,0,0,0,2,0V14h9v5A3,3,0,0,1,19,22Z"/></svg>
+                                1-2 Years    
+                            </span>
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="M17,0c-3.925,0-7,1.757-7,4v4.378c-.906-.24-1.919-.378-3-.378-3.925,0-7,1.757-7,4v8c0,2.243,3.075,4,7,4s7-1.757,7-4v-.385c.933,.248,1.955,.385,3,.385,3.925,0,7-1.757,7-4V4c0-2.243-3.075-4-7-4Zm0,1c3.252,0,6,1.374,6,3s-2.748,3-6,3-6-1.374-6-3,2.748-3,6-3ZM7,9c3.252,0,6,1.374,6,3s-2.748,3-6,3-6-1.374-6-3,2.748-3,6-3ZM1,14.08c1.213,1.158,3.419,1.92,6,1.92s4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3s-6-1.374-6-3v-1.92Zm6,8.92c-3.252,0-6-1.374-6-3v-1.92c1.213,1.158,3.419,1.92,6,1.92s4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Zm10-4c-1.057,0-2.086-.149-3-.422v-2.962c.932,.248,1.953,.383,3,.383,2.581,0,4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Zm0-4c-1.061,0-2.086-.151-3-.424v-2.576c0-.133-.012-.264-.034-.393,.938,.254,1.963,.393,3.034,.393,2.581,0,4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Zm0-4c-1.309,0-2.538-.22-3.586-.624-.518-.683-1.356-1.261-2.414-1.676v-2.619c1.213,1.158,3.419,1.92,6,1.92s4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Z"/></svg>
+                                PKR 50k Per Month    
+                            </span>
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="m8,12h-2c-1.103,0-2,.897-2,2v2c0,1.103.897,2,2,2h2c1.103,0,2-.897,2-2v-2c0-1.103-.897-2-2-2Zm-2,4v-2h2v2s-2,0-2,0ZM19,2h-1v-1c0-.552-.447-1-1-1s-1,.448-1,1v1h-8v-1c0-.552-.447-1-1-1s-1,.448-1,1v1h-1C2.243,2,0,4.243,0,7v12c0,2.757,2.243,5,5,5h14c2.757,0,5-2.243,5-5V7c0-2.757-2.243-5-5-5Zm-14,2h14c1.654,0,3,1.346,3,3v1H2v-1c0-1.654,1.346-3,3-3Zm14,18H5c-1.654,0-3-1.346-3-3v-9h20v9c0,1.654-1.346,3-3,3Z"/></svg>
+                                Posted on 1 May, 2024    
+                            </span>
+                        </div>
+                        <div class="my-2 text-end">
+                            <button class="btn btn-dark rounded-pill p-2 px-3">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-10 col-12 my-3">
+                    <div class="job_card p-3">
+                        <div class="d-flex align-items-center my-1 mb-3">
+                            <span class="bg-white mx-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="16" height="16"><path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM4.736,11.5l3.509,1.755L10,16.764l1.755-3.509L15.264,11.5,11.755,9.745,10,6.236,8.245,9.745ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"/></svg>
+                                Featured    
+                            </span>
+                            <span class="bg-white mx-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="16" height="16"><path d="M12.566,24H8.719l2-8H6.586a2.561,2.561,0,0,1-2.451-3.3L7.976,0h9.467l-3,8h4.023a2.533,2.533,0,0,1,2.11,3.932Zm-1.285-2h.212l7.416-11.174A.532.532,0,0,0,18.466,10H11.557l3-8H9.46L6.049,13.276A.561.561,0,0,0,6.586,14h6.7Z"/></svg>
+                                Urgent
+                            </span>
+                        </div>
+                        <p class="fs-4 fw-medium m-0">Frontend Developer</p>
+                        <p class="m-0">Information Technology</p>
+                        <div class="d-flex align-items-center my-4 flex-wrap">
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22Z"/><path d="M12,6a1,1,0,0,0-1,1v4.325L7.629,13.437a1,1,0,0,0,1.062,1.7l3.84-2.4A1,1,0,0,0,13,11.879V7A1,1,0,0,0,12,6Z"/></svg>
+                                Full Time
+                            </span>
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="M19,4H17.9A5.009,5.009,0,0,0,13,0H11A5.009,5.009,0,0,0,6.1,4H5A5.006,5.006,0,0,0,0,9V19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V9A5.006,5.006,0,0,0,19,4ZM11,2h2a3,3,0,0,1,2.816,2H8.184A3,3,0,0,1,11,2ZM5,6H19a3,3,0,0,1,3,3v3H2V9A3,3,0,0,1,5,6ZM19,22H5a3,3,0,0,1-3-3V14h9v1a1,1,0,0,0,2,0V14h9v5A3,3,0,0,1,19,22Z"/></svg>
+                                1-2 Years    
+                            </span>
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="M17,0c-3.925,0-7,1.757-7,4v4.378c-.906-.24-1.919-.378-3-.378-3.925,0-7,1.757-7,4v8c0,2.243,3.075,4,7,4s7-1.757,7-4v-.385c.933,.248,1.955,.385,3,.385,3.925,0,7-1.757,7-4V4c0-2.243-3.075-4-7-4Zm0,1c3.252,0,6,1.374,6,3s-2.748,3-6,3-6-1.374-6-3,2.748-3,6-3ZM7,9c3.252,0,6,1.374,6,3s-2.748,3-6,3-6-1.374-6-3,2.748-3,6-3ZM1,14.08c1.213,1.158,3.419,1.92,6,1.92s4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3s-6-1.374-6-3v-1.92Zm6,8.92c-3.252,0-6-1.374-6-3v-1.92c1.213,1.158,3.419,1.92,6,1.92s4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Zm10-4c-1.057,0-2.086-.149-3-.422v-2.962c.932,.248,1.953,.383,3,.383,2.581,0,4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Zm0-4c-1.061,0-2.086-.151-3-.424v-2.576c0-.133-.012-.264-.034-.393,.938,.254,1.963,.393,3.034,.393,2.581,0,4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Zm0-4c-1.309,0-2.538-.22-3.586-.624-.518-.683-1.356-1.261-2.414-1.676v-2.619c1.213,1.158,3.419,1.92,6,1.92s4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Z"/></svg>
+                                PKR 50k Per Month    
+                            </span>
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="m8,12h-2c-1.103,0-2,.897-2,2v2c0,1.103.897,2,2,2h2c1.103,0,2-.897,2-2v-2c0-1.103-.897-2-2-2Zm-2,4v-2h2v2s-2,0-2,0ZM19,2h-1v-1c0-.552-.447-1-1-1s-1,.448-1,1v1h-8v-1c0-.552-.447-1-1-1s-1,.448-1,1v1h-1C2.243,2,0,4.243,0,7v12c0,2.757,2.243,5,5,5h14c2.757,0,5-2.243,5-5V7c0-2.757-2.243-5-5-5Zm-14,2h14c1.654,0,3,1.346,3,3v1H2v-1c0-1.654,1.346-3,3-3Zm14,18H5c-1.654,0-3-1.346-3-3v-9h20v9c0,1.654-1.346,3-3,3Z"/></svg>
+                                Posted on 1 May, 2024    
+                            </span>
+                        </div>
+                        <div class="my-2 text-end">
+                            <button class="btn btn-dark rounded-pill p-2 px-3">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-10 col-12 my-3">
+                    <div class="job_card p-3">
+                        <div class="d-flex align-items-center my-1 mb-3">
+                            <span class="bg-white mx-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="16" height="16"><path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM4.736,11.5l3.509,1.755L10,16.764l1.755-3.509L15.264,11.5,11.755,9.745,10,6.236,8.245,9.745ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"/></svg>
+                                Featured    
+                            </span>
+                            <span class="bg-white mx-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="16" height="16"><path d="M12.566,24H8.719l2-8H6.586a2.561,2.561,0,0,1-2.451-3.3L7.976,0h9.467l-3,8h4.023a2.533,2.533,0,0,1,2.11,3.932Zm-1.285-2h.212l7.416-11.174A.532.532,0,0,0,18.466,10H11.557l3-8H9.46L6.049,13.276A.561.561,0,0,0,6.586,14h6.7Z"/></svg>
+                                Urgent
+                            </span>
+                        </div>
+                        <p class="fs-4 fw-medium m-0">Frontend Developer</p>
+                        <p class="m-0">Information Technology</p>
+                        <div class="d-flex align-items-center my-4 flex-wrap">
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22Z"/><path d="M12,6a1,1,0,0,0-1,1v4.325L7.629,13.437a1,1,0,0,0,1.062,1.7l3.84-2.4A1,1,0,0,0,13,11.879V7A1,1,0,0,0,12,6Z"/></svg>
+                                Full Time
+                            </span>
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="M19,4H17.9A5.009,5.009,0,0,0,13,0H11A5.009,5.009,0,0,0,6.1,4H5A5.006,5.006,0,0,0,0,9V19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V9A5.006,5.006,0,0,0,19,4ZM11,2h2a3,3,0,0,1,2.816,2H8.184A3,3,0,0,1,11,2ZM5,6H19a3,3,0,0,1,3,3v3H2V9A3,3,0,0,1,5,6ZM19,22H5a3,3,0,0,1-3-3V14h9v1a1,1,0,0,0,2,0V14h9v5A3,3,0,0,1,19,22Z"/></svg>
+                                1-2 Years    
+                            </span>
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="M17,0c-3.925,0-7,1.757-7,4v4.378c-.906-.24-1.919-.378-3-.378-3.925,0-7,1.757-7,4v8c0,2.243,3.075,4,7,4s7-1.757,7-4v-.385c.933,.248,1.955,.385,3,.385,3.925,0,7-1.757,7-4V4c0-2.243-3.075-4-7-4Zm0,1c3.252,0,6,1.374,6,3s-2.748,3-6,3-6-1.374-6-3,2.748-3,6-3ZM7,9c3.252,0,6,1.374,6,3s-2.748,3-6,3-6-1.374-6-3,2.748-3,6-3ZM1,14.08c1.213,1.158,3.419,1.92,6,1.92s4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3s-6-1.374-6-3v-1.92Zm6,8.92c-3.252,0-6-1.374-6-3v-1.92c1.213,1.158,3.419,1.92,6,1.92s4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Zm10-4c-1.057,0-2.086-.149-3-.422v-2.962c.932,.248,1.953,.383,3,.383,2.581,0,4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Zm0-4c-1.061,0-2.086-.151-3-.424v-2.576c0-.133-.012-.264-.034-.393,.938,.254,1.963,.393,3.034,.393,2.581,0,4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Zm0-4c-1.309,0-2.538-.22-3.586-.624-.518-.683-1.356-1.261-2.414-1.676v-2.619c1.213,1.158,3.419,1.92,6,1.92s4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Z"/></svg>
+                                PKR 50k Per Month    
+                            </span>
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="m8,12h-2c-1.103,0-2,.897-2,2v2c0,1.103.897,2,2,2h2c1.103,0,2-.897,2-2v-2c0-1.103-.897-2-2-2Zm-2,4v-2h2v2s-2,0-2,0ZM19,2h-1v-1c0-.552-.447-1-1-1s-1,.448-1,1v1h-8v-1c0-.552-.447-1-1-1s-1,.448-1,1v1h-1C2.243,2,0,4.243,0,7v12c0,2.757,2.243,5,5,5h14c2.757,0,5-2.243,5-5V7c0-2.757-2.243-5-5-5Zm-14,2h14c1.654,0,3,1.346,3,3v1H2v-1c0-1.654,1.346-3,3-3Zm14,18H5c-1.654,0-3-1.346-3-3v-9h20v9c0,1.654-1.346,3-3,3Z"/></svg>
+                                Posted on 1 May, 2024    
+                            </span>
+                        </div>
+                        <div class="my-2 text-end">
+                            <button class="btn btn-dark rounded-pill p-2 px-3">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-10 col-12 my-3">
+                    <div class="job_card p-3">
+                        <div class="d-flex align-items-center my-1 mb-3">
+                            <span class="bg-white mx-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="16" height="16"><path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM4.736,11.5l3.509,1.755L10,16.764l1.755-3.509L15.264,11.5,11.755,9.745,10,6.236,8.245,9.745ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"/></svg>
+                                Featured    
+                            </span>
+                            <span class="bg-white mx-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="16" height="16"><path d="M12.566,24H8.719l2-8H6.586a2.561,2.561,0,0,1-2.451-3.3L7.976,0h9.467l-3,8h4.023a2.533,2.533,0,0,1,2.11,3.932Zm-1.285-2h.212l7.416-11.174A.532.532,0,0,0,18.466,10H11.557l3-8H9.46L6.049,13.276A.561.561,0,0,0,6.586,14h6.7Z"/></svg>
+                                Urgent
+                            </span>
+                        </div>
+                        <p class="fs-4 fw-medium m-0">Backend Developer</p>
+                        <p class="m-0">Information Technology</p>
+                        <div class="d-flex align-items-center my-4 flex-wrap">
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22Z"/><path d="M12,6a1,1,0,0,0-1,1v4.325L7.629,13.437a1,1,0,0,0,1.062,1.7l3.84-2.4A1,1,0,0,0,13,11.879V7A1,1,0,0,0,12,6Z"/></svg>
+                                Full Time
+                            </span>
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="M19,4H17.9A5.009,5.009,0,0,0,13,0H11A5.009,5.009,0,0,0,6.1,4H5A5.006,5.006,0,0,0,0,9V19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V9A5.006,5.006,0,0,0,19,4ZM11,2h2a3,3,0,0,1,2.816,2H8.184A3,3,0,0,1,11,2ZM5,6H19a3,3,0,0,1,3,3v3H2V9A3,3,0,0,1,5,6ZM19,22H5a3,3,0,0,1-3-3V14h9v1a1,1,0,0,0,2,0V14h9v5A3,3,0,0,1,19,22Z"/></svg>
+                                1-2 Years    
+                            </span>
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="M17,0c-3.925,0-7,1.757-7,4v4.378c-.906-.24-1.919-.378-3-.378-3.925,0-7,1.757-7,4v8c0,2.243,3.075,4,7,4s7-1.757,7-4v-.385c.933,.248,1.955,.385,3,.385,3.925,0,7-1.757,7-4V4c0-2.243-3.075-4-7-4Zm0,1c3.252,0,6,1.374,6,3s-2.748,3-6,3-6-1.374-6-3,2.748-3,6-3ZM7,9c3.252,0,6,1.374,6,3s-2.748,3-6,3-6-1.374-6-3,2.748-3,6-3ZM1,14.08c1.213,1.158,3.419,1.92,6,1.92s4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3s-6-1.374-6-3v-1.92Zm6,8.92c-3.252,0-6-1.374-6-3v-1.92c1.213,1.158,3.419,1.92,6,1.92s4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Zm10-4c-1.057,0-2.086-.149-3-.422v-2.962c.932,.248,1.953,.383,3,.383,2.581,0,4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Zm0-4c-1.061,0-2.086-.151-3-.424v-2.576c0-.133-.012-.264-.034-.393,.938,.254,1.963,.393,3.034,.393,2.581,0,4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Zm0-4c-1.309,0-2.538-.22-3.586-.624-.518-.683-1.356-1.261-2.414-1.676v-2.619c1.213,1.158,3.419,1.92,6,1.92s4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Z"/></svg>
+                                PKR 50k Per Month    
+                            </span>
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="m8,12h-2c-1.103,0-2,.897-2,2v2c0,1.103.897,2,2,2h2c1.103,0,2-.897,2-2v-2c0-1.103-.897-2-2-2Zm-2,4v-2h2v2s-2,0-2,0ZM19,2h-1v-1c0-.552-.447-1-1-1s-1,.448-1,1v1h-8v-1c0-.552-.447-1-1-1s-1,.448-1,1v1h-1C2.243,2,0,4.243,0,7v12c0,2.757,2.243,5,5,5h14c2.757,0,5-2.243,5-5V7c0-2.757-2.243-5-5-5Zm-14,2h14c1.654,0,3,1.346,3,3v1H2v-1c0-1.654,1.346-3,3-3Zm14,18H5c-1.654,0-3-1.346-3-3v-9h20v9c0,1.654-1.346,3-3,3Z"/></svg>
+                                Posted on 1 May, 2024    
+                            </span>
+                        </div>
+                        <div class="my-2 text-end">
+                            <button class="btn btn-dark rounded-pill p-2 px-3">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-10 col-12 my-3">
+                    <div class="job_card p-3">
+                        <div class="d-flex align-items-center my-1 mb-3">
+                            <span class="bg-white mx-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="16" height="16"><path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM4.736,11.5l3.509,1.755L10,16.764l1.755-3.509L15.264,11.5,11.755,9.745,10,6.236,8.245,9.745ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"/></svg>
+                                Featured    
+                            </span>
+                            <span class="bg-white mx-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="16" height="16"><path d="M12.566,24H8.719l2-8H6.586a2.561,2.561,0,0,1-2.451-3.3L7.976,0h9.467l-3,8h4.023a2.533,2.533,0,0,1,2.11,3.932Zm-1.285-2h.212l7.416-11.174A.532.532,0,0,0,18.466,10H11.557l3-8H9.46L6.049,13.276A.561.561,0,0,0,6.586,14h6.7Z"/></svg>
+                                Urgent
+                            </span>
+                        </div>
+                        <p class="fs-4 fw-medium m-0">Call Representative</p>
+                        <p class="m-0">Sales & Marketing</p>
+                        <div class="d-flex align-items-center my-4 flex-wrap">
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22Z"/><path d="M12,6a1,1,0,0,0-1,1v4.325L7.629,13.437a1,1,0,0,0,1.062,1.7l3.84-2.4A1,1,0,0,0,13,11.879V7A1,1,0,0,0,12,6Z"/></svg>
+                                Full Time
+                            </span>
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="M19,4H17.9A5.009,5.009,0,0,0,13,0H11A5.009,5.009,0,0,0,6.1,4H5A5.006,5.006,0,0,0,0,9V19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V9A5.006,5.006,0,0,0,19,4ZM11,2h2a3,3,0,0,1,2.816,2H8.184A3,3,0,0,1,11,2ZM5,6H19a3,3,0,0,1,3,3v3H2V9A3,3,0,0,1,5,6ZM19,22H5a3,3,0,0,1-3-3V14h9v1a1,1,0,0,0,2,0V14h9v5A3,3,0,0,1,19,22Z"/></svg>
+                                1-2 Years    
+                            </span>
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="M17,0c-3.925,0-7,1.757-7,4v4.378c-.906-.24-1.919-.378-3-.378-3.925,0-7,1.757-7,4v8c0,2.243,3.075,4,7,4s7-1.757,7-4v-.385c.933,.248,1.955,.385,3,.385,3.925,0,7-1.757,7-4V4c0-2.243-3.075-4-7-4Zm0,1c3.252,0,6,1.374,6,3s-2.748,3-6,3-6-1.374-6-3,2.748-3,6-3ZM7,9c3.252,0,6,1.374,6,3s-2.748,3-6,3-6-1.374-6-3,2.748-3,6-3ZM1,14.08c1.213,1.158,3.419,1.92,6,1.92s4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3s-6-1.374-6-3v-1.92Zm6,8.92c-3.252,0-6-1.374-6-3v-1.92c1.213,1.158,3.419,1.92,6,1.92s4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Zm10-4c-1.057,0-2.086-.149-3-.422v-2.962c.932,.248,1.953,.383,3,.383,2.581,0,4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Zm0-4c-1.061,0-2.086-.151-3-.424v-2.576c0-.133-.012-.264-.034-.393,.938,.254,1.963,.393,3.034,.393,2.581,0,4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Zm0-4c-1.309,0-2.538-.22-3.586-.624-.518-.683-1.356-1.261-2.414-1.676v-2.619c1.213,1.158,3.419,1.92,6,1.92s4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Z"/></svg>
+                                PKR 50k Per Month    
+                            </span>
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="m8,12h-2c-1.103,0-2,.897-2,2v2c0,1.103.897,2,2,2h2c1.103,0,2-.897,2-2v-2c0-1.103-.897-2-2-2Zm-2,4v-2h2v2s-2,0-2,0ZM19,2h-1v-1c0-.552-.447-1-1-1s-1,.448-1,1v1h-8v-1c0-.552-.447-1-1-1s-1,.448-1,1v1h-1C2.243,2,0,4.243,0,7v12c0,2.757,2.243,5,5,5h14c2.757,0,5-2.243,5-5V7c0-2.757-2.243-5-5-5Zm-14,2h14c1.654,0,3,1.346,3,3v1H2v-1c0-1.654,1.346-3,3-3Zm14,18H5c-1.654,0-3-1.346-3-3v-9h20v9c0,1.654-1.346,3-3,3Z"/></svg>
+                                Posted on 1 May, 2024    
+                            </span>
+                        </div>
+                        <div class="my-2 text-end">
+                            <button class="btn btn-dark rounded-pill p-2 px-3">View Details</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-10 col-12 my-3">
+                    <div class="job_card p-3">
+                        <div class="d-flex align-items-center my-1 mb-3">
+                            <span class="bg-white mx-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="16" height="16"><path d="M10,21.236,6.755,14.745.264,11.5,6.755,8.255,10,1.764l3.245,6.491L19.736,11.5l-6.491,3.245ZM4.736,11.5l3.509,1.755L10,16.764l1.755-3.509L15.264,11.5,11.755,9.745,10,6.236,8.245,9.745ZM18,21l1.5,3L21,21l3-1.5L21,18l-1.5-3L18,18l-3,1.5ZM19.333,4.667,20.5,7l1.167-2.333L24,3.5,21.667,2.333,20.5,0,19.333,2.333,17,3.5Z"/></svg>
+                                Featured    
+                            </span>
+                            <span class="bg-white mx-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="16" height="16"><path d="M12.566,24H8.719l2-8H6.586a2.561,2.561,0,0,1-2.451-3.3L7.976,0h9.467l-3,8h4.023a2.533,2.533,0,0,1,2.11,3.932Zm-1.285-2h.212l7.416-11.174A.532.532,0,0,0,18.466,10H11.557l3-8H9.46L6.049,13.276A.561.561,0,0,0,6.586,14h6.7Z"/></svg>
+                                Urgent
+                            </span>
+                        </div>
+                        <p class="fs-4 fw-medium m-0">Frontend Developer</p>
+                        <p class="m-0">Information Technology</p>
+                        <div class="d-flex align-items-center my-4 flex-wrap">
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22Z"/><path d="M12,6a1,1,0,0,0-1,1v4.325L7.629,13.437a1,1,0,0,0,1.062,1.7l3.84-2.4A1,1,0,0,0,13,11.879V7A1,1,0,0,0,12,6Z"/></svg>
+                                Full Time
+                            </span>
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="M19,4H17.9A5.009,5.009,0,0,0,13,0H11A5.009,5.009,0,0,0,6.1,4H5A5.006,5.006,0,0,0,0,9V19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V9A5.006,5.006,0,0,0,19,4ZM11,2h2a3,3,0,0,1,2.816,2H8.184A3,3,0,0,1,11,2ZM5,6H19a3,3,0,0,1,3,3v3H2V9A3,3,0,0,1,5,6ZM19,22H5a3,3,0,0,1-3-3V14h9v1a1,1,0,0,0,2,0V14h9v5A3,3,0,0,1,19,22Z"/></svg>
+                                1-2 Years    
+                            </span>
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="M17,0c-3.925,0-7,1.757-7,4v4.378c-.906-.24-1.919-.378-3-.378-3.925,0-7,1.757-7,4v8c0,2.243,3.075,4,7,4s7-1.757,7-4v-.385c.933,.248,1.955,.385,3,.385,3.925,0,7-1.757,7-4V4c0-2.243-3.075-4-7-4Zm0,1c3.252,0,6,1.374,6,3s-2.748,3-6,3-6-1.374-6-3,2.748-3,6-3ZM7,9c3.252,0,6,1.374,6,3s-2.748,3-6,3-6-1.374-6-3,2.748-3,6-3ZM1,14.08c1.213,1.158,3.419,1.92,6,1.92s4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3s-6-1.374-6-3v-1.92Zm6,8.92c-3.252,0-6-1.374-6-3v-1.92c1.213,1.158,3.419,1.92,6,1.92s4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Zm10-4c-1.057,0-2.086-.149-3-.422v-2.962c.932,.248,1.953,.383,3,.383,2.581,0,4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Zm0-4c-1.061,0-2.086-.151-3-.424v-2.576c0-.133-.012-.264-.034-.393,.938,.254,1.963,.393,3.034,.393,2.581,0,4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Zm0-4c-1.309,0-2.538-.22-3.586-.624-.518-.683-1.356-1.261-2.414-1.676v-2.619c1.213,1.158,3.419,1.92,6,1.92s4.787-.762,6-1.92v1.92c0,1.626-2.748,3-6,3Z"/></svg>
+                                PKR 50k Per Month    
+                            </span>
+                            <span class="bg-white me-1 my-1 small d-inline-flex align-items-center fw-medium p-1 px-2 shadow-sm rounded">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="me-1" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="15" height="15"><path d="m8,12h-2c-1.103,0-2,.897-2,2v2c0,1.103.897,2,2,2h2c1.103,0,2-.897,2-2v-2c0-1.103-.897-2-2-2Zm-2,4v-2h2v2s-2,0-2,0ZM19,2h-1v-1c0-.552-.447-1-1-1s-1,.448-1,1v1h-8v-1c0-.552-.447-1-1-1s-1,.448-1,1v1h-1C2.243,2,0,4.243,0,7v12c0,2.757,2.243,5,5,5h14c2.757,0,5-2.243,5-5V7c0-2.757-2.243-5-5-5Zm-14,2h14c1.654,0,3,1.346,3,3v1H2v-1c0-1.654,1.346-3,3-3Zm14,18H5c-1.654,0-3-1.346-3-3v-9h20v9c0,1.654-1.346,3-3,3Z"/></svg>
+                                Posted on 1 May, 2024    
+                            </span>
+                        </div>
+                        <div class="my-2 text-end">
+                            <button class="btn btn-dark rounded-pill p-2 px-3">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="jobModal" tabindex="-1" aria-labelledby="jobModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content shadow rounded-0">
+                        <div class="d-flex align-items-center justify-content-between p-2 px-3">
+                            <p class="fs-5 fw-medium m-0 text-dark-emphasis">Job Details</p>
+                            <button class="btn btn-transparent shadow-none px-1 border-0" data-bs-dismiss="modal"><i class="bx bx-x fs-3"></i></button>
+                        </div>
+                        <div class="p-3 pb-4">
+                            <h2 class="mb-2 fs-4">Frontend Developer</h2>
+                            <p class="my-2"><a href="#" target="_blank" class="text-decoration-none d-inline-flex align-items-center text_secondary">Information Technology</a></p>
+                            <div class="d-flex align-items-center">
+                                <a href="apply.html" class="btn_primary text-decoration-none small fw-medium">Apply Now</a>
+                                <button class="btn btn-light shadow-sm small mx-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M17.5,0H6.5A5.507,5.507,0,0,0,1,5.5V20.472a3.5,3.5,0,0,0,6.044,2.4l4.912-5.2,5.013,5.25A3.5,3.5,0,0,0,23,20.51V5.5A5.507,5.507,0,0,0,17.5,0ZM20,20.51a.5.5,0,0,1-.861.345l-6.1-6.391A1.5,1.5,0,0,0,11.95,14h0a1.5,1.5,0,0,0-1.086.47l-6,6.345a.479.479,0,0,1-.549.122A.471.471,0,0,1,4,20.472V5.5A2.5,2.5,0,0,1,6.5,3h11A2.5,2.5,0,0,1,20,5.5Z"/></svg>
+                                </button>
+                                <button class="btn btn-light shadow-sm small">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18"><path d="M18,18.5c0,3.03-2.47,5.5-5.5,5.5H5.5C2.47,24,0,21.53,0,18.5v-7C0,8.47,2.47,6,5.5,6c.83,0,1.5,.67,1.5,1.5s-.67,1.5-1.5,1.5c-1.38,0-2.5,1.12-2.5,2.5v7c0,1.38,1.12,2.5,2.5,2.5h7c1.38,0,2.5-1.12,2.5-2.5,0-.83,.67-1.5,1.5-1.5s1.5,.67,1.5,1.5Zm5-13.45L18.58,.46c-.58-.6-1.52-.62-2.12-.04-.6,.58-.62,1.52-.04,2.12l3.33,3.46h-6.25c-3.03,0-5.5,2.47-5.5,5.5v5c0,.83,.67,1.5,1.5,1.5s1.5-.67,1.5-1.5v-5c0-1.38,1.12-2.5,2.5-2.5h6.25l-3.33,3.46c-.57,.6-.56,1.55,.04,2.12,.29,.28,.67,.42,1.04,.42,.39,0,.79-.15,1.08-.46l4.39-4.56c1.37-1.36,1.37-3.59,.02-4.93Z"/></svg>
+                                </button>
+                            </div>
+                            <hr class="my-3">
+                            <p class="fs-5 mb-1 fw-medium text-dark-emphasis">At a glance</p>
+                            <p class="my-1">Here is the quick information of this job.</p>
+                            <div class="row m-0 align-items-center justify-content-center my-3 user-select-none">
+                                <div class="col-sm-6 col-12 my-2">
+                                    <div class="glance_cards p-3 text-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35" style="fill: #ffb700;"><path d="M16.5,0c-4.206,0-7.5,1.977-7.5,4.5v2.587c-.483-.057-.985-.087-1.5-.087C3.294,7,0,8.977,0,11.5v8c0,2.523,3.294,4.5,7.5,4.5,3.407,0,6.216-1.297,7.16-3.131,.598,.087,1.214,.131,1.84,.131,4.206,0,7.5-1.977,7.5-4.5V4.5c0-2.523-3.294-4.5-7.5-4.5Zm5.5,12.5c0,1.18-2.352,2.5-5.5,2.5-.512,0-1.014-.035-1.5-.103v-1.984c.49,.057,.992,.087,1.5,.087,2.194,0,4.14-.538,5.5-1.411v.911ZM2,14.589c1.36,.873,3.306,1.411,5.5,1.411s4.14-.538,5.5-1.411v.911c0,1.18-2.352,2.5-5.5,2.5s-5.5-1.32-5.5-2.5v-.911Zm20-6.089c0,1.18-2.352,2.5-5.5,2.5-.535,0-1.06-.038-1.566-.112-.193-.887-.8-1.684-1.706-2.323,.984,.28,2.092,.435,3.272,.435,2.194,0,4.14-.538,5.5-1.411v.911Zm-5.5-6.5c3.148,0,5.5,1.32,5.5,2.5s-2.352,2.5-5.5,2.5-5.5-1.32-5.5-2.5,2.352-2.5,5.5-2.5ZM7.5,9c3.148,0,5.5,1.32,5.5,2.5s-2.352,2.5-5.5,2.5-5.5-1.32-5.5-2.5,2.352-2.5,5.5-2.5Zm0,13c-3.148,0-5.5-1.32-5.5-2.5v-.911c1.36,.873,3.306,1.411,5.5,1.411s4.14-.538,5.5-1.411v.911c0,1.18-2.352,2.5-5.5,2.5Zm9-3c-.512,0-1.014-.035-1.5-.103v-1.984c.49,.057,.992,.087,1.5,.087,2.194,0,4.14-.538,5.5-1.411v.911c0,1.18-2.352,2.5-5.5,2.5Z"/></svg>
+                                        <p class="my-2 mb-0 fs-5 fw-semibold">50k - 55k</p>
+                                        <p class="small mb-1 text_secondary">Pay per month</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-12 my-2">
+                                    <div class="glance_cards p-3 text-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35" style="fill: #ffb700;"><path d="M12,0A12,12,0,1,0,24,12,12.013,12.013,0,0,0,12,0Zm0,22A10,10,0,1,1,22,12,10.011,10.011,0,0,1,12,22Z"></path><path d="M12,6a1,1,0,0,0-1,1v4.325L7.629,13.437a1,1,0,0,0,1.062,1.7l3.84-2.4A1,1,0,0,0,13,11.879V7A1,1,0,0,0,12,6Z"></path></svg>
+                                        <p class="my-2 mb-0 fs-5 fw-semibold">Full time</p>
+                                        <p class="small mb-1 text_secondary">Job type</p>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-lg-4 col-sm-6 col-12 my-2">
+                                    <div class="glance_cards p-3 text-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="35" height="35" style="fill: #ffb700;"><path d="M19,4H17.9A5.009,5.009,0,0,0,13,0H11A5.009,5.009,0,0,0,6.1,4H5A5.006,5.006,0,0,0,0,9V19a5.006,5.006,0,0,0,5,5H19a5.006,5.006,0,0,0,5-5V9A5.006,5.006,0,0,0,19,4ZM11,2h2a3,3,0,0,1,2.816,2H8.184A3,3,0,0,1,11,2ZM5,6H19a3,3,0,0,1,3,3v3H2V9A3,3,0,0,1,5,6ZM19,22H5a3,3,0,0,1-3-3V14h9v1a1,1,0,0,0,2,0V14h9v5A3,3,0,0,1,19,22Z"></path></svg>
+                                        <p class="my-2 mb-0 fs-5 fw-semibold">1+</p>
+                                        <p class="small mb-1 text_secondary">Years of experience</p>
+                                    </div>
+                                </div> -->
+                            </div>
+                            <hr class="my-3">
+                            <p class="fs-5 mb-1 fw-medium text-dark-emphasis">Full Job Description</p>
+                            <p class="my-1">Fulcrum Pvt. Ltd. is urgently hiring for "<span class="fw-medium">Sr Generator Operator</span>" for one of their reputed client located Karachi.</p>
+                            <div class="my-3">
+                                <p class="my-1"><span class="fw-semibold me-1">Position:</span>Sr. Generator Operator</p>
+                                <p class="my-1"><span class="fw-semibold me-1">Category:</span>Information Technology</p>
+                                <p class="my-1"><span class="fw-semibold me-1">Location:</span>Luckyone Mall</p>
+                                <p class="my-1"><span class="fw-semibold me-1">Job type:</span>Luckyone Mall</p>
+                                <p class="my-1"><span class="fw-semibold me-1">Education:</span>BSCS/BSE</p>
+                                <p class="my-1"><span class="fw-semibold me-1">Experience:</span>1 to 2 Years</p>
+                                <p class="my-1"><span class="fw-semibold me-1">Age:</span>18 to 30</p>
+                                <p class="my-1"><span class="fw-semibold me-1">Timings:</span>10 am to 7 pm</p>
+                                <p class="my-1"><span class="fw-semibold me-1">Salary:</span>50k to 55k a month</p>
+                                <p class="my-1"><span class="fw-semibold me-1">Additional Requirments:</span>None</p>
+                            </div>
+                            <p class="fw-semibold my-2">Main Responsibilities</p>
+                            <ul class="my-2 mb-3">
+                                <li class="my-2">To Have a complete round of the plant. Check all temperature, pressures regarding engines and auxiliaries, level of cooling towers, underground and overhead tanks.</li>
+                                <li class="my-2">To Control generator output to match the phase, frequency, or voltage of electricity supplied to panels</li>
+                                <li class="my-2">Check all running and stand by machinery for correct operation. Check tools box for complete tools as per list.</li>
+                                <li class="my-2">Also exclusively check Generators, Cable trays, Control room panel, breakers, Circulation pumps motors, Cooling towers, Water transfer pumps, Basement, Lube oil tanks, Sui gas pressure, Air filter, Batteries, Diesel Tanks, Diesel</li>
+                                <li class="my-2">To maintain log books, registers and other reports.</li>
+                                <li class="my-2">To check the values of PH and TDS after every hour and log it into the log book & maintain these values with in their required limits.</li>
+                                <li class="my-2">To maintain all parameters regarding whole system.</li>
+                                <li class="my-2">Put down all schedule work carried out during the watch and also note any abnormality found in the log book before handing over the charge. Also inform verbally to the incoming shift in charge use of personal computers and related software applications.</li>
+                                <li class="my-2">Clean engine mat filter and panel filter for both gas engine.</li>
+                                <li class="my-2">Carry out timely cleaning of filter system and ventilation system</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer pb-4">
+        <div class="fixed_container container">
+            <div class="row mb-5 align-items-start justify-content-lg-between justify-content-center">
+                <div class="col-md-3">
+                    <img src="assets/img/logo.png" width="auto" height="auto" alt="luckyone logo" class="mb-3">
+                    <h3>Lucky Landmark (Pvt) Ltd.</h3>
+                    <p class="small">LuckyOne Mall,<br>Opp. UBL Sports Complex,<br>Main Rashid Minhas Road<br>Karachi, Pakistan.</p>
+                </div>
+                <div class="col-md-2 ml-auto">
+                    <h3 class="mt-md-4 mt-3">Links</h3>
+                    <ul class="list-unstyled links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="jobs.html">Find Jobs</a></li>
+                        <li><a href="category.html">Categories</a></li>
+                        <li><a href="how_to_apply.html">How to apply</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 ml-auto">
+                    <h3 class="mt-md-4 mt-3">Looking for job?</h3>
+                    <p>Submit you resume at lucky landmark (Pvt) Ltd via email. Just Mail us your resume at </p>
+                    <a class="text-white-50" target="_blank" href="mailto:careers@luckyone.com.pk">careers@luckyone.com.pk</a>
+                </div>
+                <div class="col-md-3 ml-auto">
+                    <h3 class="mt-md-4 mt-3">Contact</h3>
+                    <ul class="list-unstyled links">
+                        <li><a class="text-white-50" href="tel:+922136321311">Ph: (+92) 21 36321311</a></li>
+                        <li><a class="text-white-50" target="_blank" href="mailto:info@luckyone.com.pk">info@luckyone.com.pk</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="line"></div>
+                </div>
+            </div>
+            <p class="small text-center my-1">All rights reserved. Lucky Landmark (Pvt) Ltd.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>

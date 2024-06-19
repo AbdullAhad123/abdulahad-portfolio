@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How to apply for job - Apply Processs | Luckyone Careers</title>
+    <link rel="shortcut icon" href="assets/img/lucky-one-icon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css" integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>
+    .form_group {
+        /* box-shadow: 0px 2px 6px 0px #0000003e; */
+    }
+    .form-label {
+        font-size: 1.15rem;
+    }
+    .form_input_field {
+        padding: 0.75rem;
+        box-shadow: inset 0px 0px 13px 1px #ececec26 !important;
+    }
+    .form_input_field:focus {
+        border: 1px solid #ffa200
+    }
+    #application {
+        background: linear-gradient(#fffffff0, #fffffff0), url(assets/img/IMG_0174-scaled.jpg) center fixed;
+        background-size: cover;
+    }
+
+    .upload_file_container {
+        height: 300px;
+        width: 100%;
+        border: 2px dashed #ffa200;
+        border-radius: 10px;
+        padding: 3rem;
+    }
+
+    .browse_file_container {
+        height: 200px;
+        max-width: 300px;
+        background-color: #fffedc;
+        border-radius: 20px;
+        margin: auto;
+        cursor: pointer;
+        transition: 0.3s;
+        border: 1px solid #ffbf0058;
+        color: #ff9100;
+    }
+
+    .browse_file_container:hover {
+        background-color: #f8f7d1;
+    }
+
+
+</style>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+            <div class="fixed_container container">
+                <a class="navbar-brand" href="#">
+                    <img src="assets/img/logo.png" width="180" height="auto" alt="luckyone logo">
+                </a>
+                <div class="d-flex align-items-center">
+                    <a href="jobs.html" class="btn_primary d-lg-none d-inline-flex text-decoration-none align-items-center me-2 find_job_nav_btn">Find Job <i class='bx bx-search-alt ms-1 fs-5' ></i></a>
+                    <button class="navbar-toggler border-0 shadow-none text-white" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="sidebar">
+                        <i class="bx bx-menu fs-2"></i>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item mx-lg-2">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item mx-lg-2">
+                            <a class="nav-link" href="about.html">About</a>
+                        </li>
+                        <li class="nav-item mx-lg-2">
+                            <a class="nav-link" href="category.html">Categories</a>
+                        </li>
+                        <li class="nav-item mx-lg-2">
+                            <a class="nav-link" href="how_to_apply.html">How to apply?</a>
+                        </li>
+                    </ul>
+                    <a href="jobs.html" class="btn_primary d-lg-inline-flex text-decoration-none align-items-center d-none">Find Job <i class='bx bx-search-alt ms-1 fs-5' ></i></a>
+                </div>
+            </div>
+        </nav>
+        <div class="offcanvas offcanvas-start w-100" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+            <div class="d-flex p-2 align-items-center justify-content-between">
+                <img src="assets/img/logo.png" width="auto" height="auto" alt="logo">
+                <button class="btn btn-transparent shadow-none border-0" data-bs-dismiss="offcanvas">
+                    <i class="bx bx-x text-white fs-3"></i>
+                </button>
+            </div>
+            <div class="p-3 my-3">
+                <ul class="list-unstyled m-0">
+                    <li class="my-3"><a href="index.html" class="text-white text-decoration-none">Home</a></li>
+                    <li class="my-3"><a href="about.html" class="text-white text-decoration-none">About</a></li>
+                    <li class="my-3"><a href="jobs.html" class="text-white text-decoration-none">Find Jobs</a></li>
+                    <li class="my-3"><a href="category.html" class="text-white text-decoration-none">Categories</a></li>
+                    <li class="my-3"><a href="how_to_apply.html" class="text-white text-decoration-none">How to apply?</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section id="apply_now_intro" class="d-flex align-items-center position-relative">
+        <div class="fixed_container container">
+            <h1 class="display-5 text-center text_light fw-medium my-2">Front-End Developer</h1>
+            <p class="fs-5 text-center text_light my-2">Information Technology</p>
+        </div>
+    </section>
+
+    <section id="application" class="py_5">
+        <div class="fixed_container container">
+            <h2 class="fw-semibold my-2 display-5 text-center">Job Application</h2>
+            <div class="heading_line mx-auto"></div>
+            <form action="" class="bg-white my-4">
+                <div class="my-2">
+                    <div class="border-bottom p-3">
+                        <p class="fs-4 fw-semibold my-1">Personal Information</p>
+                    </div>
+                    <div class="row p-3 align-items-center">
+                        <div class="col-md-6 col-sm-10 col-12 mb-3">
+                            <label for="first_name" class="form-label fw-medium">First Name</label>
+                            <input type="text" class="form-control form_input_field shadow-none" id="first_name">
+                        </div>
+                        <div class="col-md-6 col-sm-10 col-12 mb-3">
+                            <label for="last_name" class="form-label fw-medium">Last Name</label>
+                            <input type="text" class="form-control form_input_field shadow-none" id="last_name">
+                        </div>
+                    </div>
+                </div>
+                <div class="my-2">
+                    <div class="border-bottom p-3">
+                        <p class="fs-4 fw-semibold my-1">Location</p>
+                    </div>
+                    <div class="row p-3 align-items-center">
+                        <div class="col-md-6 col-sm-10 col-12 mb-3">
+                            <label for="street_address" class="form-label fw-medium">Street Address</label>
+                            <input type="text" class="form-control form_input_field shadow-none" id="street_address">
+                        </div>
+                        <div class="col-md-6 col-sm-10 col-12 mb-3">
+                            <label for="city" class="form-label fw-medium">City</label>
+                            <input type="text" class="form-control form_input_field shadow-none" id="city">
+                        </div>
+                    </div>
+                </div>
+                <div class="my-2">
+                    <div class="border-bottom p-3">
+                        <p class="fs-4 fw-semibold my-1">Contact</p>
+                    </div>
+                    <div class="row p-3 align-items-center">
+                        <div class="col-md-6 col-sm-10 col-12 mb-3">
+                            <label for="email" class="form-label fw-medium">Email Address</label>
+                            <input type="email" class="form-control form_input_field shadow-none" id="email">
+                        </div>
+                        <div class="col-md-6 col-sm-10 col-12 mb-3">
+                            <label for="phoneNumber" class="form-label fw-medium">Phone Number</label>
+                            <input type="text" class="form-control form_input_field shadow-none" id="phoneNumber">
+                        </div>
+                    </div>
+                </div>
+                <div class="my-2">
+                    <div class="row p-3 align-items-center">
+                        <div class="col-12 mb-3">
+                            <label for="qualification" class="form-label fw-medium">Qualification</label>
+                            <select class="form-select form_input_field shadow-none" id="qualification" aria-label="Default select example">
+                                <option selected>Select One</option>
+                                <option value="1">Matriculation</option>
+                                <option value="2">Intermediate</option>
+                                <option value="3">Graduation</option>
+                                <option value="3">Masters</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-2">
+                    <div class="row p-3 align-items-center">
+                        <div class="col-12 mb-3">
+                            <label for="availableForInterview" class="form-label fw-medium">Please select 2-3 dates for interview</label>
+                            <textarea class="form-control form_input_field" id="availableForInterview"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-2">
+                    <div class="row p-3 align-items-center">
+                        <div class="col-12 mb-3">
+                            <label for="resumeUpload" class="form-label fw-medium">Upload your Resume</label>
+                            <div class="col-12 my-2">
+                                <div class="upload_file_container">
+                                    <div class="browse_file_container d-flex align-items-center justify-content-center p-3 text-center">
+                                       <div>
+                                            <i class='bx bx-upload display-4'></i>
+                                            <p class="fs-5 text-center">Click here to upload resume</p>
+                                       </div>
+                                    </div>
+                                    <input type="file" class="d-none" id="uploadResume">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-end">
+                            <button class="btn_primary" id="submitFrom">Apply Now</button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer pb-4">
+        <div class="fixed_container container">
+            <div class="row mb-5 align-items-start justify-content-lg-between justify-content-center">
+                <div class="col-md-3">
+                    <img src="assets/img/logo.png" width="auto" height="auto" alt="luckyone logo" class="mb-3">
+                    <h3>Lucky Landmark (Pvt) Ltd.</h3>
+                    <p class="small">LuckyOne Mall,<br>Opp. UBL Sports Complex,<br>Main Rashid Minhas Road<br>Karachi, Pakistan.</p>
+                </div>
+                <div class="col-md-2 ml-auto">
+                    <h3 class="mt-md-4 mt-3">Links</h3>
+                    <ul class="list-unstyled links">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Find Jobs</a></li>
+                        <li><a href="#">Categories</a></li>
+                        <li><a href="#">How to apply</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 ml-auto">
+                    <h3 class="mt-md-4 mt-3">Looking for job?</h3>
+                    <p>Submit you resume at lucky landmark (Pvt) Ltd via email. Just Mail us your resume at </p>
+                    <a class="text-white-50" target="_blank" href="mailto:careers@luckyone.com.pk">careers@luckyone.com.pk</a>
+                </div>
+                <div class="col-md-3 ml-auto">
+                    <h3 class="mt-md-4 mt-3">Contact</h3>
+                    <ul class="list-unstyled links">
+                        <li><a class="text-white-50" href="tel:+922136321311">Ph: (+92) 21 36321311</a></li>
+                        <li><a class="text-white-50" target="_blank" href="mailto:info@luckyone.com.pk">info@luckyone.com.pk</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="line"></div>
+                </div>
+            </div>
+            <p class="small text-center my-1">All rights reserved. Lucky Landmark (Pvt) Ltd.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js" integrity="sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="assets/js/app.js"></script>
+
+    <script>
+        $(".browse_file_container").click(function () {
+            $("#uploadResume").click()
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chats - Client Portal | Oneli Builders</title>
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/portal_all.css">
+    <link rel="stylesheet" href="../assets/css/portal_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css" integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+
+        .chatParentContainer {
+            min-height: 100vh;
+            max-height: fit-content;
+            width: auto;
+            background-color: #f8f8f8;
+        }
+
+        .chatTopBar {
+            min-height: 10vh;
+            max-height: fit-content;
+            width: auto;
+            background-color: #9c668c;
+            padding: 0.7rem 0;
+        }
+
+        .chatCenterBody {
+            height: 90vh;
+            width: auto;
+            background-color: rgb(218, 145, 145);
+        }
+
+        /* chatTopLeftSide  */
+
+        .chatTopLeftSide {
+            display: flex;
+            align-items: center;
+        }
+
+        .adminContainer {
+            display: flex;
+            align-items: center;
+        }
+
+        .adminAvatar {
+            height: 60px;
+            width: 60px;
+            background-color: yellow;
+        }
+
+        /* chatTopRightSide */
+
+
+
+    </style>
+</head>
+<body>
+
+    <!-- follow cursor  -->
+    <div class="cursor"></div>
+<!-- 
+    <div class="window_preloader">
+        <span class="loader"></span>
+    </div> -->
+
+    <div id="main_wrapper">
+        <div class="chatParentContainer">
+            <div class="chatTopBar">
+                <div class="container-lg">
+                    <div class="chatTopLeftSide">
+                        <button class="btn btn-transparent d-inline-flex align-items-centershadow-none border-0"><i class='bx bx-left-arrow-alt fs-4'></i></button>
+                        <div class="adminContainer">
+                            <div class="adminAvatar"></div>
+                            <div class="adminDetails"></div>
+                        </div>
+                    </div>
+                    <div class="chatTopRightSide"></div>
+                </div>
+            </div>
+            <div class="chatCenterBody"></div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../assets/js/app.js"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        function setTooltipPlacement() {
+            var screenWidth = window.innerWidth;
+            var showToolTip = screenWidth >= 1024;
+            if (showToolTip) {
+                var tooltipPlacement = 'right'; 
+                $('.sidebar_listItem_link').attr('data-bs-placement', tooltipPlacement);
+                $('.sidebar_listItem_link').tooltip();
+            } else {
+                $('.sidebar_listItem_link').tooltip('dispose');
+            }
+        }
+
+        $(window).on('resize load', function() {
+            setTooltipPlacement();
+        });
+
+        // notifications
+        $('.notification_list_item').click(function() {
+            $('.all_notification_list').addClass('animate__fadeOutLeft')
+            setTimeout(()=> {
+                $(".all_notification_list").hide();
+                $(".notification_detail_section").show();
+                $('.notification_detail_section').removeClass('animate__fadeOutLeft').addClass('animate__fadeInRight animate__faster')
+            }, 400)
+        });
+
+        $("#backToNotificationList").click(function () {
+            $('.notification_detail_section').addClass('animate__fadeOutLeft')
+            setTimeout(()=> {
+                $(".notification_detail_section").hide();
+                $(".all_notification_list").show();
+                $('.all_notification_list').removeClass('animate__fadeOutLeft').addClass('animate__fadeInRight animate__faster')
+            }, 400)
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register | Oneli Bulders</title>
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/all.css">
+    <link rel="stylesheet" href="../assets/css/portfolio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+        integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+        .wrapper {
+            height: auto;
+            width: auto;
+            background: url(../assets/img/signup_bg.jpg) center no-repeat;
+            background-size: cover;
+        }
+
+        .form_container {
+            min-height: 100vh;
+            max-height: fit-content;
+            width: auto;
+            background-color: #fffcf6;
+            padding-top: 5.2rem !important;
+        }
+
+        .form_input {
+            padding: 0.75rem;
+            background: transparent;
+            border: 1px solid #803d3ba1 !important;
+        }
+        
+        .form_input:focus {
+            background: #fffaf3 !important;
+            border: 1px solid var(--wood_red) !important;
+        }
+
+        .btn_password_actions {
+            display: none;
+            height: 100%;
+            padding: 0.8rem;
+            font-size: 1.4rem;
+            background: #fffbf6;
+            outline: none !important;
+            border: 1px solid var(--wood_red) !important;
+        }
+
+        .btn_wood_red_outlined {
+            background: transparent;
+            color: var(--wood_red);
+            border: 1px solid var(--wood_red);
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .btn_wood_red_outlined:hover {
+            background: var(--wood_red);
+            color: var(--peach);
+        }
+
+        .progress-bar {
+            background-color: #d53333;
+        }
+
+        .weak_pass {
+            background:#ff8e4e;
+        }
+
+        .good_pass {
+            background:#f5c24d;
+        }
+
+        .strong_pass {
+            background:#58d029;
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    <!-- follow cursor  -->
+    <div class="cursor"></div>
+
+    <div class="window_preloader">
+        <span class="loader"></span>
+    </div>
+
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="../assets/img/logo.png" width="140" alt="">
+                </a>
+                <div>
+                    <button data-bs-target="#navbar_menu" data-bs-toggle="offcanvas"
+                        class="btn_wood_red p-3 px-sm-4 fs_5 rounded-pill scale_animation d-inline-flex align-items-center"
+                        id="menu_btn"><i class='bx bx-menu fs-5'></i><span class="btn_text_cont">&nbsp;MENU</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar  -->
+        <div class="offcanvas offcanvas-top h-100" tabindex="-1" id="navbar_menu"
+            aria-labelledby="navbar_menuLabel">
+            <div class="d-flex align-items-center justify-content-between py-3 container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="../assets/img/logo.png" width="140" alt="">
+                </a>
+                <div>
+                    <a href="tel:+4733378901" class="text-decoration-none align-items-center mx-2 btn_peach d-inline-flex fs_5 fw-semibold p-3 px-sm-4 rounded-pill scale_animation text-uppercase text_wood_red" id="make_call">
+                        <i class='bx bx-phone fs-5'></i>
+                        <div class="btn_text_cont position-relative">
+                            <div class="make_call_text">&nbsp;Make a Call</div>
+                            <div class="make_call_number">&nbsp;0313 0215362</div>
+                        </div>
+                    </a>
+                    <button data-bs-dismiss="offcanvas" class="btn_wood_red p-3 px-sm-4 fs_5 rounded-pill scale_animation d-inline-flex align-items-center" id="menu_close_btn"><i class='bx bx-x fs-5'></i><span class="btn_text_cont">&nbsp;CLOSE</span></button>
+                </div>
+            </div>
+            <div class="offcanvas-body container">
+                <ul class="list-unstyled my-4 fst_serif">
+                    <li class="my-3 fs-3">
+                        <a href="index.html" class="d-inline-flex align-items-center text-decoration-none fw-semibold nav_item text-uppercase">HOME 
+                            <i class="bx bx-arrow-back bx-rotate-180"></i>
+                        </a>
+                    </li>
+                    <li class="my-3 fs-3">
+                        <a href="about.html" class="d-inline-flex align-items-center text-decoration-none fw-semibold nav_item text-uppercase">about us 
+                            <i class="bx bx-arrow-back bx-rotate-180"></i>
+                        </a>
+                    </li>
+                    <li class="my-3 fs-3">
+                        <a href="portfolio.html" class="d-inline-flex align-items-center text-decoration-none fw-semibold nav_item text-uppercase">portfolio 
+                            <i class="bx bx-arrow-back bx-rotate-180"></i>
+                        </a>
+                    </li>
+                    <li class="my-3 fs-3">
+                        <a href="solutions.html" class="d-inline-flex align-items-center text-decoration-none fw-semibold nav_item text-uppercase">Solutions 
+                            <i class="bx bx-arrow-back bx-rotate-180"></i>
+                        </a>
+                    </li>
+                    <li class="my-3 fs-3">
+                        <a href="contact.html" class="d-inline-flex align-items-center text-decoration-none fw-semibold nav_item text-uppercase">Contact 
+                            <i class="bx bx-arrow-back bx-rotate-180"></i>
+                        </a>
+                    </li>
+                    <li class="my-4">
+                        <a href="login.html" class="text-decoration-none btn_wood_red p-3 px-4 fst_sans rounded-pill fs-5 scale_animation">Login</a>
+                        <span class="mx-2 fs-5">OR</span>
+                        <a href="signup.html" class="text-decoration-none btn_wood_red p-3 px-4 fst_sans rounded-pill fs-5 scale_animation">Signup</a>
+                    </li>
+                </ul>
+            </div>
+        </div>        
+    </header>
+    
+    <!-- form wrapper  -->
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-xl-7 col-lg-6 col-md-5 col-12 p-0">
+                <div class="image_container"></div>
+            </div>
+            <div class="col-xl-5 col-lg-6 col-md-7 col-12 p-0">
+                <div class="form_container p-3 pb-0 d-flex align-items-center">
+                    <div class="col-lg-10 col-12 mx-auto px-2">
+                        <h1 class="fst_sans fs-2 fw-semibold text_darker_brown">Register your account</h1>
+                        <form class="my-4">
+                            <div class="my-3">
+                                <label for="fullName" class="form-label fs_5 fw-semibold text-uppercase fst_sans text_wood_red">Full Name</label>
+                                <input type="text" class="form-control form_input fst_sans shadow-sm" id="fullName" placeholder="Enter your name">
+                                <div class="text-danger small my-1 fullName_error d-none">The name field is required</div>
+                            </div>
+                            <div class="my-3">
+                                <label for="username" class="form-label fs_5 fw-semibold text-uppercase fst_sans text_wood_red">Username</label>
+                                <input type="text" class="form-control form_input fst_sans shadow-sm" id="username" placeholder="Enter your username">
+                                <div class="text-danger small my-1 username_error d-none">The username field is required</div>
+                            </div>
+                            <div class="my-3">
+                                <label for="email" class="form-label fs_5 fw-semibold text-uppercase fst_sans text_wood_red">email</label>
+                                <input type="email" class="form-control form_input fst_sans shadow-sm" id="email" placeholder="Enter your email">
+                                <div class="text-danger small my-1 email_error d-none">The email field is required</div>
+                            </div>
+                            <div class="my-3">
+                                <label for="password" class="form-label fs_5 fw-semibold text-uppercase fst_sans text_wood_red">password</label>
+                                <div class="position-relative">
+                                    <div class="password_input">
+                                        <input type="password" class="form-control form_input fst_sans shadow-sm" id="password" placeholder="Enter your password">
+                                    </div>
+                                    <button type="button" class="btn_password_actions rounded-end position-absolute top-0 end-0 bottom-0 p-2">
+                                        <i class='bx bx-show'></i>
+                                    </button>
+                                </div>
+                                <div class="text-danger small my-1 password_error d-none">The pasword field is required</div>
+                                <div class="progress my-2 rounded" role="progressbar" style="height: 8px;" aria-label="Basic example" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar" style="width: 0%"></div>
+                                </div>
+                                <div class="text-end my-2">
+                                    <a type="button" class="btn_generate_password text_light_wood_brown text-decoration-none user-select-none">Suggest a Strong Password</a>
+                                </div>
+                            </div>
+                            <div class="my-2">
+                                <button class="btn_wood_red p-3 w-100 rounded fw-medium" type="button" id="signup_btn">REGISTER <i class="bx bx-arrow-back bx-rotate-180"></i></button>
+                            </div>
+                            <div class="d-flex justify-content-end align-items-center">
+                                <p class="my-3 text-center fst_sans text_darker_brown">Already have an account?</p>
+                                <a href="login.html" class="btn_wood_red_outlined text-decoration-none  ms-2 small p-2 rounded fw-medium px-3" type="button">SIGNIN</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../assets/js/app.js"></script>
+
+    <script>
+        $("#signup_btn").click(function () {
+            const fullName = $("#fullName").val();
+            const username = $("#username").val();
+            const email = $("#email").val();
+            const password = $("#password").val();
+
+            if (fullName == '') {
+                $("#fullName").focus();
+                $(".fullName_error").removeClass('d-none');
+            } else {
+                $(".fullName_error").addClass('d-none');
+            }
+
+            if (username == '') {
+                $("#username").focus();
+                $(".username_error").removeClass('d-none');
+            } else {
+                $(".username_error").addClass('d-none');
+            }
+
+            if (email == '') {
+                $("#email").focus();
+                $(".email_error").removeClass('d-none');
+            } else {
+                $(".email_error").addClass('d-none');
+            }
+
+            if (password == '') {
+                $("#password").focus();
+                $(".password_error").removeClass('d-none');
+                $(".password_error").text('The password field is required');
+            } else if (password.length < 6) {
+                $("#password").focus();
+                $(".password_error").removeClass('d-none');
+                $(".password_error").text('Password is too weak');
+            } else if (password.length >=6 && password.length <= 10) {
+                $("#password").focus();
+                $(".password_error").removeClass('d-none');
+                $(".password_error").text('Password strength is average');
+            }  else {
+                $(".password_error").addClass('d-none');
+            }
+
+            if (fullName && username && email && password) {
+                $(this).find('i.bx').toggleClass('bx-arrow-back bx-loader-alt bx-spin');
+            }
+        });
+
+        function generatePassword(length) {
+            const charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            let password = "";
+            for (let i = 0; i < length; i++) {
+            const randomIndex = Math.floor(Math.random() * charset.length);
+            password += charset[randomIndex];
+            }
+            return password;
+        }
+
+        $(".btn_generate_password").click(function () {
+            const password = generatePassword(25); 
+            $('.btn_password_actions').fadeIn();
+            $("#password").val(password);
+            passwordStrength();
+        });
+        
+        function passwordStrength () {
+            const input = $(".password_input .form_input").val();
+
+            if (input.length < 6) {
+                $(".progress-bar").removeClass('good_pass strong_pass');
+                $(".progress-bar").addClass('weak_pass');
+                $(".progress-bar").width('33.33%');
+            } else if (input.length >=6 && input.length <= 10) {
+                $(".progress-bar").removeClass('weak_pass strong_pass');
+                $(".progress-bar").addClass('good_pass');
+                $(".progress-bar").width('66.67%');
+            } else if (input.length > 10) {
+                $(".progress-bar").removeClass('weak_pass good_pass');
+                $(".progress-bar").addClass('strong_pass');
+                $(".progress-bar").width('100%');
+            } else {
+                $(".progress-bar").removeClass('weak_pass good_pass strong_pass');
+                $(".progress-bar").width('0');
+            }
+
+            if (input == '') {
+                $(".progress-bar").removeClass('weak_pass good_pass strong_pass');
+                $(".progress-bar").width('0');
+            }
+
+        }
+
+        $(document).on('keyup keypress keydown', function () {
+            passwordStrength();
+        });
+
+        $("#fullName").on('keyup', function (e) {
+            if (e.keyCode === 13) {
+               $("#signup_btn").click();
+            }
+        })
+        $("#username").on('keyup', function (e) {
+            if (e.keyCode === 13) {
+               $("#signup_btn").click();
+            }
+        })
+        $("#email").on('keyup', function (e) {
+            if (e.keyCode === 13) {
+               $("#signup_btn").click();
+            }
+        })
+        $("#password").on('keyup', function (e) {
+            if (e.keyCode === 13) {
+               $("#signup_btn").click();
+            }
+        })
+
+    </script>
+</body>
+
+</html>

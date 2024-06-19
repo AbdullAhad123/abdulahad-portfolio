@@ -1,0 +1,471 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --peach: #E4C59E;
+    --light_wood_brown: #AF8260;
+    --wood_red: #803D3B;
+    --darker_brown: #322C2B;
+    --white: #ffffff;
+    --light_white: #fffbf7;
+    --black: #000000;
+}
+
+/* main contianers css  */
+#main_wrapper {
+    height: auto;
+    width: auto;
+}
+
+/* intro  */
+.intro_section {
+    min-height: 400px;
+    max-height: fit-content;
+    width: auto;
+    background: #eadcc6;
+    border-radius: 30px;
+}
+
+/* contract  */
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link {
+    border: none;
+    color: var(--darker_brown);
+}
+
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--wood_red) !important;
+    color: var(--wood_red) !important;
+}
+
+.contract_card {
+    min-height: 320px;
+    max-height: fit-content;
+    width: auto;
+    background: #fff8f0;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.contract_card:hover {
+    scale: 1.02;
+    box-shadow: 0px 6px 6px 0px #00000029
+}
+
+.contract_card .spinner-grow {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background: #cea065;
+    height: 13px;
+    width: 13px;
+    animation-duration: 1s !important;
+    cursor: pointer;
+}
+
+.contract_badge {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 16px;
+    width: 16px;
+    animation-duration: 1s !important;
+    cursor: pointer;
+}
+
+.contract_card_badge {
+    padding: 0.2rem 0.9rem;
+    background: #e5ffce;
+    color: #84b955;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+/* project  */
+
+.project_card {
+    height: auto;
+    width: auto;
+    background: #fdfdfd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 5px 0px #00000030;
+    transition: 0.3s;
+}
+
+.project_card:hover {
+    scale: 1.02;
+    box-shadow: 0px 5px 6px 1px #00000030;
+}
+
+.project_card:hover .project_img {
+    opacity: 1;
+}
+
+.project_img {
+    height: 250px;
+    width: auto;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    opacity: 0.85;
+    transition: 0.3s;
+}
+
+.project_details {
+    height: auto;
+    width: auto;
+    padding: 0.75rem;
+}
+
+.project_status {
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+.project_status.complete {
+    background: #f2fbe6;
+    color: #79a040;
+}
+
+.project_status.active {
+    background: #fbf8d9;
+    color: #c0a700;
+}
+
+/* contract details  */
+.contract_glance_card {
+    height: auto;
+    width: auto;
+    max-width: 400px;
+    border-radius: 10px;
+    margin: 0.3rem;
+    transition: 0.25s;
+    cursor: pointer;
+    /* background-image: linear-gradient(319deg, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%); */
+    background: linear-gradient(319deg, #e8d6b1 0%, #fff3da 1%, #f5e3cb 100%)
+}
+
+.contract_glance_card:hover {
+    scale: 1.02;
+}
+
+.svg_image {
+    height: 60px;
+    width: 60px;
+    background: #f5e3cb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    margin: 0.5rem auto;
+}
+
+.quick_details {
+    min-height: 350px;
+    max-height: fit-content;
+    width: auto;
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to top, #e6b980 0%, #f8e3c5 100%);
+    border-radius: 25px;
+}
+
+.contract_details_image {
+    filter: drop-shadow(1px 1px 2px #00000040);
+}
+
+/* acc  */
+.process_images_scroll {
+    height: 500px;
+    width: auto;
+}
+
+.accordian_button {
+    box-shadow: 0px 3px 7px 0px #00000005;
+}
+
+.accordian_button_item {
+    background-color: #f6f1eab8 !important;
+    color: var(--wood_red) !important;
+    outline: none !important;
+    transition: 0.2s;
+}
+
+.accordian_button_item:hover {
+    background-color: #e2d5c483 !important;
+}
+
+.accordian_button_item.active {
+    background-color: var(--wood_red) !important;
+    color: #ffedd3b5 !important;
+}
+
+.accordian_details {
+    display: none;
+    background-color: #e2d5c44d;
+}
+
+/* sign off  */
+.signature_image {
+    height: 150px;
+    width: auto;
+    border: 2px solid var(--peach);
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.signature_image .bx-image-add {
+    font-size: 2.8rem;
+}
+
+.signature_date input {
+    border: 2px solid var(--peach);
+    padding: 0.4rem;
+    width: 100%;
+    background: transparent;
+    outline: none;
+}
+
+.signature_date input:focus {
+    background: transparent;
+    border: 2px solid var(--peach);
+}
+
+/* meetings  */
+.contact_header {
+    height: auto;
+    width: auto;
+    background: #eadcc6;
+    border-radius: 10px;
+}
+
+.input_field {
+    padding: 0.75rem;
+    outline: none;
+    border: 1px solid #afafaf12;
+    background: #fdfdfd6f;
+}
+
+.input_field:focus {
+    background: #ffffff80;
+    border: 1px solid var(--peach);
+}
+
+.contact_form_container {
+    height: 100%;
+    width: auto;
+    background: white;
+    box-shadow: 0px 4px 6px 0px #00000012;
+    padding: 1.8rem 1.2rem;
+    border-radius: 10px;
+}
+
+#date_time {
+    min-height: 60px;
+    max-height: 60px;
+}
+
+#callPurpose {
+    min-height: 100px;
+    max-height: 100px;
+}
+
+#sendRequest {
+    padding: 0.75rem;
+}
+
+.contact_image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* meeting_card  */
+.meeting_card {
+    height: auto;
+    width: auto;
+    background: #ffffff;
+    box-shadow: 0px 4px 5px 0px #0000002e;
+    border-radius: 10px;
+}
+
+.members_list {
+    display: flex;
+    align-items: center;
+}
+
+.member_avatar {
+    height: 40px;
+    width: 40px;
+    margin: 0.2rem;
+    border-radius: 100px;
+    position: relative;
+    box-shadow: 0px 1px 2px 0px #0000004f;
+}
+
+.member_avatar:nth-child(2) {
+    left: -10px;
+}
+
+.member_avatar:nth-child(3) {
+    left: -20px;
+}
+
+.meeting_details_btn,
+.meeting_postpond_btn {
+    padding: 0.75rem;
+    border: 1px solid var(--wood_red);
+}
+
+.details_svg_image {
+    fill: #d18a31;
+    height: 18px !important;
+    width: 18px !important;
+}
+
+#meeting_id,
+#meeting_pass {
+    cursor: pointer;
+    transition: 0.25s;
+    text-decoration: underline;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    background: transparent;
+}
+
+#meeting_id:hover,
+#meeting_pass:hover {
+    color: var(--light_wood_brown);
+}
+
+#check-group {
+    animation: 0.32s ease-in-out 1.03s check-group;
+    transform-origin: center;
+}
+
+#check-group #check {
+    animation: 0.34s cubic-bezier(0.65, 0, 1, 1) 0.8s forwards check;
+    stroke-dasharray: 0, 75px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#check-group #outline {
+    animation: 0.38s ease-in outline;
+    transform: rotate(0deg);
+    transform-origin: center;
+}
+
+#check-group #white-circle {
+    animation: 0.35s ease-in 0.35s forwards circle;
+    transform: none;
+    transform-origin: center;
+}
+
+@keyframes outline {
+    from {
+        stroke-dasharray: 0, 345.576px;
+    }
+
+    to {
+        stroke-dasharray: 345.576px, 345.576px;
+    }
+}
+
+@keyframes circle {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0);
+    }
+}
+
+@keyframes check {
+    from {
+        stroke-dasharray: 0, 75px;
+    }
+
+    to {
+        stroke-dasharray: 75px, 75px;
+    }
+}
+
+@keyframes check-group {
+    from {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.09);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+.profile_form_input {
+    padding: 0.7rem 0.7rem;
+    outline: none;
+}
+
+.profile_form_input:focus {
+    border: 1px solid var(--peach);
+}
+
+.payment_methods_container {
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem 0;
+}
+
+
+.payment_method_item {
+    height: auto;
+    width: 250px;
+    background: #f7f7f7;
+    padding: 0.75rem;
+    margin: 0.3rem 0;
+    border: none;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+.paymentMethodRadio {
+    accent-color: var(--light_wood_brown)
+}
+
+.payment_method_item.selected {
+    border: 1px solid var(--light_wood_brown);
+    background: #f7f4f196;
+}
+
+#cancelCardDetails {
+    display: none;
+}
+
+.cardNumberInput {
+    position: relative;
+}
+
+.secureCardIcon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
+}

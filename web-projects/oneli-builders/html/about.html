@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About | Oneli Bulders</title>
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/all.css">
+    <link rel="stylesheet" href="../assets/css/about.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css"
+        integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>
+    .about_us_image {
+        filter: drop-shadow(0px 2px 10px #00000040);
+    }
+
+    #services {
+        height: auto;
+        width: auto;
+        background: linear-gradient(180deg , #151212f9, #201a19f9), url(../assets/img/bg_image.jpg) center no-repeat fixed;
+    }
+
+
+    /* team  */
+
+    .team_image {
+        height: auto;
+        width: auto;
+    }
+
+    .team_image img {
+        transition: 0.3s;
+    }
+    
+    .team_card {
+        height: auto;
+        width: auto;
+    }
+    
+    .team_card:hover .team_image img {
+        scale: 1.01;
+        box-shadow: 0px 4px 14px 0px #0000009e;
+    }
+
+</style>
+    <body>
+
+    <!-- follow cursor  -->
+    <div class="cursor"></div>
+
+    <div class="window_preloader">
+        <span class="loader"></span>
+    </div>
+
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="../assets/img/logo.png" width="140" alt="">
+                </a>
+                <div>
+                    <a href="tel:+4733378901" class="text-decoration-none align-items-center mx-2 btn_peach d-inline-flex fs_5 fw-semibold p-3 px-sm-4 rounded-pill scale_animation text-uppercase text_wood_red" id="make_call">
+                        <i class='bx bx-phone fs-5'></i>
+                        <div class="btn_text_cont position-relative">
+                            <div class="make_call_text">&nbsp;Make a Call</div>
+                            <div class="make_call_number">&nbsp;0313 0215362</div>
+                        </div>
+                    </a>
+                    <button data-bs-target="#navbar_menu" data-bs-toggle="offcanvas"
+                        class="btn_wood_red p-3 px-sm-4 fs_5 rounded-pill scale_animation d-inline-flex align-items-center"
+                        id="menu_btn"><i class='bx bx-menu fs-5'></i><span class="btn_text_cont">&nbsp;MENU</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar  -->
+        <div class="offcanvas offcanvas-top h-100" tabindex="-1" id="navbar_menu"
+            aria-labelledby="navbar_menuLabel">
+            <div class="d-flex align-items-center justify-content-between py-3 container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="../assets/img/logo.png" width="140" alt="">
+                </a>
+                <div>
+                    <a href="tel:+4733378901" class="text-decoration-none align-items-center mx-2 btn_peach d-inline-flex fs_5 fw-semibold p-3 px-sm-4 rounded-pill scale_animation text-uppercase text_wood_red" id="make_call">
+                        <i class='bx bx-phone fs-5'></i>
+                        <div class="btn_text_cont position-relative">
+                            <div class="make_call_text">&nbsp;Make a Call</div>
+                            <div class="make_call_number">&nbsp;0313 0215362</div>
+                        </div>
+                    </a>
+                    <button data-bs-dismiss="offcanvas" class="btn_wood_red p-3 px-sm-4 fs_5 rounded-pill scale_animation d-inline-flex align-items-center" id="menu_close_btn"><i class='bx bx-x fs-5'></i><span class="btn_text_cont">&nbsp;CLOSE</span></button>
+                </div>
+            </div>
+            <div class="offcanvas-body container">
+                <ul class="list-unstyled my-4 fst_serif">
+                    <li class="my-3 fs-3">
+                        <a href="index.html" class="d-inline-flex align-items-center text-decoration-none fw-semibold nav_item text-uppercase">HOME 
+                            <i class="bx bx-arrow-back bx-rotate-180"></i>
+                        </a>
+                    </li>
+                    <li class="my-3 fs-3">
+                        <a href="about.html" class="d-inline-flex align-items-center text-decoration-none fw-semibold nav_item text-uppercase">about us 
+                            <i class="bx bx-arrow-back bx-rotate-180"></i>
+                        </a>
+                    </li>
+                    <li class="my-3 fs-3">
+                        <a href="portfolio.html" class="d-inline-flex align-items-center text-decoration-none fw-semibold nav_item text-uppercase">portfolio 
+                            <i class="bx bx-arrow-back bx-rotate-180"></i>
+                        </a>
+                    </li>
+                    <li class="my-3 fs-3">
+                        <a href="solutions.html" class="d-inline-flex align-items-center text-decoration-none fw-semibold nav_item text-uppercase">Solutions 
+                            <i class="bx bx-arrow-back bx-rotate-180"></i>
+                        </a>
+                    </li>
+                    <li class="my-3 fs-3">
+                        <a href="contact.html" class="d-inline-flex align-items-center text-decoration-none fw-semibold nav_item text-uppercase">Contact 
+                            <i class="bx bx-arrow-back bx-rotate-180"></i>
+                        </a>
+                    </li>
+                    <li class="my-4">
+                        <a href="login.html" class="text-decoration-none btn_wood_red p-3 px-4 fst_sans rounded-pill fs-5 scale_animation">Login</a>
+                        <span class="mx-2 fs-5">OR</span>
+                        <a href="signup.html" class="text-decoration-none btn_wood_red p-3 px-4 fst_sans rounded-pill fs-5 scale_animation">Signup</a>
+                    </li>
+                </ul>
+            </div>
+        </div>        
+    </header>
+
+    <!-- intro  -->
+    <section id="intro" class="fullscreen d-flex align-items-center">
+        <div class="container-lg">
+            <h1 class="text-center my-2 display-2 text-white fw-medium text-capitalize fst_serif" data-aos="fade-up" data-aos-delay="300" data-aos-duration="600">About Us</h1>
+            <p class="text-white fs-5 my-2 text-center fst_sans" data-aos="fade-up" data-aos-delay="450" data-aos-duration="650">Discover the Story Behind Oneli Builders' Legacy of Exceptional Craftsmanship.</p>
+        </div>
+    </section>
+
+    <!-- about  -->
+    <section id="about" class="py_5">
+        <div class="container-lg">
+            <div class="row m-0 align-items-center justify-content-center my-4">
+                <div class="col-lg-7 col-md-6 col-sm-12 col-12 my-3">
+                    <p class="text_wood_red fs-5 my-2 fw-semibold text-uppercase fst_sans" data-aos="fade-right" data-aos-delay="300" data-aos-duration="600">who are we</p>
+                    <h2 class="my-2 display-4 fw-medium text_darker_brown fst_serif" data-aos="fade-right" data-aos-delay="350" data-aos-duration="650">We transforms your dreams into reality</h2>
+                    <p class="my-3 fst_sans fs_5" data-aos="fade-right" data-aos-delay="400" data-aos-duration="700">Oneli Builders, based in London and Kent, is a reputable firm co-owned by Michael and Alzbeta Rieger. Backed by years of expertise, we uphold unparalleled standards in every project. Michael and Alzbeta oversee each job meticulously, collaborating closely with clients to actualize their visions promptly and professionally.</p>
+                    <div class="my-4" data-aos="fade-up" data-aos-delay="450" data-aos-duration="600">
+                        <a href="about.html" class="btn_wood_red text-decoration-none fw-medium mx-1 scale_animation p-3 px-4 d-inline-flex align-items-center justify-content-center rounded-pill">Explore more about us&nbsp;<i class="bx bx-arrow-back bx-rotate-180"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-6 col-sm-12 col-12 my-3" data-aos="flip-right" data-aos-delay="300" data-aos-duration="600">
+                    <img src="../assets/img/who_are_we_image (2).png" class="about_us_image" width="100%" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py_5">
+        <div class="container-lg">
+            <h2 class="my-4 display-4 fw-medium text_peach text-center fst_serif" data-aos="fade-up" data-aos-delay="300" data-aos-duration="600">We can help you with</h2>
+            <div class="swiper serviceSwiper mt-5" data-aos="fade-up" data-aos-delay="500" data-aos-duration="800">
+                <div class="swiper-wrapper px-2">
+                    <div class="swiper-slide">
+                        <a href="loft_converison.html" class="text-decoration-none">
+                            <div class="project_card">
+                                <div class="porject_image" style="background: linear-gradient(145deg , #00000000 , #00000059), url(../assets/img/house_loft_conversion.jpg) center;"></div>
+                                <div class="fw-medium project_name text_wood_red">Loft Conversion</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="rear_extension.html" class="text-decoration-none">
+                            <div class="project_card">
+                                <div class="porject_image" style="background: linear-gradient(145deg , #00000000 , #00000059), url(../assets/img/house_extension.jpg) center;"></div>
+                                <div class="fw-medium project_name text_wood_red">Rear Extension</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="refurbishment.html" class="text-decoration-none">
+                            <div class="project_card">
+                                <div class="porject_image" style="background: linear-gradient(145deg , #00000000 , #00000059), url(../assets/img/house_refurbishment.jpg) center;"></div>
+                                <div class="fw-medium project_name text_wood_red">Renovation & Refurbishment</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="interior_designing.html" class="text-decoration-none">
+                            <div class="project_card">
+                                <div class="porject_image" style="background: linear-gradient(145deg , #00000000 , #00000059), url(../assets/img/house_designing.jpg) center;"></div>
+                                <div class="fw-medium project_name text_wood_red">Interior Designing</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- about  -->
+    <section id="team" class="py_5">
+        <div class="container-lg overflow-x-hidden">
+            <p class="text_wood_red fs-5 my-2 fw-semibold text-uppercase fst_sans" data-aos="fade-up" data-aos-delay="300" data-aos-duration="600">our team</p>
+            <h2 class="my-2 display-4 fw-medium text_darker_brown fst_serif" data-aos="fade-up" data-aos-delay="400" data-aos-duration="600">Meet the Visionaries Behind Our Success</h2>
+            <p class="my-3 fst_sans fs_5" data-aos="fade-up" data-aos-delay="500" data-aos-duration="600">Get acquainted with the brilliant minds driving our achievements. Our team is
+                comprised of passionate experts dedicated to realizing your dreams. With skill, innovation, and a shared
+                commitment to excellence, we make the extraordinary possible. </p>
+            <div class="row align-items-center justify-content-center my-4">
+                <div class="team_card d-md-flex d-block m-0 align-items-center my-4" data-aos="fade-right" data-aos-delay="700" data-aos-duration="700">
+                    <div class="team_image me-2">
+                        <img src="https://onelibuilders.co.uk/wp-content/uploads/2023/03/michael_rieger-1.png" class="rounded-circle" width="250" height="auto" alt="">
+                    </div>
+                    <div class="team_details p-3">
+                        <h2 class="fw-semibold fst_serif mt-1">Michael Rieger</h2>
+                        <p class="fst_sans m-0 text_wood_red fw-semibold">DIRECTOR</p>
+                        <p class="fst_sans mt-3">With 27 years of industry expertise, Michael, a Business degree graduate from UNYP, managed underground gas storage projects for RWE before leading his family firm in Czechia. In 2015, he founded Professional Carpentry Services in London, personally overseeing projects since.</p>
+                    </div>
+                </div>
+                <div class="team_card d-md-flex d-block m-0 align-items-center my-4" data-aos="fade-left" data-aos-delay="800" data-aos-duration="800">
+                    <div class="team_image d-md-none d-block me-2">
+                        <img src="https://onelibuilders.co.uk/wp-content/uploads/2023/03/alzbeta_rieger.png" class="rounded-circle" width="250" height="auto" alt="">
+                    </div>
+                    <div class="team_details p-3">
+                        <h2 class="fw-semibold fst_serif mt-1">Alzbeta Rieger</h2>
+                        <p class="fst_sans m-0 text_wood_red fw-semibold">DESIGNER</p>
+                        <p class="fst_sans mt-3">Alzbeta is a graduate in Fashion and Textile Design from the Technical University of Liberec, has over a decade of experience in Interior Design and Building Space Solutions. With expertise in light, colors, and materials, she crafts truly unique, innovative and harmonized spaces.</p>
+                    </div>
+                    <div class="team_image d-md-block d-none me-2">
+                        <img src="https://onelibuilders.co.uk/wp-content/uploads/2023/03/alzbeta_rieger.png" class="rounded-circle" width="250" height="auto" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- contact  -->
+   <section id="contact" class="py_5 mt-4">
+        <div class="container-lg">
+            <h2 class="my-2 display-4 text-center fw-medium text_darker_brown fst_serif" data-aos="fade-up" data-aos-delay="400" data-aos-duration="700">Have a project to discuss?<br>Let's have a talk</h2>
+            <div class="text-center" data-aos="zoom-out" data-aos-delay="500" data-aos-duration="800">
+                <a href="tel:+4417345327" class="align-items-center mx-auto my-5 btn_wood_red d-inline-flex fs_5 fw-semibold p-3 px-sm-4 rounded-pill scale_animation text-uppercase text_wood_red" id="make_call">
+                    <i class='bx bx-phone fs-5 text_peach'></i>
+                    <div class="btn_text_cont position-relative">
+                        <div class="make_call_text text_peach">&nbsp;Make a Call</div>
+                        <div class="make_call_number text_peach">&nbsp;0313 0215362</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer  -->
+    <footer class="footer_section">
+        <div class="site-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md pr-md-5 mb-4 mb-md-0">
+                        <h3>About Us</h3>
+                        <p class="mb-4">We are the leading construction company in London & Kent specializes in building, remodeling, and renovating homes. Our goal is to make the building process as seamless and stress free as possible for our clients.</p>
+                        <ul class="list-unstyled quick-info mb-4">
+                            <li><a href="tel:+4431398765" class="d-flex align-items-center text-decoration-none"><i class="bx me-1 bx-phone"></i>+4431398765</a></li>
+                            <li><a href="mailto:info@gmail.com" class="d-flex align-items-center text-decoration-none"><i class="bx me-1 bx-envelope"></i>info@gmail.com</a></li>
+                        </ul>
+                        <div class="subscribe_form">
+                            <form action="#" class="subscribe">
+                                <input type="text" class="form-control" id="footer_input" placeholder="Enter your e-mail">
+                                <button class="btn btn-submit" type-="button" id="subscribe_btn">Send</button>
+                            </form>
+                            <div class="text-danger small subscribe_form_message my-1"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4 mb-md-0">
+                        <h3>Quick Links</h3>
+                        <ul class="list-unstyled">
+                            <li class="my-3">
+                                <a href="index.html" class="text-decoration-none my-1 quick_links">Home</a>
+                            </li>
+                            <li class="my-3">
+                                <a href="about.html" class="text-decoration-none my-1 quick_links">About</a>
+                            </li>
+                            <li class="my-3">
+                                <a href="portfolio.html" class="text-decoration-none my-1 quick_links">Portfolio</a>
+                            </li>
+                            <li class="my-3">
+                                <a href="solutions.html" class="text-decoration-none my-1 quick_links">Solutions</a>
+                            </li>
+                            <li class="my-3">
+                                <a href="contact.html" class="text-decoration-none my-1 quick_links">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4 mb-4 mb-md-0">
+                        <h3>Social Links</h3>
+                        <ul class="list-unstyled mb-4 d-flex align-items-center">
+                            <li class="my-1"><a href="https://facebook.com" target="_blank" class="text-decoration-none social_link social_bg_facebook"><i class="bx bxl-facebook"></i></a></li>
+                            <li class="my-1"><a href="https://instagram.com" target="_blank" class="text-decoration-none social_link social_bg_instagram"><i class="bx bxl-instagram"></i></a></li>
+                            <li class="my-1"><a href="https://twitter.com" target="_blank" class="text-decoration-none social_link social_bg_twitter"><i class="bx bxl-twitter"></i></a></li>
+                            <li class="my-1"><a href="https://linkedin.com" target="_blank" class="text-decoration-none social_link social_bg_linkedin"><i class="bx bxl-linkedin"></i></a></li>
+                            <li class="my-1"><a href="https://youtube.com" target="_blank" class="text-decoration-none social_link social_bg_youtube"><i class="bx bxl-youtube"></i></a></li>
+                        </ul>
+                        <h3 class="my-3">Latest Work</h3>
+                        <div class="row gallery">
+                            <div class="col-6">
+                                <a href="portfolio.html"><img src="../assets/img/kitchen.jpg" width="100%" height="100%" alt="project image" class="img-fluid"></a>
+                            </div>
+                            <div class="col-6">
+                                <a href="portfolio.html"><img src="../assets/img/IMG_6303.jpg" width="100%" height="100%" alt="project image" class="img-fluid"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../assets/js/app.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        // init aos 
+        AOS.init();
+        var swiper = new Swiper(".serviceSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 15,
+                },
+                1024: {
+                    slidesPerView: 2.2,
+                    spaceBetween: 20,
+                },
+                1200: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                },
+            },
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+:root {
+    --yellow: #f9b433;
+    --orange: #ef5b13;
+}
+
+#intro {
+    height: auto;
+    width: auto;
+}
+
+#headerSlider {
+    height: auto;
+    width: 100%;
+}
+
+.headerSlides {
+    min-height: 630px;
+    max-height: auto;
+    width: 100%;
+    display: flex !important;
+    align-items: center;
+}
+
+.header_slide_1 {
+    background: linear-gradient(#36363694, #00000087), url(../img/IMG_0174-scaled.jpg) center fixed;
+    background-size: cover;
+}
+
+.header_slide_2 {
+    background: linear-gradient(#36363694, #00000087), url(../img/2-1.jpg) center fixed;
+    background-size: cover;
+}
+
+/* category  */
+.category_card {
+    min-height: 150px;
+    max-height: fit-content;
+    width: auto;
+    border-radius: 10px;
+    background: linear-gradient(92deg, #f1f1f161, #f6f6f666);
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.category_card:hover {
+    scale: 1.02;
+    box-shadow: 0px 3px 8px 0px #0000004a;
+}
+
+.category_card_navigation_link {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: black;
+    scale: 0;
+    transition: 0.2s;
+}
+
+.category_card:hover .category_card_navigation_link {
+    scale: 1;
+}
+
+/* job  */
+
+.job_card {
+    height: auto;
+    width: auto;
+    background: linear-gradient(180deg, #eef7ff, #eef7ff);
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.job_card:hover {
+    background: linear-gradient(180deg, #daeeff, #e5f3ff);
+    scale: 1.02;
+}
+
+/* process  */
+
+#process {
+    background: linear-gradient(#fffffff0, #fffffff0), url(../img/IMG_0174-scaled.jpg) center fixed;
+    background-size: cover;
+}
+
+.timeline {
+    height: 100%;
+    width: 0.15rem;
+    background: var(--orange);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.timeline_circle {
+    height: 15px;
+    width: 15px;
+    background-color: var(--orange);
+    border-radius: 100px;
+    position: absolute;
+    top: 50%;
+    left: -38px;
+    box-shadow: 0px 0px 10px 1px #ef5c1356;
+}
+
+/* job page css  */
+
+#job_intro {
+    min-height: 550px;
+    max-height: fit-content;
+    width: auto;
+    background: linear-gradient(#21212184, #0000009f), url(../img/job_header.jpg) center;
+    background-size: cover;
+}
+
+#category_intro {
+    min-height: 550px;
+    max-height: fit-content;
+    width: auto;
+    background: linear-gradient(#21212184, #0000009f), url(../img/cateogry_header.jpg) center;
+    background-size: cover;
+}
+
+#apply_intro {
+    min-height: 550px;
+    max-height: fit-content;
+    width: auto;
+    background: linear-gradient(#21212184, #0000009f), url(../img/apply_header.jpg) center;
+    background-size: cover;
+}
+
+#about_intro {
+    min-height: 550px;
+    max-height: fit-content;
+    width: auto;
+    background: linear-gradient(#212121a3, #000000a6), url(../img/about_header.jpg) center;
+    background-size: cover;   
+}
+
+#apply_now_intro {
+    min-height: 550px;
+    max-height: fit-content;
+    width: auto;
+    background: linear-gradient(#23232380, #0f0f0fb5), url(../img/apply_now_header.jpg) center;
+    background-size: cover;   
+}
+
+.trend_search {
+    max-width: 700px;
+    ;
+}
+
+.trend_search_tag a {
+    font-size: 14px;
+    color: #f5f5f5cf;
+    transition: 0.3s;
+}
+
+.trend_search_tag a:hover {
+    color: #ffcc4d;
+}
+
+/* search  */
+.search_container {
+    height: auto;
+    max-width: 600px;
+    background-color: white;
+    border-radius: 40px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.search_input {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    color: black;
+}
+
+.search_input::placeholder {
+    color: grey;
+}
+
+.search_container i.bx-search {
+    color: black;
+}
+
+.filters_btn {
+    background: transparent;
+    color: black;
+    transition: 0.3s;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--yellow);
+    outline: none;
+    box-shadow: 0px 0px 6px 0px #00000026;
+}
+
+.filters_btn:hover {
+    background: var(--yellow);
+    color: black;
+}
+
+.search_btn {
+    background: var(--yellow);
+    color: black;
+    transition: 0.3s;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--yellow);
+    outline: none;
+    box-shadow: 0px 0px 6px 0px #00000026;
+}
+
+.search_btn:hover {
+    background: var(--yellow);
+    color: black;
+}
+
+@media (max-width: 575px) {
+
+    .filters_btn span,
+    .search_btn span {
+        display: none;
+    }
+}

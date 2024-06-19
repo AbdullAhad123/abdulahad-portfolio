@@ -1,0 +1,57 @@
+:root {
+    --peach: #E4C59E;
+    --light_wood_brown: #AF8260;
+    --wood_red: #803D3B;
+    --darker_brown: #322C2B;
+    --white: #ffffff;
+    --light_white: #fffbf7;
+    --black: #000000;
+}
+
+#intro {
+    min-height: 600px;
+    max-height: fit-content;
+    width: auto;
+    background: linear-gradient(179deg, #ffffff0f, #0000004a, #0000007d), url(../img/bg_house_image.jpg) center no-repeat fixed;
+    background-size: cover;
+    padding-top: 7rem;
+    padding-bottom: 6rem;
+}
+
+#team {
+    height: auto;
+    width: auto;
+}
+
+/* project  */
+/* project  */
+
+.project_card {
+    height: 400px;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project_card:hover .porject_image {
+    scale: 1.08;
+}
+
+.porject_image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: cover !important;
+    transition: 0.5s cubic-bezier(0.47, 0, 0.745, 0.715)
+}
+
+.project_name {
+    position: absolute;
+    bottom: 25px;
+    background: var(--peach);
+    padding: 0.85rem 1rem;
+    padding-right: 1.5rem !important;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}

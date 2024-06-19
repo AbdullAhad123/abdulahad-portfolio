@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Adult Invitation Template 3</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .fst_italic {
+            font-family: "Courgette", cursive;
+        }
+
+        .fst_sans {
+            font-family: "Comic Neue", cursive;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #b03f3f;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: white;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #main {
+            height: auto;
+            width: auto;
+        }
+
+        header {
+            min-height: 100vh;
+            max-height: fit-content;
+            width: auto;
+            background: radial-gradient(circle, #590000, #4b0000);
+            background-size: cover ;
+            padding-top: 6rem;
+            padding-bottom: 6rem;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        @media (max-width: 575px) {
+            .main_header_text {
+                font-size: 20vw !important;
+            }
+        }
+
+        .top_image_border {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            background: url('images/celebration_confetti.png') top;
+            background-size: auto;
+            opacity: 0.2;
+            mix-blend-mode: plus-lighter;
+        }
+
+        .animate_image {
+            animation: image_animation 6s infinite ease-in-out;
+            filter: drop-shadow(2px 4px 6px #fecb886e);
+        }
+
+        @keyframes image_animation {
+            0% {
+                transform: translateY(0px);
+            }
+            25% {
+                transform: translateY(-10px);
+            }
+            50% {
+                transform: translateY(0px);
+            }
+            75% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .header_heading {
+            font-size: 100px;
+            color: #ff9f4b;
+        }
+
+        @media (max-width: 575px) {
+            header {
+                background-size: cover;
+                background-position: right;
+            }
+
+            .header_heading {
+                font-size: 20vw !important;
+            }
+        }
+
+        .location_image {
+            height: 350px;
+            max-width: 550px;
+            transition: 2s;
+            border-radius: 40px;
+        }
+
+        .location_image:hover {
+            background-size: 150% !important;
+        }
+
+        .follow_map {
+            transform: translateY(100%);
+            background: linear-gradient(0deg , #0000009f ,#00000000);
+            transition: 0.5s;
+        }
+
+        .location_image:hover .follow_map {
+            transform: translateY(0%);
+        }
+
+
+    </style>
+</head>
+
+<body> 
+
+    <div id="main">
+        <header>
+            <div class="top_image_border"></div>
+            <div class="container-lg text-center position-relative">
+                <div data-aos="zoom-in" data-aos-delay="300" data-aos-duration="600">
+                    <img src="images/cupcake.png" width="400" style="rotate: -10deg;" class="img-fluid animate_image my-4" alt="cupcake">
+                </div>
+                <p data-aos="fade-up" data-aos-delay="350" data-aos-duration="600" class="fs-3 my-2 text-uppercase" style="color: #ffffffe8;">WE ARE INVITING YOU IN</p>
+                <h1 data-aos="fade-up" data-aos-delay="400" data-aos-duration="600" class="my-4 fst_italic header_heading">Charlie's <br> 25th <br> Birthday</h1>
+                <p data-aos="fade-right" data-aos-delay="500" data-aos-duration="600" class="fs-2 my-2 mb-md-5 mb-4 text-uppercase" style="color: #ffffffe8;">Boardgames, <br> Karaoke and <br> Entertainment</p>
+                <h2 data-aos="fade-up" data-aos-delay="600" data-aos-duration="600" class="my-4 fst_italic display-2 fw-medium" style="color: #ff9f4b;">28 July, 2024</h2>
+                <p data-aos="fade-up" data-aos-delay="700" data-aos-duration="600" class="fs-4 my-3 fw-light" style="color: #ffffffe8;">Join us at City Cafe on 28 July 2024 for Charlie's 25th birthday celebration. Enjoy board games, karaoke, and entertainment. Fun times and unforgettable memories await. We can’t wait to see you there!</p>
+                <div class="location_image position-relative overflow-hidden my-4 mx-auto" style="background: url(images/the_cafe.jpg) center; background-size: 130%;">
+                    <div class="follow_map position-absolute top-0 end-0 start-0 bottom-0 d-flex align-items-center justify-content-center">
+                        <a href="#" target="_blank" class="text-white text-center text-decoration-none fs-5">Get Directions</a>
+                    </div>
+                    <!-- use the background image with the size 16:9 
+                    or change the background-sive to cover 
+                    and remove the hover psuedo class to remove teh jitters and reverse animation  -->
+                </div>
+                <p data-aos="fade-left" data-aos-delay="800" data-aos-duration="600" class="fs-2 my-2 mt-md-5 fst_italic text-uppercase" style="color: #ffffffe8;">RSVP at</p>
+                <p data-aos="fade-up" data-aos-delay="850" data-aos-duration="600" class="my-2 fst_italic display-4 fw-medium" style="color: #ff9f4b;">0313 0284764</p>
+            </div>
+        </header>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();  
+    </script>
+
+</body>
+
+</html>

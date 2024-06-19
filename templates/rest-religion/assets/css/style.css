@@ -1,0 +1,207 @@
+@font-face {
+    font-family: 'Surt';
+    src: url('../fonts/Blaze Type-surt/Surt-Normal-Bold.woff2') format('woff2'),
+         url('../fonts/Blaze Type-surt/Surt-Normal-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Surt';
+    src: url('../fonts/Blaze Type-surt/Surt-Normal-Medium.woff2') format('woff2'),
+         url('../fonts/Blaze Type-surt/Surt-Normal-Medium.woff') format('woff');
+    font-weight: 500; /* Use 500 for medium weight */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Surt';
+    src: url('../fonts/Blaze Type-surt/Surt-Normal-Regular.woff2') format('woff2'),
+         url('../fonts/Blaze Type-surt/Surt-Normal-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Mackay';
+    src: url('../fonts/Mackay/font.woff2') format('woff2'),
+         url('../fonts/Mackay/font.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MackayItalic';
+    src: url('../fonts/MackayItalic/font.woff2') format('woff2'),
+         url('../fonts/MackayItalic/font.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Surt', sans-serif;
+}
+
+.fst_italic {
+    font-family: 'MackayItalic', sans-serif;
+}
+
+.fs_5 {
+    font-size: 1.18rem !important;
+}
+
+.fs_4 {
+    font-size: 1.3rem !important;
+}
+
+p.fs_4 {
+    color: #222222c7 !important;
+}
+
+.fs_6 {
+    font-size: .85rem !important;
+}
+
+.spacing_1 {
+    letter-spacing: 1px;
+}
+
+.spacing_2 {
+    letter-spacing: 1.4px;
+}
+
+#topbar {
+    background: url(../img/topbar_bg.webp);
+    padding: .25rem;
+}
+
+#introheading {
+    padding: .6rem;
+}
+
+header {
+    height: fit-content;
+    background: url(../img/bg_blue_color.webp) center/cover;
+}
+
+.header_details {
+    padding: 4rem;
+}
+
+.header_details p {
+    max-width: 500px;
+    margin: auto;
+}
+
+#banner img,
+.header_image img,
+.swiper-slide img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.heading_line {
+    height: 2px;
+    width: 45%;
+    background-color: #000;
+}
+
+#benefits {
+    margin: 3rem 0;
+}
+
+#overview {
+    background: url(../img/blue_gradient_image.webp) center/cover;
+    padding: .75rem;
+    margin: 3rem 0;
+    border-radius: 10px;
+}
+
+#overview h2 {
+    max-width: 700px;
+    margin: 1rem auto;
+}
+
+.list {
+    padding: 1rem 2rem;
+}
+
+.list li {
+    font-size: 1.6rem !important;
+}
+
+.buy_btn {
+    width: 100%;
+    padding: .8rem;
+    border: none;
+    outline: 0;
+    box-shadow: 0 2px 3px 0 #00000045;
+    background: #6473ff;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+@media (max-width:1024px) {
+    .header_details {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width:575px) {
+    .header_details {
+        padding: 2rem 1rem;
+    }
+
+    .heading_line {
+        width: 50% !important;
+    }
+
+    #overview {
+        padding: .5rem !important;
+    }
+
+    .list {
+        padding-right: 0;
+    }
+
+    .list li {
+        font-size: 1.1rem !important;
+    }
+}
+@media (max-width:768px) {
+    .heading_line {
+        width: 35% !important;
+    }
+}
+
+.save_title {
+    max-width: 320px;
+}
+
+.swiper-slide {
+    height: 400px;
+    width: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    -webkit-user-select: none;
+}
+
+.swiper_controls {
+    height: 40px !important;
+    width: 40px !important;
+    background: #f5f5f5;
+    padding: .4rem;
+    border-radius: 100px;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+    font-size: 1rem !important;
+    color: #747474;
+}

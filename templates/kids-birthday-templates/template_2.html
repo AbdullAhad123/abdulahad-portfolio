@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Invitation Template 2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: "Satisfy", cursive;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #ffd001;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: white;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #main {
+            height: auto;
+            width: auto;
+        }
+
+        header {
+            height: auto;
+            width: auto;
+            background: url('images/road\ hill\ \(3\).png') no-repeat, radial-gradient(#01013e, #000023) center;
+            background-size: 100%;
+            padding-top: 10rem;
+            padding-bottom: 4rem;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        @media (max-width: 1600px) {
+            header {
+                padding-top: 8.5rem;
+            }
+        }
+
+        @media (max-width: 767px) {
+            header {
+                padding-top: 5rem;
+            }
+        }
+
+        @media (max-width: 425px) {
+            header {
+                padding-top: 3rem;
+            }
+
+            .main_heading {
+                margin-top: 2rem !important;
+                font-size: 25vw !important;
+            }
+        }
+
+        .confetti {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            background: url(images/celebration_confetti.png) center;
+            background-size: 700px;
+            opacity: 0.4;
+        }
+
+        .header_details {
+            position: relative;
+        }
+
+        .image_animation {
+            max-width: 400px;
+            /* animation: animate_image 4s infinite cubic-bezier(0.47, 0, 0.745, 0.715); */
+            filter: drop-shadow(0px 0px 10px #ffffff51);
+        }
+
+        @keyframes animate_image {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="main">
+        <header class="">
+            <div class="confetti"></div>
+            <div class="header_details text-center">
+                <h2 class="text-center h1 text-white m-0" data-aos="fade-left" data-aos-delay="100">Lets join us for
+                </h2>
+                <h1 data-aos="fade-up" data-aos-delay="300" data-aos-duration="500"
+                    class="my-5 display-1 fw-bold text-center main_heading" style="color: #ffbe40; font-size: 100px;">
+                    Ahad's <br> Birthday</h1>
+                <img src="images/panda_1.png" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="500"
+                    width="100%" class="image_animation" alt="">
+            </div>
+            <div class="position-relative my-5 mb-0">
+                <h2 class="text-center h1 text-white m-0" data-aos="fade-left" data-aos-delay="600"
+                    data-aos-duration="1000">We're glad to invite you to celebrate on</h2>
+                <h3 data-aos="fade-up" data-aos-delay="800" data-aos-duration="1000"
+                    class="my-5 mb-0 display-1 fw-bold text-center main_heading" style="color: #ffbe40;">07<sup>th</sup>
+                    June 2024 - 9:00 pm</h3>
+            </div>
+            <div class="position-relative text-center my-5 mb-0 pb-4">
+                <img data-aos="zoom-in" data-aos-delay="900" data-aos-duration="1000" src="images/cafe.png" width="100%"
+                    class="image_animation" alt="">
+                <h2 data-aos="fade-right" data-aos-delay="800" data-aos-duration="1000"
+                    class="text-center h1 text-white my-3">Meet us at</h2>
+                <h3 data-aos="fade-up" data-aos-delay="900" data-aos-duration="1000"
+                    class="my-4 mb-0 display-1 fw-bold text-center main_heading" style="color: #ffbe40;">The Golden Café
+                </h3>
+                <h2 data-aos="fade-left" data-aos-delay="900" data-aos-duration="1200"
+                    class="text-center text-white my-3">Shop no. 3, Street xyz, State</h2>
+            </div>
+        </header>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();  
+    </script>
+
+</body>
+
+</html>

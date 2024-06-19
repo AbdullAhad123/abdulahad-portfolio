@@ -1,0 +1,145 @@
+:root {
+    --peach: #E4C59E;
+    --light_wood_brown: #AF8260;
+    --wood_red: #803D3B;
+    --darker_brown: #322C2B;
+    --white: #ffffff;
+    --light_white: #fffbf7;
+    --black: #000000;
+}
+
+#intro {
+    min-height: 100vh;
+    max-height: fit-content;
+    width: auto;
+    background: linear-gradient(179deg, #ffffff0f, #0000004a, #0000007d), url(../img/header.jpg) center no-repeat;
+    background-size: cover;
+    padding-top: 7rem;
+    padding-bottom: 6rem;
+}
+
+/* project  */
+
+.project_card {
+    height: 400px;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.project_card:hover .porject_image {
+    scale: 1.08;
+}
+
+.porject_image {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: cover !important;
+    transition: 0.5s cubic-bezier(0.47, 0, 0.745, 0.715)
+}
+
+.project_name {
+    position: absolute;
+    bottom: 25px;
+    background: var(--peach);
+    padding: 0.85rem 1rem;
+    padding-right: 1.5rem !important;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+/* about  */
+
+.about_container {
+    height: auto;
+    width: auto;
+    background: linear-gradient(311deg, #faf2e6, #ccbdb2);
+    position: relative;
+}
+
+.about_image {
+    width: fit-content;
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    overflow: hidden;
+    transition: 0.2s cubic-bezier(0.47, 0, 0.745, 0.715)
+}
+
+.about_image img {
+    transition: 0.3s cubic-bezier(0.47, 0, 0.745, 0.715)
+}
+
+.about_container:hover .about_image img {
+    scale: 1.05;
+}
+
+/* service  */
+
+#service_cont {
+    background: linear-gradient(180deg , #151212f9, #201a19f9), url(../img/bg_image.jpg) center no-repeat fixed;
+    background-size: cover;
+}
+
+.service_card {
+    position: relative;
+    overflow: hidden;
+}
+
+.service_card_small {
+    height: 350px;
+}
+
+.service_card_large {
+    height: 700px;
+}
+
+@media (max-width: 767px) {
+    .service_card_large {
+        height: 350px;
+    }
+}
+
+.service_card_detail {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(180deg, #00000000, #00000073);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(100%);
+    transition: 0.3s;
+}
+
+.service_card:hover .service_card_detail {
+    transform: translateY(0%);
+}
+
+/* testimonial  */
+.carousel-item {
+    min-height: 360px;
+    max-height: fit-content;
+}
+
+.carousel-inner {
+    border-radius: 10px;
+    background:linear-gradient(106deg, #4e4540, #4e4540);
+}
+
+.review_star_icon {
+    color:  #ffc400;
+}
+
+.testimonial_text {
+    color: #ccbdb2;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .testimonial_text {
+        text-align: justify;
+    }
+}

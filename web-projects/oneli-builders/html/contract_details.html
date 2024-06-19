@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contracts - Client Portal | Oneli Builders</title>
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../assets/css/portal_all.css">
+    <link rel="stylesheet" href="../assets/css/portal_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/boxicons/2.1.0/css/boxicons.min.css" integrity="sha512-pVCM5+SN2+qwj36KonHToF2p1oIvoU3bsqxphdOIWMYmgr4ZqD3t5DjKvvetKhXGc/ZG5REYTT6ltKfExEei/Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+    <style>
+
+        .active_contract {
+            height: 10px;
+            width: 10px;
+            background: var(--light_wood_brown);
+            position: absolute;
+            top: 5px;
+            right: -13px;
+        }
+
+        .complete_contract {
+            position: absolute;
+            top: 5px;
+            right: -13px;
+        }
+        .contract_heading a{
+            color: #AF8260;
+            transition: 0.25s;
+        }
+        .contract_heading a i.bx{
+            color: #af82609c;
+            display: none;
+            transition: 0.25s;
+        }
+        
+        .contract_heading a:hover {
+            color: #956743;
+        }
+
+        .contract_heading a:hover .bx-hash{
+            display: inline;
+        }
+        
+    </style>
+<body>
+
+    <!-- follow cursor  -->
+    <div class="cursor"></div>
+
+    <div class="window_preloader">
+        <span class="loader"></span>
+    </div>
+
+    <div id="main_wrapper">
+        <article class="content_wrapper">
+            <!-- sidebar  -->
+            <section class="sideBar text-center py-5">
+                <ul class="m-0 list-unstyled py-4 sideBar_item_list mx-auto">
+                    <li class="sidebar_listItem my-2">
+                        <a href="dashboard.html" class="sidebar_listItem_link mx-auto d-flex justify-content-center align-items-center" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Dashboard">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24"><path d="m0,3v6h11V0H3C1.346,0,0,1.346,0,3Zm13,21h8c1.654,0,3-1.346,3-3v-6h-11v9ZM21,0h-8v13h11V3c0-1.654-1.346-3-3-3ZM0,21c0,1.654,1.346,3,3,3h8v-13H0v10Z"/></svg>
+                            <span class="mt-1 sb_lil_title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="sidebar_listItem my-2">
+                        <a href="contracts.html" class="sidebar_listItem_link mx-auto d-flex justify-content-center align-items-center" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Contracts">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24"><path d="M17.41,5h-4.41V.59l4.41,4.41Zm-6.41,2V0H3C1.34,0,0,1.34,0,3V22H10v-2.42l2.75-2.75-1.25-.34-1.45,.39c-.38,.08-.75,.12-1.05,.12-1.05,0-2.09-.41-3-1.05-.91,.64-1.95,1.05-3,1.05v-2c.51,0,1.02-.17,1.5-.45-.92-1.1-1.5-2.42-1.5-3.55,0-1.65,1.35-3,3-3s3,1.35,3,3c0,1.14-.58,2.45-1.5,3.55,.48,.28,.99,.45,1.5,.45,.12,0,.64-.03,1.17-.27-.1-.36-.17-.77-.17-1.23,0-.83,.68-1.5,1.5-1.5s1.5,.67,1.5,1.5c0,.46-.07,.87-.17,1.23,.53,.25,1.05,.27,1.17,.27h.57s3.43-3.42,3.43-3.42V7h-7Zm12.26,5.74c-.99-.99-2.6-.99-3.59,0l-7.67,7.67v3.59h3.59l7.67-7.67c.48-.48,.74-1.12,.74-1.8s-.26-1.32-.74-1.79Zm-18.26-1.74c0,.63,.39,1.48,1,2.24,.61-.76,1-1.61,1-2.24,0-.55-.45-1-1-1s-1,.45-1,1Z"/></svg>
+                            <span class="mt-1 sb_lil_title">Contracts</span>
+                        </a>
+                    </li>
+                    <li class="sidebar_listItem my-2">
+                        <a href="projects.html" class="sidebar_listItem_link mx-auto d-flex justify-content-center align-items-center" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Project">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24"><path d="M24,9.367v2.332l-12,7.2L0,11.7v-2.332l12,7.2,12-7.2Zm-.056-2.137L12,.064,.056,7.23l11.944,7.166,11.944-7.166ZM0,13.699v2.332l12,7.2,2-1.2v-2.332l-2,1.2L0,13.699Zm21,2.301h-2v3h-3v2h3v3h2v-3h3v-2h-3v-3Z"/></svg>
+                            <span class="mt-1 sb_lil_title">Project</span>
+                        </a>
+                    </li>
+                    <li class="sidebar_listItem my-2">
+                        <a href="chats.html" class="sidebar_listItem_link mx-auto d-flex justify-content-center align-items-center" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Message">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24"><path d="m12,0C5.383,0,0,5.383,0,12s5.383,12,12,12h12v-12C24,5.383,18.617,0,12,0Zm-5,13.5c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5,1.5.672,1.5,1.5-.672,1.5-1.5,1.5Zm5,0c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5,1.5.672,1.5,1.5-.672,1.5-1.5,1.5Zm5,0c-.828,0-1.5-.672-1.5-1.5s.672-1.5,1.5-1.5,1.5.672,1.5,1.5-.672,1.5-1.5,1.5Z"/></svg>
+                            <span class="mt-1 sb_lil_title">Message</span>
+                        </a>
+                    </li>
+                    <li class="sidebar_listItem my-2">
+                        <a href="meetings.html" class="sidebar_listItem_link mx-auto d-flex justify-content-center align-items-center" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Meetings">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" height="24" width="24"><path xmlns="http://www.w3.org/2000/svg" d="M21,12.418V11A9,9,0,0,0,3,11v1.418A5,5,0,0,0,5,22H7V12H5V11a7,7,0,0,1,14,0v1H17v8H13v2h6a5,5,0,0,0,2-9.582Z"/></svg>
+                            <span class="mt-1 sb_lil_title">Meetings</span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!-- body  -->
+            <section class="contentBody">
+                <!-- topnav  -->
+                <div class="topBar">
+                    <div class="d-flex container py-1 align-items-center justify-content-between">
+                        <a href="dashboard.html">
+                            <img src="../assets/img/mini_logo.png" width="60" height="auto" alt="">
+                        </a>
+                        <div class="d-flex align-items-center">
+                            <!-- notification  -->
+                            <div>
+                                <button class="btn btn-transparent position-relative d-inline-flex shadow-none border-0" data-bs-toggle="offcanvas" data-bs-target="#notification" aria-controls="notification">
+                                    <div class="newItem_dot"></div>
+                                    <i class='bx bx-bell fs-4'></i>
+                                </button>
+                                <div class="offcanvas offcanvas-end" tabindex="-1" id="notification" aria-labelledby="notificationLabel">
+                                    <div class="all_notification_list animate__animated">
+                                        <div class="d-flex align-items-center justify-content-between p-3">
+                                            <p class="fs-5 fw-medium my-0">Notifications (3)</p>
+                                            <button type="button" class="btn btn-transparent d-inline-flex border-0 shadow-none text-white p-0" data-bs-dismiss="offcanvas"><i class="bx bx-x fs-4"></i></button>
+                                        </div>
+                                        <div class="notification_section_body">
+                                            <ul class="notification_list">
+                                                <li class="notification_list_item new position-relative">
+                                                    <div class="new_item">
+                                                        <i class="bx bxs-circle small"></i>
+                                                    </div>
+                                                    <p class="my-0 fw-bold notification_list_title">Kitchen Renovation: Demolition & Prep Work In Progress!</p>
+                                                    <p class="my-0 fw-medium fs_6 notification_list_time ms-2">2h ago</p>
+                                                </li>
+                                                <li class="notification_list_item new position-relative">
+                                                    <div class="new_item">
+                                                        <i class="bx bxs-circle small"></i>
+                                                    </div>
+                                                    <p class="my-0 fw-bold notification_list_title">Kitchen renovation: Payment Received for Cabinet Selection!</p>
+                                                    <p class="my-0 fw-medium fs_6 notification_list_time ms-2">3h ago</p>
+                                                </li>
+                                                <li class="notification_list_item new position-relative">
+                                                    <div class="new_item">
+                                                        <i class="bx bxs-circle small"></i>
+                                                    </div>
+                                                    <p class="my-0 fw-bold notification_list_title">New Message from Project Manager: John Smith</p>
+                                                    <p class="my-0 fw-medium fs_6 notification_list_time ms-2">3h ago</p>
+                                                </li>
+                                                <li class="notification_list_item">
+                                                    <p class="my-0 fw-medium notification_list_title">Milestone Update: Countertop Selection Finalized</p>
+                                                    <p class="my-0 fs_6 notification_list_time ms-2">12h ago</p>
+                                                </li>
+                                                <li class="notification_list_item">
+                                                    <p class="my-0 fw-medium notification_list_title">Reminder: Upcoming Inspection Scheduled for July 15th</p>
+                                                    <p class="my-0 fs_6 notification_list_time ms-2">1d ago</p>
+                                                </li>
+                                                <li class="notification_list_item">
+                                                    <p class="my-0 fw-medium notification_list_title">Hey Alex! Your Kitchen Plans are Now Available!</p>
+                                                    <p class="my-0 fs_6 notification_list_time ms-2">2d ago</p>
+                                                </li>
+                                                <li class="notification_list_item">
+                                                    <p class="my-0 fw-medium notification_list_title">Action Required: Review Change Order for Additional Lighting</p>
+                                                    <p class="my-0 fs_6 notification_list_time ms-2">1w ago</p>
+                                                </li>
+                                                <li class="notification_list_item">
+                                                    <p class="my-0 fw-medium notification_list_title">Congratulations! Your Kitchen Renovation Project is 50% Complete!</p>
+                                                    <p class="my-0 fs_6 notification_list_time ms-2">4w ago</p>
+                                                </li>
+                                                <div class="text-center">
+                                                    <button class="btn_peach p-2 px-3 rounded-pill fs_6 my-2">Load More</button>
+                                                </div>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="notification_detail_section animate__animated animate__fadeInRight">
+                                        <div class="py-2">
+                                            <button type="button" id="backToNotificationList" class="btn btn-transparent d-inline-flex align-items-center border-0 shadow-none text-white p-0"><i class="bx bx-chevron-left fs_5"></i>Back</button>
+                                        </div>
+                                        <p class="fs_5 my-2 fw-medium">Kitchen Renovation: Demolition & Prep Work In Progress!</p>
+                                        <p class="my-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi animi a inventore alias tenetur voluptas, eveniet accusamus sunt, consequuntur culpa exercitationem quae repellat ullam distinctio impedit deleniti veniam saepe? Vitae molestias nobis voluptates sunt tempore, consectetur deserunt eum dolor ratione quam vero accusamus dolorum nesciunt facere eveniet dolore unde quia a debitis harum sint cumque eius. Dolore nam nostrum sapiente.</p>
+                                    </div> 
+                                </div>
+                            </div>
+                            <!-- user profile  -->
+                            <div>
+                                <button class="btn btn-transparent p-0 ms-1 shadow-none border-0" data-bs-toggle="offcanvas" data-bs-target="#userProfile" aria-controls="userProfile">
+                                    <div class="user_profile rounded-circle" style="background-image: url(../assets/img/man_dummmy_image.jpg); background-size: cover;"></div>
+                                </button>
+                                <div class="offcanvas offcanvas-end" tabindex="-1" id="userProfile" aria-labelledby="userProfileLabel">
+                                    <div class="d-flex align-items-center justify-content-between p-3">
+                                        <p class="fs-5 fw-medium my-0">Account Settings</p>
+                                        <button type="button" class="btn btn-transparent d-inline-flex border-0 shadow-none text-white p-0" data-bs-dismiss="offcanvas"><i class="bx bx-x fs-4"></i></button>
+                                    </div>
+                                    <div class="account_setting_container fst_sans p-2 py-3">
+                                        <a href="profile.html" class="userBigAvatar position-relative" style="background: url(../assets/img/man_dummmy_image.jpg) center; background-size: cover;">
+                                            <div class="onlineDot"></div>
+                                            <div class="position-absolute top-0 end-0 bottom-0 start-0 h-100 w-100 editProfile_btn"><i class="bx bx-pencil fs-4"></i></div>
+                                        </a>
+                                        <p class="fs-5 text-white fw-medium my-1 text-center">Alex Hales Havandaas</p>
+                                        <p class="my-1 text-center">@alexhales55</p>
+                                        <p class="my-1 mb-2 d-flex justify-content-center align-items-center"><i class='bx bxs-map me-1'></i> London, Greater London</p>
+                                        <div class="profile_completion_progress_section rounded">
+                                            <div class="d-flex align-items-center justify-content-between">
+                                                <p class="fst_sans d-block my-1 fw-medium small">Profile Completeness</p>
+                                                <p class="my-1 small">30%</p>
+                                            </div>
+                                            <div class="progress profile_completion_progress" role="progressbar" aria-label="profile completeness">
+                                                <div class="progress-bar percent_50" style="width: 30%"></div>
+                                            </div>
+                                            <div class="text-end">
+                                                <a href="profile.html" class="fst_sans profile_completion_link d-block my-1 small">Complete Now<i class='bx bx-right-arrow-alt'></i></a>
+                                            </div>
+                                        </div>
+                                        <ul class="user_quick_links m-0 my-2">
+                                            <li class="my-2">
+                                                <a href="profile.html">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="user_links_svg" viewBox="0 0 24 24" width="17" height="17"><path d="M12,12A6,6,0,1,0,6,6,6.006,6.006,0,0,0,12,12ZM12,2A4,4,0,1,1,8,6,4,4,0,0,1,12,2Z"/><path d="M12,14a9.01,9.01,0,0,0-9,9,1,1,0,0,0,2,0,7,7,0,0,1,14,0,1,1,0,0,0,2,0A9.01,9.01,0,0,0,12,14Z"/></svg>
+                                                    <span class="ms-1">&nbsp;Profile</span>
+                                                </a>
+                                            </li>
+                                            <li class="my-2">
+                                                <a href="contracts.html">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="user_links_svg" viewBox="0 0 24 24" width="17" height="17"><path d="M23.12,11.88c-1.13-1.13-3.11-1.13-4.24,0l-7,7c-.57,.57-.88,1.32-.88,2.12v2c0,.55,.45,1,1,1h2c.8,0,1.55-.31,2.12-.88l7-7c.57-.57,.88-1.32,.88-2.12s-.31-1.55-.88-2.12Zm-1.41,2.83l-7,7c-.19,.19-.44,.29-.71,.29h-1v-1c0-.26,.11-.52,.29-.71l7-7c.38-.38,1.04-.38,1.41,0,.19,.19,.29,.44,.29,.71s-.1,.52-.29,.71Zm-7.71-1.21c0-.83-.67-1.5-1.5-1.5s-1.5,.67-1.5,1.5c0,.32,.1,.67,.29,.99-.32,.28-.74,.51-1.29,.51-.44,0-.88-.13-1.3-.34,.81-1.16,1.3-2.55,1.3-3.66,0-1.65-1.35-3-3-3s-3,1.35-3,3c0,1.22,.68,2.65,1.71,3.8-.24,.13-.48,.2-.71,.2-.55,0-1,.45-1,1s.45,1,1,1c.83,0,1.61-.33,2.3-.85,.84,.53,1.76,.85,2.7,.85,2.6,0,4-2.48,4-3.5Zm-6.87-.1c-.68-.79-1.13-1.72-1.13-2.4,0-.55,.45-1,1-1s1,.45,1,1c0,.72-.35,1.63-.87,2.4Zm1.87,7.6c0,.55-.45,1-1,1h-3c-2.76,0-5-2.24-5-5V5C0,2.24,2.24,0,5,0h5.76c1.07,0,2.07,.42,2.83,1.17l3.24,3.24c.76,.76,1.17,1.76,1.17,2.83v1.76c0,.55-.45,1-1,1s-1-.45-1-1v-1.76c0-.08,0-.16-.02-.24h-2.98c-1.1,0-2-.9-2-2V2.02c-.08,0-.16-.02-.24-.02H5c-1.65,0-3,1.35-3,3v12c0,1.65,1.35,3,3,3h3c.55,0,1,.45,1,1Z" /></svg>
+                                                    <span class="ms-1">&nbsp;Contracts</span>
+                                                </a>
+                                            </li>
+                                            <li class="my-2">
+                                                <a href="projects.html">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="user_links_svg" viewBox="0 0 24 24" width="17" height="17"><path d="M.485,8.088l9.862,5.917c.51,.306,1.081,.459,1.653,.459,.571,0,1.143-.153,1.653-.459l9.861-5.917c.301-.181,.485-.506,.485-.857s-.184-.677-.485-.857L13.654,.456c-1.021-.613-2.287-.613-3.307,0L.485,6.373c-.301,.181-.485,.506-.485,.857s.184,.677,.485,.857ZM11.376,2.171h0c.384-.23,.863-.23,1.248,0l8.432,5.06-8.432,5.06c-.385,.23-.864,.23-1.249,0L2.944,7.23,11.376,2.171Zm12.624,17.829c0,.553-.448,1-1,1h-2v2c0,.553-.448,1-1,1s-1-.447-1-1v-2h-2c-.552,0-1-.447-1-1s.448-1,1-1h2v-2c0-.553,.448-1,1-1s1,.447,1,1v2h2c.552,0,1,.447,1,1Zm-11.143,3.286c-.188,.312-.519,.485-.858,.485-.175,0-.353-.046-.514-.143L.485,17.029c-.474-.284-.627-.898-.343-1.372,.283-.474,.897-.628,1.372-.343l11,6.6c.474,.284,.627,.898,.343,1.372Zm11-12.196c.284,.474,.131,1.088-.343,1.372l-11,6.6c-.159,.095-.336,.143-.515,.143s-.356-.048-.515-.143L.485,12.462c-.474-.284-.627-.898-.343-1.372,.283-.475,.897-.628,1.372-.343l10.485,6.291,10.485-6.291c.474-.284,1.088-.131,1.372,.343Z"/></svg>
+                                                    <span class="ms-1">&nbsp;Projects</span>
+                                                </a>
+                                            </li>
+                                            <li class="my-2">
+                                                <a href="contact.html">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="user_links_svg" viewBox="0 0 24 24" width="17" height="17"><path d="M21,12.424V11A9,9,0,0,0,3,11v1.424A5,5,0,0,0,5,22a2,2,0,0,0,2-2V14a2,2,0,0,0-2-2V11a7,7,0,0,1,14,0v1a2,2,0,0,0-2,2v6H14a1,1,0,0,0,0,2h5a5,5,0,0,0,2-9.576ZM5,20H5a3,3,0,0,1,0-6Zm14,0V14a3,3,0,0,1,0,6Z"/></svg>
+                                                    <span class="ms-1">&nbsp;Meetings</span>
+                                                </a>
+                                            </li>
+                                            <li class="my-2">
+                                                <a target="_blank" href="https://www.ratedpeople.com/profile/oneli#reviews-and-ratings">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="user_links_svg" viewBox="0 0 24 24" width="17" height="17"><path d="m6.516 14.323-1.49 6.452a.998.998 0 0 0 1.529 1.057L12 18.202l5.445 3.63a1.001 1.001 0 0 0 1.517-1.106l-1.829-6.4 4.536-4.082a1 1 0 0 0-.59-1.74l-5.701-.454-2.467-5.461a.998.998 0 0 0-1.822 0L8.622 8.05l-5.701.453a1 1 0 0 0-.619 1.713l4.214 4.107zm2.853-4.326a.998.998 0 0 0 .832-.586L12 5.43l1.799 3.981a.998.998 0 0 0 .832.586l3.972.315-3.271 2.944c-.284.256-.397.65-.293 1.018l1.253 4.385-3.736-2.491a.995.995 0 0 0-1.109 0l-3.904 2.603 1.05-4.546a1 1 0 0 0-.276-.94l-3.038-2.962 4.09-.326z"></path></svg>
+                                                    <span class="ms-1">&nbsp;Rate Us</span>
+                                                </a>
+                                            </li>
+                                            <li class="my-2">
+                                                <a href="send_feedback.html">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" class="user_links_svg" viewBox="0 0 24 24" width="17" height="17"><path d="m21,3H3c-1.654,0-3,1.346-3,3v13h6.923l3.749,3.157c.382.339.861.507,1.337.507.468,0,.931-.163,1.292-.484l3.848-3.18h6.852V6c0-1.654-1.346-3-3-3Zm1,14h-5.571l-4.448,3.645-4.327-3.645H2v-6.487l1.844,1.026-.724,2.265.4.302,1.82-1.407,1.811,1.401.421-.291-.737-2.239,1.832-1.061v.004l1.844,1.026-.724,2.265.4.302,1.82-1.407,1.811,1.401.421-.291-.737-2.239,1.832-1.061v.004l1.844,1.026-.724,2.265.4.302,1.82-1.407,1.811,1.401.421-.291-.737-2.239,1.832-1.061v6.491Zm0-7h-2.403l-.653-2.501h-.54l-.654,2.501h-4.82l-.653-2.501h-.54l-.654,2.501h-4.82l-.653-2.501h-.54l-.654,2.501h-2.416v-4c0-.551.448-1,1-1h18c.552,0,1,.449,1,1v4Z"/></svg>
+                                                    <span class="ms-1">&nbsp;Send Feedback</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                        <a href="index.html" class="btn_edit_profile text-decoration-none d-flex w-100 fw-medium justify-content-center align-items-center rounded my-2 p-2 px-3"><i class='bx bx-log-out me-1' ></i> Logout</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- main content of body starts  -->
+                <div class="contentBody_content container-lg">
+                    <section class="contract_section my-3">
+                        <!-- header  -->
+                        <div class="contract_header">
+                            <div class="position-relative d-inline-flex ">
+                                <div class="mb-4">
+                                    <h1 class="fst_serif display-5 fw-medium my-1 text_darker_brown">Contract Details</h1>
+                                    <div class="heading_line"></div>
+                                </div>
+                                <div class="spinner-grow spinner-grow-sm active_contract"></div>
+                            </div>
+                            <!-- if the contract is active then it will be link else it will be a text  -->
+                            <h2 class="fst_serif h1 fw-medium my-2 contract_heading"><a href="project_details.html" class="text-decoration-none">Kitchen Renovation Project<i class='bx bx-hash fs-2' ></i></a></h2>
+                            <p class="fs_5 fst_sans">Kitchen revamp time! We'll help you create a space you love. Consider sleek new cabinets for better storage, stunning quartz countertops, and energy-efficient appliances you'll enjoy using. Tell us your preferences for faucets, backsplashes, and more! We'll translate your vision into a beautiful and functional dream kitchen.</p>
+                        </div>
+                        <!-- at a glance  -->
+                        <div class="overview my-4">
+                            <div class="mb-2">
+                                <h2 class="fst_serif fw-medium my-1 text_darker_brown">At a Glance</h2>
+                                <div class="heading_line"></div>
+                            </div>
+                            <div class="row align-items-center justify-content-center my-2">
+                                <div class="col-lg-3 col-sm-6 col-12 my-2">
+                                    <div class="contract_glance_card glance_card_1 p-md-4 py-4 p-3 mx-auto text-center">
+                                        <div class="svg_image">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="var(--wood_red)" height="30" width="30" viewBox="0 0 24 24">
+                                                <path d="m17.776,21.334c-.564,1.595-2.085,2.666-3.781,2.666H4.005c-1.17,0-2.279-.51-3.044-1.398-.753-.875-1.087-2.025-.917-3.158.405-2.698,1.885-5.198,4.401-7.444C1.929,9.754.449,7.254.044,4.556c-.17-1.132.164-2.283.917-3.157C1.726.51,2.835,0,4.005,0h9.99c1.696,0,3.217,1.071,3.781,2.666.185.521-.088,1.092-.608,1.276-.521.187-1.092-.088-1.276-.608-.283-.798-1.045-1.334-1.896-1.334H4.005c-.587,0-1.145.257-1.528.703-.378.439-.539.991-.454,1.555.375,2.499,1.922,4.84,4.598,6.958.24.189.38.479.38.784s-.14.595-.38.784c-2.676,2.118-4.223,4.458-4.598,6.957-.085.564.076,1.117.454,1.556.384.446.941.703,1.528.703h9.99c.852,0,1.613-.536,1.896-1.333.185-.521.758-.796,1.276-.608.521.184.793.756.608,1.276Zm-8.15-7.39l.508.405c1.172.932,2.727,2.431,3.474,4.275.125.309.088.659-.098.935-.186.275-.496.441-.829.441h-7.362c-.332,0-.643-.166-.829-.441-.186-.275-.223-.625-.099-.933.746-1.853,2.3-3.346,3.472-4.273l.52-.411c.364-.289.88-.288,1.244.002Zm-.627,2.06c-.631.509-1.371,1.194-1.965,1.996h3.928c-.594-.798-1.332-1.484-1.963-1.996Zm15.001-4.003c0,3.309-2.691,6-6,6s-6-2.691-6-6,2.691-6,6-6,6,2.691,6,6Zm-2,0c0-2.206-1.794-4-4-4s-4,1.794-4,4,1.794,4,4,4,4-1.794,4-4Zm-3-.414v-1.586c0-.552-.447-1-1-1s-1,.448-1,1v2c0,.265.105.52.293.707l1,1c.195.195.451.293.707.293s.512-.098.707-.293c.391-.391.391-1.023,0-1.414l-.707-.707Z"/>
+                                            </svg>
+                                        </div>
+                                        <p class="text-uppercase my-1 mt-2 fw-medium text_darker_brown">Duration</p>
+                                        <p class="mt-0 fs-5 fw-medium text_darker_brown">3 Months</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12 my-2">
+                                    <div class="contract_glance_card glance_card_2 p-md-4 py-4 p-3 mx-auto text-center">
+                                        <div class="svg_image">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="var(--wood_red)" height="30" width="30" viewBox="0 0 24 24">
+                                                <path d="m8,12c3.309,0,6-2.691,6-6S11.309,0,8,0,2,2.691,2,6s2.691,6,6,6Zm0-10c2.206,0,4,1.794,4,4s-1.794,4-4,4-4-1.794-4-4,1.794-4,4-4Zm2,13c0,.552-.448,1-1,1-3.86,0-7,3.14-7,7,0,.552-.448,1-1,1s-1-.448-1-1c0-4.962,4.038-9,9-9,.552,0,1,.448,1,1Zm13.644,2.752l-2.366,1.927.979,2.98c.134.403-.002.847-.339,1.106-.337.259-.801.277-1.156.046l-2.754-1.793-2.708,1.812c-.168.113-.362.169-.556.169-.211,0-.422-.067-.6-.2-.34-.254-.481-.696-.354-1.101l.941-3.016-2.377-1.934c-.32-.271-.437-.713-.292-1.107.145-.394.519-.655.938-.655h3.001l1.062-2.98c.146-.391.52-.651.937-.651s.792.26.937.651l1.062,2.98h3.001c.42,0,.795.263.939.657s.026.837-.295,1.108Z"/>
+                                            </svg>
+                                        </div>
+                                        <p class="text-uppercase my-1 mt-2 fw-medium text_darker_brown">Client</p>
+                                        <p class="mt-0 fs-5 fw-medium text_darker_brown">Abdul Ahad</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12 my-2">
+                                    <div class="contract_glance_card glance_card_3 p-md-4 py-4 p-3 mx-auto text-center">
+                                        <div class="svg_image">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="var(--wood_red)" height="30" width="30" viewBox="0 0 24 24">
+                                                <path d="m9.893,17.047c-.291-.031-.588-.047-.893-.047-3.734,0-6.55,2.461-7.008,6.124-.063.506-.494.876-.991.876-.042,0-.083-.003-.125-.008-.548-.068-.937-.568-.868-1.116.58-4.638,4.277-7.876,8.992-7.876.378,0,.748.02,1.107.059.549.06.946.553.887,1.102-.059.55-.559.939-1.102.887ZM1.5,7c0-.553.448-1,1-1h.5v-.5C3,2.468,5.467,0,8.5,0h1c3.033,0,5.5,2.468,5.5,5.5v.5h.5c.553,0,1,.447,1,1s-.447,1-1,1h-.5c0,3.309-2.691,6-6,6s-6-2.691-6-6h-.5c-.552,0-1-.447-1-1Zm11.5,1H5c0,2.206,1.794,4,4,4s4-1.794,4-4Zm-8-2h8v-.5c0-1.758-1.308-3.204-3-3.449v1.949c0,.553-.448,1-1,1s-1-.447-1-1v-1.949c-1.692.245-3,1.691-3,3.449v.5Zm17.5,15h-3c-.828,0-1.5.672-1.5,1.5s.672,1.5,1.5,1.5h3c.828,0,1.5-.672,1.5-1.5s-.672-1.5-1.5-1.5Zm-3-7h3c.828,0,1.5-.672,1.5-1.5s-.672-1.5-1.5-1.5h-3c-.828,0-1.5.672-1.5,1.5s.672,1.5,1.5,1.5Zm-5,7h-3c-.829,0-1.5.672-1.5,1.5s.671,1.5,1.5,1.5h3c.828,0,1.5-.672,1.5-1.5s-.672-1.5-1.5-1.5Zm2-5h-2c-.828,0-1.5.672-1.5,1.5s.672,1.5,1.5,1.5h2c.828,0,1.5-.672,1.5-1.5s-.672-1.5-1.5-1.5Zm6,0h-1c-.828,0-1.5.672-1.5,1.5s.672,1.5,1.5,1.5h1c.828,0,1.5-.672,1.5-1.5s-.672-1.5-1.5-1.5Z"/>
+                                            </svg>
+                                        </div>
+                                        <p class="text-uppercase my-1 mt-2 fw-medium text_darker_brown">Contractor</p>
+                                        <p class="mt-0 fs-5 fw-medium text_darker_brown">Oneli Builders</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-sm-6 col-12 my-2">
+                                    <div class="contract_glance_card glance_card_4 p-md-4 py-4 p-3 mx-auto text-center">
+                                        <div class="svg_image">
+                                            <svg xmlns="http://www.w3.org/2000/svg" fill="var(--wood_red)" height="30" width="30" viewBox="0 0 24 24">
+                                                <path d="M23.12,11.88c-1.13-1.13-3.11-1.13-4.24,0l-7,7c-.57,.57-.88,1.32-.88,2.12v2c0,.55,.45,1,1,1h2c.8,0,1.55-.31,2.12-.88l7-7c.57-.57,.88-1.32,.88-2.12s-.31-1.55-.88-2.12Zm-1.41,2.83l-7,7c-.19,.19-.44,.29-.71,.29h-1v-1c0-.26,.11-.52,.29-.71l7-7c.38-.38,1.04-.38,1.41,0,.19,.19,.29,.44,.29,.71s-.1,.52-.29,.71Zm-7.71-1.21c0-.83-.67-1.5-1.5-1.5s-1.5,.67-1.5,1.5c0,.32,.1,.67,.29,.99-.32,.28-.74,.51-1.29,.51-.44,0-.88-.13-1.3-.34,.81-1.16,1.3-2.55,1.3-3.66,0-1.65-1.35-3-3-3s-3,1.35-3,3c0,1.22,.68,2.65,1.71,3.8-.24,.13-.48,.2-.71,.2-.55,0-1,.45-1,1s.45,1,1,1c.83,0,1.61-.33,2.3-.85,.84,.53,1.76,.85,2.7,.85,2.6,0,4-2.48,4-3.5Zm-6.87-.1c-.68-.79-1.13-1.72-1.13-2.4,0-.55,.45-1,1-1s1,.45,1,1c0,.72-.35,1.63-.87,2.4Zm1.87,7.6c0,.55-.45,1-1,1h-3c-2.76,0-5-2.24-5-5V5C0,2.24,2.24,0,5,0h5.76c1.07,0,2.07,.42,2.83,1.17l3.24,3.24c.76,.76,1.17,1.76,1.17,2.83v1.76c0,.55-.45,1-1,1s-1-.45-1-1v-1.76c0-.08,0-.16-.02-.24h-2.98c-1.1,0-2-.9-2-2V2.02c-.08,0-.16-.02-.24-.02H5c-1.65,0-3,1.35-3,3v12c0,1.65,1.35,3,3,3h3c.55,0,1,.45,1,1Z"/>
+                                            </svg>
+                                        </div>
+                                        <p class="text-uppercase my-1 mt-2 fw-medium text_darker_brown">Date Signed</p>
+                                        <p class="mt-0 fs-5 fw-medium text_darker_brown">02 July, 2024</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- quick overiew  -->
+                        <div class="quick_details my-4 p-3">
+                            <div class="row m-0 align-items-center my-3">
+                                <div class="col-lg-7 col-md-6 col-12 my-2">
+                                    <h2 class="fst_serif fw-medium my-1 text_darker_brown">Quick Overview</h2>
+                                    <p class="fs_5 my-2 fst_sans">This contract outlines the details of your kitchen renovation project with Oneli Builders.  Review the scope of work, payment schedule, and key milestones to ensure a smooth project experience. Download a copy of the contract for your records and reference it for any questions you may have throughout the project.</p>
+                                    <button class="btn_wood_red p-2 px-3 rounded my-2 d-inline-flex align-items-center"><i class='bx me-1 bx-download fs_5'></i> Download Contract</button>
+                                </div>
+                                <div class="col-lg-5 col-md-6 col-12 my-2 text-center">
+                                    <img src="../assets/img/builder_withContract_details.png" width="350" height="auto" class="img-fluid contract_details_image" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- contract details  -->
+                        <div class="overview my-5">
+                            <div class="mb-2">
+                                <h2 class="fst_serif fw-medium my-1 text_darker_brown">Contract Breakdown</h2>
+                                <div class="heading_line"></div>
+                            </div>
+                            <p class="fs_5 my-2 fst_sans">Thoroughly review every detail outlined in the agreement to ensure a comprehensive understanding of its contents.</p>
+                            <ul class="accordian_container list-unstyled">
+                                <li class="accordian_item my-3" data-aos="fade-up" data-aos-delay="600" data-aos-duration="800">
+                                    <div class="accordian_button">
+                                        <button class="btn btn-light rounded-0 border-0 accordian_button_item d-flex align-items-center justify-content-between text-start w-100 p-3 fs_5">
+                                            <span class="fs_5 fw-medium fst_serif">Scope of Work</span>
+                                            <span><i class="bx bx-plus"></i></span>
+                                        </button>
+                                        <div class="accordian_details">
+                                            <div class="p-3">
+                                                <p class="my-2 fst_sans">The scope of work section details the contractor’s services, delineates the project boundaries, and safeguards both the designer and the business. For the designer, it defines the limits of their responsibilities, ensuring they don’t perform tasks or provide deliverables outside the agreed-upon scope. For the business or enterprise, it assures that you won’t charge the designer for any services they didn’t explicitly agree to.</p>
+                                                <p class="my-2 fst_sans">Meticulously outline every project aspect in this section to prevent scope creep and ensure everyone agrees on the tasks’ execution and costs. For example, if load testing of an ecommerce website is part of the service, the contract must clearly state it, including how this task impacts the overall cost.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="accordian_item my-3" data-aos="fade-up" data-aos-delay="650" data-aos-duration="800">
+                                    <div class="accordian_button">
+                                        <button class="btn btn-light rounded-0 border-0 accordian_button_item d-flex align-items-center justify-content-between text-start w-100 p-3 fs_5">
+                                            <span class="fs_5 fw-medium fst_serif">Payments & Milestone</span>
+                                            <span><i class="bx bx-plus"></i></span>
+                                        </button>
+                                        <div class="accordian_details">
+                                            <div class="p-3">
+                                                <p class="my-2 fst_sans">Specifying clear payment terms establishes a mutual understanding of the financial obligations and expectations. Key elements to include in this section are:</p>
+                                                <p class="my-2 fst_sans"></p>
+                                                <ul class="fst_sans my-2">
+                                                    <li class="my-2">
+                                                        <span class="fw-semibold">Payment schedule</span> Outlining a structured payment schedule provides financial security for the contractor and accountability for the business or enterprise. An example payment structure might look like:- 25% deposit required before starting the project, - Another 25% due at the halfway point, - The final 50% upon project completion‍
+                                                    </li>
+                                                    <li class="my-2">
+                                                        <span class="fw-semibold">Additional expenses</span> Detail any potential additional costs, like travel or software subscriptions, that the business is responsible for. Transparency in these costs avoids surprise expenses and provides the contractor with fair compensation for all work.
+                                                    </li>
+                                                    <li class="my-2">
+                                                        <span class="fw-semibold">Accepted payment methods</span> Clearly state the accepted payment methods, such as bank transfers, PayPal, or Stripe. This is especially important when dealing with freelance contractors who may prefer specific payment channels.
+                                                    </li>
+                                                    <li class="my-2">
+                                                        <span class="fw-semibold">Late payment policies</span>  Include any policies related to late payments, like interest on overdue amounts. Maintaining a professional relationship and ensuring timely payments is particularly important for independent contractors who rely on these payments for their livelihood.
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="accordian_item my-3" data-aos="fade-up" data-aos-delay="700" data-aos-duration="800">
+                                    <div class="accordian_button">
+                                        <button class="btn btn-light rounded-0 border-0 accordian_button_item d-flex align-items-center justify-content-between text-start w-100 p-3 fs_5">
+                                            <span class="fs_5 fw-medium fst_serif">Feedback, revisions, and approvals</span>
+                                            <span><i class="bx bx-plus"></i></span>
+                                        </button>
+                                        <div class="accordian_details">
+                                            <div class="p-3">
+                                                <p class="my-2 fst_sans">
+                                                    Incorporate a clear stakeholder feedback and revision process in your web design contract to align expectations between all parties. Here’s how to effectively outline this process
+                                                </p>
+                                                <ul class="fst_sans my-2">
+                                                    <li class="my-2">
+                                                        <span class="fw-semibold">Feedback milestones</span> Specify the stages or milestones when the designer will present the work for feedback. For example, the designer might share a website prototype after the initial design phase and provide a specific timeline for the business or enterprise’s team to review and respond. This approach helps keep the project on track and keeps both parties responsible for the project’s direction.
+                                                    </li>
+                                                    <li class="my-2">
+                                                        <span class="fw-semibold">Feedback timeline</span> Define a clear timeline for the in-house team to provide feedback to the designer. For example, you might designate five business days for the team to review and respond to a designer’s prototype. Setting a defined period keeps the project progressing without unnecessary delays.
+                                                    </li>
+                                                    <li class="my-2">
+                                                        <span class="fw-semibold">Response to delayed feedback</span> Address what happens if the in-house team delays feedback. You might include a clause stating that if the designer doesn’t receive feedback within the agreed-upon time frame, you’ll adjust the project’s delivery date accordingly. This agreement helps manage expectations and adhere to the project’s schedule.
+                                                    </li>
+                                                    <li class="my-2">
+                                                        <span class="fw-semibold">Revision rounds</span> Clarify the number of revision rounds included in the project costs to manage the scope of work and prevent the project from becoming mired in endless revisions. State clearly, for example, that the contractor will include two rounds of revisions and any additional revisions will incur extra charges.
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="accordian_item my-3" data-aos="fade-up" data-aos-delay="750" data-aos-duration="800">
+                                    <div class="accordian_button">
+                                        <button class="btn btn-light rounded-0 border-0 accordian_button_item d-flex align-items-center justify-content-between text-start w-100 p-3 fs_5">
+                                            <span class="fs_5 fw-medium fst_serif">Termination of contract</span>
+                                            <span><i class="bx bx-plus"></i></span>
+                                        </button>
+                                        <div class="accordian_details">
+                                            <div class="p-3">
+                                                <p class="my-2 mb-3 fst_sans">Every web contract should address potential scenarios where a project may not reach completion and their legal implications.</p>
+                                                <p class="my-2 fst_sans">Clearly outline the procedures for various termination scenarios, such as:</p>
+                                                <ul class="fst_sans my-2">
+                                                    <li class="my-2">If the service provider cannot complete the work due to unforeseen circumstances and needs to terminate the contract, the contract may state that the designer will deliver all completed work to date and provide a prorated refund for any incomplete portions.</li>
+                                                    <li class="my-2">If the business decides to halt the project while it’s in progress, the contract might require them to pay the freelancer for the work done up to termination, possibly including a termination fee.</li>
+                                                    <li class="my-2">In cases where the business fails to meet payment milestones, the contract should specify the consequences, including pausing or terminating the project.</li>
+                                                </ul>
+                                                <p class="my-2 fst_sans">Additionally, the contract should address legal aspects like indemnification to protect both parties from potential loss or harm resulting from contract termination.</p>
+                                                <p class="my-2 fst_sans">Specifying the state jurisdiction for legal proceedings is another critical component, especially for businesses in the United States. By outlining jurisdiction in the contract, you stipulate that legal disputes occur in a predetermined location, potentially avoiding escalation to a federal court.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="accordian_item my-3" data-aos="fade-up" data-aos-delay="800" data-aos-duration="800">
+                                    <div class="accordian_button">
+                                        <button class="btn btn-light rounded-0 border-0 accordian_button_item d-flex align-items-center justify-content-between text-start w-100 p-3 fs_5">
+                                            <span class="fs_5 fw-medium fst_serif">Privacy & Force Majeure</span>
+                                            <span><i class="bx bx-plus"></i></span>
+                                        </button>
+                                        <div class="accordian_details">
+                                            <div class="p-3">
+                                                <p class="my-2 mt-3 fw-semibold fst_sans">Privacy</p>
+                                                <p class="my-2 fst_sans">A well-drafted web design contract often includes a confidentiality clause or a nondisclosure agreement (NDA) that protects the business’s proprietary information, like trade secrets or unreleased promotions, and instills confidence that their confidential data is secure.</p>
+                                                <p class="my-2 fst_sans">For example, if a company supplies images for website development, the contract should clearly state that it’s the company’s responsibility to secure all necessary usage licenses and copyright permissions. This provision ensures that the web designer or developer is indemnified against any legal action resulting from copyright infringement should the company provide materials without proper authorization. The same principle applies to other forms of content, such as videos or written copy.</p>
+                                                <p class="my-2 mt-3 fw-semibold fst_sans">Force Majeure</p>
+                                                <p class="my-2 fst_sans">The force majeure clause outlines what happens when unforeseen circumstances or events beyond either party’s control, like natural disasters, wars, or global pandemics, occur. Unlike indemnification, which deals with compensation for losses, force majeure addresses situations where fulfilling contractual obligations becomes impossible due to these external factors.</p>
+                                                <p class="my-2 fst_sans">Including a force majeure clause protects the designer and the business by specifying that neither party will be liable for failure to meet obligations due to such extraordinary events. This clause also guarantees that in the case of unforeseeable disruptions, both parties clearly understand the terms, and this helps to mitigate potential conflicts or legal disputes arising from unavoidable delays or cancellations.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>   
+                        </div>
+                        <!-- signature  -->
+                        <div class="sign_off my-4">
+                            <div class="mb-3">
+                                <h2 class="fst_serif fw-medium my-1 text_darker_brown">Contract Signoff</h2>
+                                <div class="heading_line"></div>
+                                <p class="my-2 fst_sans fs_5">Sign the contract to agree with the terms and conditions, indicating final approval and making the agreement legally binding.</p>
+                            </div>
+                            <!-- before contract sign  -->
+                            <div class="row align-items-center my-2">
+                                <!-- client sign  -->
+                                <div class="col-md-6 col-sm-10 col-12">
+                                    <h3 class="fst_serif fs-4 fw-medium my-2 text_darker_brown">Client Signatures</h3>
+                                    <div class="signature_image client_sign_image_container d-flex align-items-center justify-content-center">
+                                        <i class='bx bx-image-add text_light_wood_brown'></i>
+                                    </div>
+                                    <input type="file" class="d-none" id="client_sign_image">
+                                    <div class="signature_date my-2">
+                                        <div class="form-floating">
+                                            <input type="date" class="form-control shadow-none" id="client_sign_date">
+                                            <label for="client_sign_date">Date</label>
+                                        </div>
+                                    </div>
+                                    <button class="btn_wood_red p-2 px-3 rounded my-2 d-none" id="upload_client_sign">Upload <i class="bx bx-loader-alt bx-spin d-none"></i></button>
+                                    <div class="error-message text-danger d-none" id="error_message"></div>
+                                </div>
+                            </div>
+                            <!-- after contract sign  -->
+                            <div class="row justify-content-around align-items-center my-2">
+                                <!-- client sign  -->
+                                <div class="col-md-6 col-sm-10 col-12 my-2">
+                                    <h3 class="fst_serif fs-4 fw-medium my-2 text_darker_brown">Client Signatures</h3>
+                                    <div class="signature_image client_sign_image_container d-flex align-items-center justify-content-center">
+                                        <img src="../assets/img/demo_e_sign.png" width="auto" height="100%" alt="">
+                                    </div>
+                                </div>
+                                <!-- contractor sign  -->
+                                <div class="col-md-6 col-sm-10 col-12 my-2">
+                                    <h3 class="fst_serif fs-4 fw-medium my-2 text_darker_brown">Contractor Signatures</h3>
+                                    <div class="signature_image d-flex align-items-center justify-content-center">
+                                        <img src="../assets/img/demo_e_sign.png" width="auto" height="100%" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+        </article>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../assets/js/app.js"></script>
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        function setTooltipPlacement() {
+            var screenWidth = window.innerWidth;
+            var showToolTip = screenWidth >= 1024;
+            if (showToolTip) {
+                var tooltipPlacement = 'right'; 
+                $('.sidebar_listItem_link').attr('data-bs-placement', tooltipPlacement);
+                $('.sidebar_listItem_link').tooltip();
+            } else {
+                $('.sidebar_listItem_link').tooltip('dispose');
+            }
+        }
+
+        $(window).on('resize load', function() {
+            setTooltipPlacement();
+        });
+
+        // flip card 
+        $('.project_card').click(function() {
+            $(this).toggleClass("flip_project_card");
+        })
+        
+        // Process and details accordion
+        $(".accordian_button_item").click(function() {
+            let card_details = $(this).siblings('.accordian_details');
+            let isCardOpen = card_details.hasClass('toggle_show');
+            let imagePath = $(this).data('image');
+
+            $('.accordian_details').removeClass('toggle_show').slideUp();
+            $(".accordian_button_item").removeClass('active').find('i.bx').removeClass('bx-minus').addClass('bx-plus');
+
+            if (!isCardOpen) {  
+                card_details.addClass('toggle_show').slideDown(400);
+                $(this).addClass('active');
+                $(this).find('i.bx').removeClass('bx-plus').addClass('bx-minus');
+                $(".process_images_scroll").css({
+                    'background': 'url("'+imagePath+'") center',
+                    'background-size': 'cover'
+                })
+            }
+        });
+        function activeFirstItem() {
+            let firstItem = $('.accordian_container li').first();
+            let imagePath = firstItem.find('.accordian_button_item').data('image');
+
+            firstItem.find('.accordian_details').addClass('toggle_show').slideDown(400);
+            firstItem.find('.accordian_button_item').addClass('active');
+            firstItem.find('i.bx').removeClass('bx-plus').addClass('bx-minus');
+
+            $(".process_images_scroll").css({
+                'background': 'url("' + imagePath + '") center',
+                'background-size': 'cover'
+            });
+        }
+        activeFirstItem();
+
+        // upload sign
+        $("#upload_client_sign").click(function () {
+            var clientSignImage = $("#client_sign_image")[0].files[0];
+            var clientSignDate = $("#client_sign_date").val();
+
+            if (!clientSignImage) {
+                $("#error_message").text("Please upload a picture of signature.");
+                $("#error_message").removeClass("d-none");
+                return false; 
+            } else if (!clientSignDate) {
+                $("#error_message").text("Please choose a date.");
+                $("#error_message").removeClass("d-none");
+                return false; 
+            } else if (new Date(clientSignDate) > new Date()) {
+                $("#error_message").text("Please choose today's date.");
+                $("#error_message").removeClass("d-none");
+                return false; 
+            } else{
+                $("#error_message").addClass("d-none");
+                $("#upload_client_sign i.bx").removeClass('d-none');
+                setTimeout(() => {
+                    $("#upload_client_sign i.bx").addClass('d-none');
+                    location.reload();
+                }, 2000);
+            }
+        });
+
+        // Display selected image
+        $(".client_sign_image_container").click(function () {
+            $("#client_sign_image").click();
+        });
+
+        $("#client_sign_image").change(function (event) {
+            var input = event.target;
+
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $(".client_sign_image_container").empty().append(`<img src="${e.target.result}" height="100%" width="auto" alt="client signature image">`);
+                    $("#upload_client_sign").removeClass('d-none');
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        });
+    </script>
+</body>
+
+</html>
