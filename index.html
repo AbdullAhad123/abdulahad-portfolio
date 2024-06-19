@@ -26,6 +26,34 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 </head>
+<style>
+    .project_card_item {
+        height: auto;
+        width: auto;
+    }
+
+    .project_image_container {
+        height: 350px;
+        width: auto;
+        overflow: hidden;
+        border-radius: 5px;
+        box-shadow: 0px 4px 8px 0px #0000004a;
+        position: relative;
+    }
+    .project_image_container img{
+        transition: 6s;
+    }   
+
+    .project_card_link {
+        text-decoration: none;
+        color: #000000a6;
+        transition: 0.2s;
+    }
+    .project_card_link:hover {
+        color: #f78f1a;
+        text-decoration: underline;
+    }
+</style>
 <body>
 
     <div id="preloader" >
@@ -554,6 +582,25 @@
                 },
             },
         });
+        // back to top 
+        $(window).on('scroll load', function () {
+            const scrolled = $(window).scrollTop();
+            if (scrolled > 120) {
+                $("#backToTop").fadeIn();
+            } else {
+                $("#backToTop").fadeOut();
+            }
+        });
+        // image 
+        $(".project_image_container").on('mouseover mouseenter', function () {
+            const image = $(this).find('img');
+            const imageTransformToBe = image.innerHeight() - 350;
+            image.css('transform', 'translateY(-'+imageTransformToBe+'px)')
+        })
+        $(".project_image_container").on('mouseleave mouseout', function () {
+            const image = $(this).find('img');
+            image.css('transform', 'translateY(0px)')
+        })
     </script>
 </body>
 
