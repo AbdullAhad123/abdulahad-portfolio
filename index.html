@@ -130,6 +130,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
         var loader=document.getElementById("preloader");window.addEventListener("load",function(){loader.style.display="none"});var swiper=new Swiper(".myProjects",{slidesPerView:1,spaceBetween:10,autoplay:{delay:4e3,disableOnInteraction:!1},breakpoints:{525:{slidesPerView:1.5,spaceBetween:10},640:{slidesPerView:1.8,spaceBetween:10},768:{slidesPerView:2.4,spaceBetween:10},1024:{slidesPerView:2.8,spaceBetween:12},1200:{slidesPerView:3.2,spaceBetween:15},1400:{slidesPerView:3.5,spaceBetween:15}}});$(window).on("scroll load",function(){let e=$(window).scrollTop();e>120?$("#backToTop").fadeIn():$("#backToTop").fadeOut()}),$(".project_image_container").on("mouseover mouseenter",function(){let e=$(this).find("img"),s=e.innerHeight()-350;e.css("transform","translateY(-"+s+"px)")}),$(".project_image_container").on("mouseleave mouseout",function(){let e=$(this).find("img");e.css("transform","translateY(0px)")});
+        if (window.location.hostname.startsWith('www.')) {window.location.replace('https://' + window.location.hostname.replace('www.', '') + window.location.pathname);}
     </script>
 </body>
 
