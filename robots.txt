@@ -1,4 +1,2 @@
 User-agent: *
 Disallow:
-
-Sitemap: https://abdullahad123.github.io/abdulahad-portfolio/sitemap.xml
